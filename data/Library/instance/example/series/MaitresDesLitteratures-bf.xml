@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/990066391650203331#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:generationProcess>
+               <bf:GenerationProcess>
+                  <rdfs:label>DLC marc2bibframe2 v1.4.0-SNAPSHOT: 2020-12-10T18:03:04.062+01:00</rdfs:label>
+               </bf:GenerationProcess>
+            </bf:generationProcess>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>n</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>990066391650203331</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>AT-OBV</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-14T18:20:00</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-04-23</bf:creationDate>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>ZDB-neu</rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>DE-600</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>UBW</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/ger"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>UBW</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rakwb"/>
+            </bf:descriptionConventions>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/%23%23%23"/>
+      </bf:language>
+      <rdfs:label>Maîtres des littératures</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Maîtres des littératures</rdfs:label>
+            <bflc:titleSortKey>Maîtres des littératures</bflc:titleSortKey>
+            <bf:mainTitle>Maîtres des littératures</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:hasInstance rdf:resource="http://example.org/990066391650203331#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/990066391650203331#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/serl"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1929/1935</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/fr%23"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://id.loc.gov/vocabulary/marcgt/ser">
+            <rdfs:label>monographic series</rdfs:label>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>AC06711755</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>AC06711755</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>AT-OBV</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>006639165ACC01</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>Aleph</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>ZDB-neu</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>DE-600</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>OBVAC06711755</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>DE-599</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:place>
+         <bf:Place>
+            <bf:code>XA-FR</bf:code>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>ISO 3166</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:place>
+      <rdfs:label>Maîtres des littératures</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Maîtres des littératures</rdfs:label>
+            <bflc:titleSortKey>Maîtres des littératures</bflc:titleSortKey>
+            <bf:mainTitle>Maîtres des littératures</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:status>
+               <bf:Status>
+                  <rdfs:label>current</rdfs:label>
+               </bf:Status>
+            </bf:status>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Paris</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Rieder</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1929-1935</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Paris; Rieder; 1929-1935</bf:provisionActivityStatement>
+      <bf:firstIssue>1.1929 </bf:firstIssue>
+      <bf:lastIssue> 20.1935 nachgewiesen</bf:lastIssue>
+      <bf:instanceOf rdf:resource="http://example.org/990066391650203331#Work"/>
+   </bf:Instance>
+</rdf:RDF>

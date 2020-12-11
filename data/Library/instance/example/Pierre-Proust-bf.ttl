@@ -1,0 +1,212 @@
+
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bflc:  <http://id.loc.gov/ontologies/bflc/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://id.loc.gov/vocabulary/languages/ger>
+        a       bf:Language .
+
+<http://id.loc.gov/vocabulary/countries/fr%23>
+        a       bf:Place .
+
+<http://id.loc.gov/vocabulary/descriptionConventions/rakwb>
+        a       bf:DescriptionConventions .
+
+<http://example.org/990066391760203331#Work830-24>
+        a                bf:Work ;
+        bf:identifiedBy  [ a          bf:Identifier ;
+                           rdf:value  "AC06711755" ;
+                           bf:source  [ a           bf:Source ;
+                                        rdfs:label  "AT-OBV"
+                                      ]
+                         ] ;
+        bf:title         [ a                    bf:Title ;
+                           bflc:title30MarcKey  "830 0$w(AT-OBV)AC06711755$v7$9O:1"
+                         ] .
+
+<http://id.loc.gov/vocabulary/organizations/43ACC_UBW>
+        a       bf:Agent .
+
+<http://id.loc.gov/vocabulary/languages>
+        a       bf:Source .
+
+<http://id.loc.gov/vocabulary/relators/aut>
+        a       bf:Role .
+
+<http://example.org/990066391760203331#Work>
+        a                  bf:Text , bf:Work ;
+        rdfs:label         "Proust recherches sur la création intellectuelle" ;
+        bf:adminMetadata   [ a                          bf:AdminMetadata ;
+                             bflc:encodingLevel         [ a        bflc:EncodingLevel ;
+                                                          bf:code  "f"
+                                                        ] ;
+                             bf:changeDate              "2017-11-14T18:20:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                             bf:creationDate            "2008-04-23"^^<http://www.w3.org/2001/XMLSchema#date> ;
+                             bf:descriptionConventions  <http://id.loc.gov/vocabulary/descriptionConventions/rakwb> ;
+                             bf:descriptionConventions  [ a        bf:DescriptionConventions ;
+                                                          bf:code  "isbd"
+                                                        ] ;
+                             bf:descriptionLanguage     <http://id.loc.gov/vocabulary/languages/ger> ;
+                             bf:descriptionModifier     [ a           bf:Agent ;
+                                                          rdfs:label  "UBW"
+                                                        ] ;
+                             bf:generationProcess       [ a           bf:GenerationProcess ;
+                                                          rdfs:label  "DLC marc2bibframe2 v1.4.0-SNAPSHOT: 2020-12-10T16:13:54.901+01:00"
+                                                        ] ;
+                             bf:identifiedBy            [ a          bf:Local ;
+                                                          rdf:value  "990066391760203331"
+                                                        ] ;
+                             bf:source                  [ a        bf:Source ;
+                                                          bf:code  "AT-OBV"
+                                                        ] ;
+                             bf:source                  [ a           bf:Agent , bf:Source ;
+                                                          rdfs:label  "UBW"
+                                                        ] ;
+                             bf:source                  [ a           bf:Agent , bf:Source ;
+                                                          rdfs:label  "BAY"
+                                                        ] ;
+                             bf:status                  [ a        bf:Status ;
+                                                          bf:code  "n"
+                                                        ]
+                           ] ;
+        bf:classification  [ a                         bf:Classification ;
+                             bf:classificationPortion  "IH 74361" ;
+                             bf:source                 [ a           bf:Source ;
+                                                         rdfs:label  "rvk"
+                                                       ]
+                           ] ;
+        bf:contribution    [ a         bflc:PrimaryContribution , bf:Contribution ;
+                             bf:agent  <http://example.org/990066391760203331#Agent100-17> ;
+                             bf:role   <http://id.loc.gov/vocabulary/relators/aut>
+                           ] ;
+        bf:hasInstance     <http://example.org/990066391760203331#Instance> ;
+        bf:language        <http://id.loc.gov/vocabulary/languages/fre> ;
+        bf:language        [ a                bf:Language ;
+                             bf:identifiedBy  [ a          bf:Identifier ;
+                                                rdf:value  <http://id.loc.gov/vocabulary/languages/fre> ;
+                                                bf:source  <http://id.loc.gov/vocabulary/languages>
+                                              ]
+                           ] ;
+        bf:title           [ a                  bf:Title ;
+                             rdfs:label         "Proust recherches sur la création intellectuelle" ;
+                             bflc:titleSortKey  "Proust recherches sur la création intellectuelle" ;
+                             bf:mainTitle       "Proust" ;
+                             bf:subtitle        "recherches sur la création intellectuelle"
+                           ] .
+
+<http://example.org/990066391760203331#Instance>
+        a                              bf:Instance ;
+        rdfs:label                     "Proust recherches sur la création intellectuelle" ;
+        bf:extent                      [ a           bf:Extent ;
+                                         rdfs:label  "91, LX S."
+                                       ] ;
+        bf:hasItem                     <http://example.org/990066391760203331#Item852-26> , <http://example.org/990066391760203331#Item852-27> , <http://example.org/990066391760203331#Item852-25> ;
+        bf:hasSeries                   [ a                     bf:Instance ;
+                                         rdfs:label            "Maîtres des littératures" ;
+                                         bf:instanceOf         <http://example.org/990066391760203331#Work830-24> ;
+                                         bf:seriesEnumeration  "7" ;
+                                         bf:seriesStatement    "Maîtres des littératures 7"
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "OBVAC06711768" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "DE-599"
+                                                    ]
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "050547429" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "DE-604"
+                                                    ]
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "AC06711768"
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "006639176ACC01" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "Aleph"
+                                                    ]
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "AC06711768" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "AT-OBV"
+                                                    ]
+                                       ] ;
+        bf:instanceOf                  <http://example.org/990066391760203331#Work> ;
+        bf:issuance                    <http://id.loc.gov/vocabulary/issuance/mono> ;
+        bf:note                        [ a            bf:Note ;
+                                         rdfs:label   "Ill." ;
+                                         bf:noteType  "Physical details"
+                                       ] ;
+        bf:place                       [ a          bf:Place ;
+                                         bf:code    "XA-FR" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "ISO 3166"
+                                                    ]
+                                       ] ;
+        bf:provisionActivity           [ a         bf:Publication , bf:ProvisionActivity ;
+                                         bf:agent  [ a           bf:Agent ;
+                                                     rdfs:label  "Rieder"
+                                                   ] ;
+                                         bf:date   "1930" ;
+                                         bf:place  [ a           bf:Place ;
+                                                     rdfs:label  "Paris"
+                                                   ]
+                                       ] ;
+        bf:provisionActivity           [ a         bf:Publication , bf:ProvisionActivity ;
+                                         bf:date   "1930/####"^^<http://id.loc.gov/datatypes/edtf> ;
+                                         bf:place  <http://id.loc.gov/vocabulary/countries/fr%23>
+                                       ] ;
+        bf:provisionActivityStatement  "Paris; Rieder; 1930" ;
+        bf:responsibilityStatement     "par Pierre Abraham" ;
+        bf:title                       [ a                  bf:Title ;
+                                         rdfs:label         "Proust recherches sur la création intellectuelle" ;
+                                         bflc:titleSortKey  "Proust recherches sur la création intellectuelle" ;
+                                         bf:mainTitle       "Proust" ;
+                                         bf:subtitle        "recherches sur la création intellectuelle"
+                                       ] .
+
+<http://id.loc.gov/vocabulary/organizations/43ACC_WUW>
+        a       bf:Agent .
+
+<http://id.loc.gov/vocabulary/languages/fre>
+        a       bf:Language .
+
+<http://example.org/990066391760203331#Agent100-17>
+        a                    bf:Person , bf:Agent ;
+        rdfs:label           "Abraham, Pierre 1892-1974" ;
+        bflc:name00MarcKey   "1001 $aAbraham, Pierre$d1892-1974$0(DE-588)12490310X$4aut" ;
+        bflc:name00MatchKey  "Abraham, Pierre 1892-1974" ;
+        bflc:primaryContributorName00MatchKey
+                "Abraham, Pierre 1892-1974" ;
+        bf:identifiedBy      [ a          bf:Identifier ;
+                               rdf:value  "12490310X" ;
+                               bf:source  [ a           bf:Source ;
+                                            rdfs:label  "DE-588"
+                                          ]
+                             ] .
+
+<http://example.org/990066391760203331#Item852-27>
+        a          bf:Item ;
+        bf:heldBy  <http://id.loc.gov/vocabulary/organizations/43ACC_ONB> ;
+        bf:itemOf  <http://example.org/990066391760203331#Instance> .
+
+<http://id.loc.gov/vocabulary/organizations/43ACC_ONB>
+        a       bf:Agent .
+
+<http://example.org/990066391760203331#Item852-26>
+        a          bf:Item ;
+        bf:heldBy  <http://id.loc.gov/vocabulary/organizations/43ACC_UBW> ;
+        bf:itemOf  <http://example.org/990066391760203331#Instance> .
+
+<http://id.loc.gov/vocabulary/issuance/mono>
+        a       bf:Issuance .
+
+<http://example.org/990066391760203331#Item852-25>
+        a          bf:Item ;
+        bf:heldBy  <http://id.loc.gov/vocabulary/organizations/43ACC_WUW> ;
+        bf:itemOf  <http://example.org/990066391760203331#Instance> .

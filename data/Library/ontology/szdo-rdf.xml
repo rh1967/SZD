@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF xmlns="https://gams.uni-graz.at/o:szd.ontology#" xmlns:cidoc-crm="http://www.cidoc-crm.org/cidoc-crm/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:ric="http://purl.org/ica/ric" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:wiki="https://www.wikidata.org/wiki/" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xml:base="https://gams.uni-graz.at/o:szd.ontology">
+  <owl:Ontology rdf:about="https://gams.uni-graz.at/o:szd.ontology">
+    <dc:description>Nachlasssystematik des Nachlasses von Stefan Zweig.</dc:description>
+    <dc:identifier>gams/o:szd.ontology</dc:identifier>
+    <dc:publisher>Zentrum für Informationsmodellierung, Universität Graz</dc:publisher>
+    <dc:rights>https://creativecommons.org/licenses/by-nc/4.0</dc:rights>
+    <dc:title>Nachlassontologie Stefan Zweig</dc:title>
+    <rdfs:comment xml:lang="de"> Nachlasssystematik von Stefan Zweig. 5 Hauptkategorien: Creation, Korrospodenzen, Lebenskalendar, Sammlung und Bibliothek. Sowie Definition der
+			Provenienzkriterien, die im Nachlass vorzufinden sind. Literaturarchiv Salzburg </rdfs:comment>
+    <rdfs:label xml:lang="en">Literary Estate Ontology</rdfs:label>
+    <rdfs:label xml:lang="de">Nachlassontologie</rdfs:label>
+    <owl:versionInfo>Version 1.0</owl:versionInfo>
+  </owl:Ontology>
+  <rdfs:Class rdf:about="https://gams.uni-graz.at/o:szd.ontology#Work">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E71_Man-Made_Thing"></rdfs:subClassOf>
+    <rdfs:label xml:lang="de">Werk</rdfs:label>
+    <rdfs:label xml:lang="en">Work</rdfs:label>
+    <rdfs:comment xml:lang="de">Als Werk gelten alle privat oder beruflich verfassten oder geschaffenen Aufzeichnungen, Skizzen, Entwürfe und Ausarbeitungen, seien sie z.B. künstlerischen,
+			wissenschaftlichen, journalistischen und politischen Inhalts, unabhängig von der Form, in der sie überliefert sind und davon, ob sie abgeschlossen oder unvollendet sind.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/wiki/Q386724"></rdfs:seeAlso>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://gams.uni-graz.at/o:szd.ontology#PersonalDocument">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E71_Man-Made_Thing"></rdfs:subClassOf>
+    <rdfs:comment xml:lang="de">Als Lebensdokumente gelten Materialien der beruflichen und privaten Lebensführung des Bestandsbildners. Neben Einzeldokumenten (Lebensdokumenten) zählen zu dieser
+			Gruppe auch Konvolute (private Sachakten), die der Bestandsbildner angelegt hat. </rdfs:comment>
+    <rdfs:label xml:lang="en">Personal document</rdfs:label>
+    <rdfs:label xml:lang="de">Lebensdokumente</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://gams.uni-graz.at/o:szd.ontology#Correspondence">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E71_Man-Made_Thing"></rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Correspondence</rdfs:label>
+    <rdfs:label xml:lang="de">Korrespondenz</rdfs:label>
+    <rdfs:comment xml:lang="de">Als Werk gelten alle privat oder beruflich verfassten oder geschaffenen Aufzeichnungen, Skizzen, Entwürfe und Ausarbeitungen, seien sie z.B. künstlerischen,
+			wissenschaftlichen, journalistischen und politischen Inhalts, unabhängig von der Form, in der sie überliefert sind und davon, ob sie abgeschlossen oder unvollendet sind.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://gams.uni-graz.at/o:szd.ontology#Autograph">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E71_Man-Made_Thing"></rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Autograph</rdfs:label>
+    <rdfs:label xml:lang="de">Autograph</rdfs:label>    
+<rdfs:comment xml:lang="de">Ein Autograph in einer Autographensammlung.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://gams.uni-graz.at/o:szd.ontology#Book">
+    <rdfs:subClassOf rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E71_Man-Made_Thing"></rdfs:subClassOf>
+    <rdfs:comment xml:lang="de">Ein Buch in einer Bibliothek (Sammlung).</rdfs:comment>
+    <rdfs:label xml:lang="en">Book</rdfs:label>
+    <rdfs:label xml:lang="de">Buch</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/wiki/Q571"></rdfs:seeAlso>
+  </rdfs:Class>
+  <rdf:Property rdf:about="https://gams.uni-graz.at/o:szd.ontology#provenanceCriteria">
+    <rdfs:domain rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Book"></rdfs:domain>
+    <rdfs:range rdf:resource="https://gams.uni-graz.at/o:szd.glossar#Provenienzkriterien"></rdfs:range>
+    <rdfs:comment xml:lang="de">Aufgrund eines oder mehrer Provenienzkriterien  kann ein Buch der Bibliothek Stefan Zweigs zugeordnet werden.</rdfs:comment>
+    <rdfs:label xml:lang="de">hat Provenienzkriterium</rdfs:label>
+    <rdfs:label xml:lang="en">has provenance criteria</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://gams.uni-graz.at/o:szd.ontology#originalSignatur">
+    <rdfs:domain rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Book"></rdfs:domain>
+    <rdfs:range rdf:resource="https://gams.uni-graz.at/o:szd.glossar#Originalsignaturen"></rdfs:range>
+    <rdfs:comment xml:lang="de">Aufgrund einer Originalsignatur (Provenienzkriterien) kann ein Buch der Bibliothek Stefan Zweigs zugeordnet werden.</rdfs:comment>
+    <rdfs:label xml:lang="de">hat Originalsignatur</rdfs:label>
+    <rdfs:label xml:lang="en">has original signature</rdfs:label>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://gams.uni-graz.at/o:szd.ontology#BiographicalEvent">
+    <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E5_Event"></rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Biographical Event</rdfs:label>
+    <rdfs:label xml:lang="de">Lebensereignis</rdfs:label>
+    <rdfs:comment xml:lang="de">Ein Ereignis im Leben des Nachlassbildners</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://purl.org/ica/ric#RiC-R-hasPart">
+    <owl:inverseOf rdf:resource="http://purl.org/ica/ric#RiC-R-isPartOf"></owl:inverseOf>
+    <rdfs:domain rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:domain>
+    <rdfs:range rdf:resource="http://purl.org/ica/ric#RiC-E2-RecordComponent"></rdfs:range>
+    <rdfs:comment xml:lang="de">Person, die ein Nachwort verfasst</rdfs:comment>
+    <rdfs:label xml:lang="en">has part</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/ica/ric#RiC-R-hasMember">
+    <owl:inverseOf rdf:resource="http://purl.org/ica/ric#RiC-R-isMemberOf"></owl:inverseOf>
+    <rdfs:domain rdf:resource="http://purl.org/ica/ric#RiC-E3-RecordSet"></rdfs:domain>
+    <rdfs:range rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:range>
+    <rdfs:comment xml:lang="en">Relations RiC-R135, RiC-R141, RiC-R258</rdfs:comment>
+    <rdfs:label xml:lang="en">has member</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://gams.uni-graz.at/o:szd.ontology#digitizedObject">
+    <rdfs:domain rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"></rdfs:range>
+    <rdfs:comment xml:lang="de">URI zum Digitalisat</rdfs:comment>
+    <rdfs:label xml:lang="de">hat Digitalisat</rdfs:label>
+    <rdfs:label xml:lang="en">has digitazied Object</rdfs:label>
+    <skos:example>gams.uni-graz.at/o:szd.6826</skos:example>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://gams.uni-graz.at/o:szd.ontology#hatSchreibstoff">
+    <rdfs:domain rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"></rdfs:range>
+    <rdfs:comment xml:lang="de">Das Material bzw. Medium mit dem geschrieben wurde.</rdfs:comment>
+    <rdfs:label xml:lang="de">hat Schreibstoff</rdfs:label>
+    <rdfs:label xml:lang="en">has writing material</rdfs:label>
+    <skos:example>violette Tinte, Bleistift</skos:example>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/ica/ric#RiC-P-languageInformation">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E1-Record"></rdf:Description>
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E3-RecordSet"></rdf:Description>
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E2-RecordComponent"></rdf:Description>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"></rdfs:range>
+    <rdfs:comment xml:lang="de">Sprache kommt in irgendeiner Form vor.</rdfs:comment>
+    <rdfs:label xml:lang="de">hat Sprache</rdfs:label>
+    <rdfs:label xml:lang="en">has language Information</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://gams.uni-graz.at/o:szd.ontology#hatBeschreibstoff">
+    <rdfs:domain rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"></rdfs:range>
+    <rdfs:comment xml:lang="de">Das Material bzw. Medium auf das geschrieben wurde.</rdfs:comment>
+    <rdfs:label xml:lang="de">hat Beschreibstoff</rdfs:label>
+    <rdfs:label xml:lang="en">has writing surface</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://gams.uni-graz.at/o:szd.ontology#hatSchreiberhand">
+    <rdfs:domain rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:domain>
+    <rdfs:range rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Person"></rdfs:range>
+    <rdfs:comment xml:lang="de">person kommt als Schreiber in einerm Record vor.</rdfs:comment>
+    <rdfs:label xml:lang="de">hat Schreiberhand</rdfs:label>
+    <rdfs:label xml:lang="en">has writer</rdfs:label>
+    <skos:example>gams.uni-graz.at/o:szd.personen#SZDPER.1560</skos:example>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/ica/ric#RiC-R-wasAuthoredBy">
+    <rdfs:domain>
+      <rdfs:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E1-Record"></rdf:Description>
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E2-RecordComponent"></rdf:Description>
+        </owl:unionOf>
+      </rdfs:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Agent"></rdfs:range>
+    <rdfs:comment xml:lang="de">Urheber und Verfasser eines Texte</rdfs:comment>
+    <rdfs:label xml:lang="en">was authored by</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/wiki/Q5"></rdfs:seeAlso>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://gams.uni-graz.at/o:szd.ontology#wasTranslatedBy">
+    <rdfs:domain rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:domain>
+    <rdfs:range rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Agent"></rdfs:range>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/wiki/Q333634"></rdfs:seeAlso>
+    <rdfs:label xml:lang="en">translation from</rdfs:label>
+    <rdfs:label xml:lang="de">Übersetzung von</rdfs:label>
+    <rdfs:comment xml:lang="de">Person, die Text von einer Ausgangssprache in eine Zielsprache übersetzt.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://gams.uni-graz.at/o:szd.ontology#AfterwordWrittenBy">
+    <rdfs:domain rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:domain>
+    <rdfs:range rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Agent"></rdfs:range>
+    <rdfs:comment xml:lang="de">Person, die ein Nachwort verfasst</rdfs:comment>
+    <rdfs:label xml:lang="de">Nachwort verfasst von</rdfs:label>
+    <rdfs:label xml:lang="en">afterword written by </rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://gams.uni-graz.at/o:szd.ontology#ForewordWrittenBy">
+    <rdfs:domain rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:domain>
+    <rdfs:range rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Agent"></rdfs:range>
+    <rdfs:comment xml:lang="de">Person, die ein Vorwort verfasst</rdfs:comment>
+    <rdfs:label xml:lang="de">Vorwort verfasst von</rdfs:label>
+    <rdfs:label xml:lang="en">foreword written by</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://gams.uni-graz.at/o:szd.ontology#wasComposedBy">
+    <rdfs:domain rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:domain>
+    <rdfs:range rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Agent"></rdfs:range>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/wiki/Q36834"></rdfs:seeAlso>
+    <rdfs:label xml:lang="en">composed by</rdfs:label>
+    <rdfs:label xml:lang="de">komponiert von</rdfs:label>
+  </rdf:Property>
+  <rdfs:Class rdf:about="https://gams.uni-graz.at/o:szd.ontology#Agent">
+    <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"></rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://purl.org/ica/ric#RiC-E4-Agent"></rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"></rdfs:subClassOf>
+    <rdfs:label xml:lang="en">Agent</rdfs:label>
+    <rdfs:label xml:lang="de">Akteur</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://gams.uni-graz.at/o:szd.ontology#Person">
+    <rdfs:subClassOf rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Agent"></rdfs:subClassOf>
+    <rdfs:seeAlso rdf:resource="http://d-nb.info/standards/elementset/gnd#Person"></rdfs:seeAlso>
+    <rdfs:label xml:lang="en">Person</rdfs:label>
+    <rdfs:label xml:lang="de">Person</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://gams.uni-graz.at/o:szd.ontology#Organisation">
+    <rdfs:subClassOf rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Agent"></rdfs:subClassOf>
+    <rdfs:seeAlso rdf:resource="http://d-nb.info/standards/elementset/gnd#Person"></rdfs:seeAlso>
+    <rdfs:label xml:lang="en">Organisation</rdfs:label>
+    <rdfs:label xml:lang="de">Organisation</rdfs:label>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="https://gams.uni-graz.at/o:szd.ontology#Issue">
+    <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"></rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A project-specific commented selection of records  on a issue.</rdfs:comment>
+    <rdfs:label xml:lang="en">Issue</rdfs:label>
+    <rdfs:label xml:lang="de">Thema</rdfs:label>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://purl.org/ica/ric#RiC-P-physicalOrLogicalExtent">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E1-Record"></rdf:Description>
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E3-RecordSet"></rdf:Description>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"></rdfs:range>
+    <rdfs:comment xml:lang="en">Property for RiC-P15, RiC-P30</rdfs:comment>
+    <rdfs:label xml:lang="en">physical or logical extent</rdfs:label>
+    <skos:definition xml:lang="en">For RiC-P15: Number of physical units and/or physical dimensions of Record carriers or, in the case of digital media carriers, the size of storage space
+			occupied.</skos:definition>
+    <skos:definition xml:lang="en">For RiC-P30: 40 pages; 5 folios; 25 m2; 1 USB stick; 3GB</skos:definition>
+    <skos:definition xml:lang="en">For RiC-P30: Number of physical units and/or physical dimensions of Record Set carriers or, in the case of digital media carriers, the size of storage space
+			occupied.</skos:definition>
+    <skos:example>For RiC-P15: 1 page; 5 folios; 17 x 34.5 cm; 1 USB stick; 3GB</skos:example>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://purl.org/ica/ric#RiC-R-isAssociatedWith">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"></rdf:type>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E1-Record"></rdf:Description>
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E11-DocumentaryForm"></rdf:Description>
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E12-Date"></rdf:Description>
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E13-Place"></rdf:Description>
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E14-ConceptThing"></rdf:Description>
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E2-RecordComponent"></rdf:Description>
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E3-RecordSet"></rdf:Description>
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E4-Agent"></rdf:Description>
+          <rdf:Description rdf:about="https://gams.uni-graz.at/o:szd.ontology#BiographicalEvent"></rdf:Description>
+          <rdf:Description rdf:about="https://gams.uni-graz.at/o:szd.ontology#Issue"></rdf:Description>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E1-Record"></rdf:Description>
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E11-DocumentaryForm"></rdf:Description>
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E12-Date"></rdf:Description>
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E13-Place"></rdf:Description>
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E14-ConceptThing"></rdf:Description>
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E2-RecordComponent"></rdf:Description>
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E3-RecordSet"></rdf:Description>
+          <rdf:Description rdf:about="http://purl.org/ica/ric#RiC-E4-Agent"></rdf:Description>
+          <rdf:Description rdf:about="https://gams.uni-graz.at/o:szd.ontology#BiographicalEvent"></rdf:Description>
+          <rdf:Description rdf:about="https://gams.uni-graz.at/o:szd.ontology#Issue"></rdf:Description>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:label xml:lang="en">is associated with</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://purl.org/ica/ric#RiC-R-wasAssociatedWith"></rdfs:seeAlso>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://gams.uni-graz.at/o:szd.ontology#wasEditedBy">
+    <rdfs:domain rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:domain>
+    <rdfs:range rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Agent"></rdfs:range>
+    <rdfs:comment xml:lang="de">Person, die schriftstellerische, publizistische oder wissenschaftliche Texte oder Werke von Autoren und Künstlern zur Publikation vorbereitet.</rdfs:comment>
+    <rdfs:label xml:lang="en">edited by</rdfs:label>
+    <rdfs:label xml:lang="de">herausgeben von</rdfs:label>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/wiki/Q1607826"></rdfs:seeAlso>
+    <rdfs:seeAlso rdf:resource="http://d-nb.info/standards/elementset/gnd#editor"></rdfs:seeAlso>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://gams.uni-graz.at/o:szd.ontology#hasIllustrationsFrom">
+    <rdfs:domain rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:domain>
+    <rdfs:range rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Agent"></rdfs:range>
+    <rdfs:comment xml:lang="de">Person, die Druckerzeugnisse bebildert</rdfs:comment>
+    <rdfs:label xml:lang="de">hat Illustrationen von</rdfs:label>
+    <rdfs:label xml:lang="en">has Illustrations From</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://d-nb.info/standards/elementset/gnd#illustratorOrIlluminator"></rdfs:seeAlso>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/wiki/Q644687"></rdfs:seeAlso>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://www.wikidata.org/wiki/Property:P227">
+    <rdfs:domain rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Agent"></rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"></rdfs:range>
+    <rdfs:label xml:lang="en">has GND Identifier</rdfs:label>
+    <skos:example>http://d-nb.info/gnd/118637479</skos:example>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://www.wikidata.org/wiki/Property:P214">
+    <rdfs:domain rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Agent"></rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"></rdfs:range>
+    <rdfs:label xml:lang="en">has VIAF Identifier</rdfs:label>
+    <skos:example>https://viaf.org/viaf/19685936</skos:example>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://www.wikidata.org/wiki/Property:P569">
+    <rdfs:domain rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Person"></rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"></rdfs:range>
+    <rdfs:label xml:lang="en">date of Birth</rdfs:label>
+    <rdfs:label xml:lang="de">hat Geburstdatum</rdfs:label>
+    <skos:example>1881-11-28</skos:example>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://www.wikidata.org/wiki/Property:P570">
+    <rdfs:domain rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Person"></rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"></rdfs:range>
+    <rdfs:label xml:lang="en">date of Death</rdfs:label>
+    <rdfs:label xml:lang="de">hat Sterbedatum</rdfs:label>
+    <skos:example>1942-02-23</skos:example>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://www.wikidata.org/wiki/Property:P734">
+    <rdfs:domain rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Person"></rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"></rdfs:range>
+    <rdfs:label xml:lang="en">has surname</rdfs:label>
+    <rdfs:label xml:lang="de">hat Vorname</rdfs:label>
+    <skos:example>Stefan</skos:example>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://www.wikidata.org/wiki/Property:P735">
+    <rdfs:domain rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Person"></rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"></rdfs:range>
+    <rdfs:label xml:lang="en">has given Name</rdfs:label>
+    <rdfs:label xml:lang="de">hat Nachname</rdfs:label>
+    <skos:example>Zweig</skos:example>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://www.wikidata.org/wiki/Property:P2561">
+    <rdfs:domain rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Agent"></rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"></rdfs:range>
+    <rdfs:label xml:lang="en">has name</rdfs:label>
+    <rdfs:label xml:lang="de">hat Name</rdfs:label>
+    <rdfs:comment xml:lang="de">hat einen Namen unter dem eine person bekannt ist.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Name the subject is known by.</rdfs:comment>
+    <skos:example>Stefzi</skos:example>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/knows">
+    <rdfs:label xml:lang="en">knows</rdfs:label>
+    <rdfs:label xml:lang="de">kennt</rdfs:label>
+    <rdfs:comment xml:lang="de">Eine person kennt eine andere Person.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A person known by this person (indicating some level of reciprocated interaction between the parties)</rdfs:comment>
+    <rdfs:domain rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Person"></rdfs:domain>
+    <rdfs:range rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Person"></rdfs:range>
+    <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"></rdfs:isDefinedBy>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/page">
+    <rdfs:label xml:lang="en">page</rdfs:label>
+    <rdfs:label xml:lang="de">page</rdfs:label>
+    <rdfs:comment xml:lang="de">Eine Webseite oder Dokument, das mit der Person in Beziehung steht.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A page or document about this thing.</rdfs:comment>
+    <rdfs:domain rdf:resource="https://gams.uni-graz.at/o:szd.ontology#Agent"></rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"></rdfs:range>
+    <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"></rdfs:isDefinedBy>
+    <skos:example>https://de.wikipedia.org/wiki/Stefan_Zweig</skos:example>
+    <skos:example>https://www.uni-salzburg.at</skos:example>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://gams.uni-graz.at/o:szd.ontology#provenance">
+    <rdfs:domain rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"></rdfs:range>
+    <rdfs:comment xml:lang="de">beschreibt die Provenienz eines Records</rdfs:comment>
+    <rdfs:label xml:lang="de">hat Provenienz</rdfs:label>
+    <rdfs:label xml:lang="en">has provenance</rdfs:label>
+    <skos:example>The Jewish National Library, Jerusalem, Signatur: Arc. Ms. Var. 305 / 93</skos:example>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://gams.uni-graz.at/o:szd.ontology#acquisition">
+    <rdfs:domain rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"></rdfs:range>
+    <rdfs:comment xml:lang="de">beschreibt den Erwerb eines Records</rdfs:comment>
+    <rdfs:label xml:lang="de">hat Erwerb</rdfs:label>
+    <rdfs:label xml:lang="en">acquisition</rdfs:label>
+    <skos:example>1911, Antiquariat Charavay, Paris</skos:example>
+  </rdf:Property>
+  <rdf:Property rdf:about="https://gams.uni-graz.at/o:szd.ontology#origin">
+    <rdfs:domain rdf:resource="http://purl.org/ica/ric#RiC-E1-Record"></rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"></rdfs:range>
+    <rdfs:comment xml:lang="de">beschreibt den Ursprung eines Records.</rdfs:comment>
+    <rdfs:label xml:lang="de">hat ursprung</rdfs:label>
+    <rdfs:label xml:lang="en">origin</rdfs:label>
+    <skos:example>Karteikarte aus der Sammlung Zweig (Privatsammlung Schweiz). Hinterberger XX, Nr. 590a</skos:example>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://purl.org/ica/ric#RiC-E1-Record">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ica/ric"></rdfs:isDefinedBy>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://purl.org/ica/ric#RiC-E2-RecordComponent">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ica/ric"></rdfs:isDefinedBy>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://purl.org/ica/ric#RiC-E3-RecordSet">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ica/ric"></rdfs:isDefinedBy>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://purl.org/ica/ric#RiC-E4-Agent">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ica/ric"></rdfs:isDefinedBy>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://purl.org/ica/ric#RiC-E11-DocumentaryForm">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ica/ric"></rdfs:isDefinedBy>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://purl.org/ica/ric#RiC-E12-Date">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ica/ric"></rdfs:isDefinedBy>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://purl.org/ica/ric#RiC-E13-Place">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ica/ric"></rdfs:isDefinedBy>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://purl.org/ica/ric#RiC-E14-ConceptThing">
+    <rdfs:isDefinedBy rdf:resource="http://purl.org/ica/ric"></rdfs:isDefinedBy>
+  </rdfs:Class>
+</rdf:RDF>
+

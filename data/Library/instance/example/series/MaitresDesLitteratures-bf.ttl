@@ -1,0 +1,136 @@
+
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bflc:  <http://id.loc.gov/ontologies/bflc/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://id.loc.gov/vocabulary/issuance/serl>
+    a       bf:Issuance .
+
+<http://id.loc.gov/vocabulary/languages/ger>
+    a       bf:Language .
+
+<http://id.loc.gov/vocabulary/marcgt/ser>
+    a           bf:GenreForm ;
+    rdfs:label  "monographic series" .
+
+<http://id.loc.gov/vocabulary/descriptionConventions/rakwb>
+    a       bf:DescriptionConventions .
+
+<http://id.loc.gov/vocabulary/countries/fr%23>
+    a       bf:Place .
+
+<http://example.org/990066391650203331#Instance>
+    a                              bf:Instance ;
+    rdfs:label                     "Maîtres des littératures" ;
+    bf:firstIssue                  "1.1929 " ;
+    bf:genreForm                   <http://id.loc.gov/vocabulary/marcgt/ser> ;
+    bf:identifiedBy                [ a          bf:Local ;
+                                     rdf:value  "AC06711755"
+                                   ] ;
+    bf:identifiedBy                [ a          bf:Local ;
+                                     rdf:value  "OBVAC06711755" ;
+                                     bf:source  [ a           bf:Source ;
+                                                  rdfs:label  "DE-599"
+                                                ]
+                                   ] ;
+    bf:identifiedBy                [ a          bf:Local ;
+                                     rdf:value  "AC06711755" ;
+                                     bf:source  [ a           bf:Source ;
+                                                  rdfs:label  "AT-OBV"
+                                                ]
+                                   ] ;
+    bf:identifiedBy                [ a          bf:Local ;
+                                     rdf:value  "006639165ACC01" ;
+                                     bf:source  [ a           bf:Source ;
+                                                  rdfs:label  "Aleph"
+                                                ]
+                                   ] ;
+    bf:identifiedBy                [ a          bf:Local ;
+                                     rdf:value  "ZDB-neu" ;
+                                     bf:source  [ a           bf:Source ;
+                                                  rdfs:label  "DE-600"
+                                                ]
+                                   ] ;
+    bf:instanceOf                  <http://example.org/990066391650203331#Work> ;
+    bf:issuance                    <http://id.loc.gov/vocabulary/issuance/serl> ;
+    bf:lastIssue                   " 20.1935 nachgewiesen" ;
+    bf:place                       [ a          bf:Place ;
+                                     bf:code    "XA-FR" ;
+                                     bf:source  [ a           bf:Source ;
+                                                  rdfs:label  "ISO 3166"
+                                                ]
+                                   ] ;
+    bf:provisionActivity           [ a          bf:Publication , bf:ProvisionActivity ;
+                                     bf:agent   [ a           bf:Agent ;
+                                                  rdfs:label  "Rieder"
+                                                ] ;
+                                     bf:date    "1929-1935" ;
+                                     bf:place   [ a           bf:Place ;
+                                                  rdfs:label  "Paris"
+                                                ] ;
+                                     bf:status  [ a           bf:Status ;
+                                                  rdfs:label  "current"
+                                                ]
+                                   ] ;
+    bf:provisionActivity           [ a         bf:Publication , bf:ProvisionActivity ;
+                                     bf:date   "1929/1935"^^<http://id.loc.gov/datatypes/edtf> ;
+                                     bf:place  <http://id.loc.gov/vocabulary/countries/fr%23>
+                                   ] ;
+    bf:provisionActivityStatement  "Paris; Rieder; 1929-1935" ;
+    bf:title                       [ a                  bf:Title ;
+                                     rdfs:label         "Maîtres des littératures" ;
+                                     bflc:titleSortKey  "Maîtres des littératures" ;
+                                     bf:mainTitle       "Maîtres des littératures"
+                                   ] .
+
+<http://example.org/990066391650203331#Work>
+    a                 bf:Text , bf:Work ;
+    rdfs:label        "Maîtres des littératures" ;
+    bf:adminMetadata  [ a                          bf:AdminMetadata ;
+                        bflc:encodingLevel         [ a        bflc:EncodingLevel ;
+                                                     bf:code  "f"
+                                                   ] ;
+                        bf:changeDate              "2017-11-14T18:20:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                        bf:creationDate            "2008-04-23"^^<http://www.w3.org/2001/XMLSchema#date> ;
+                        bf:descriptionConventions  <http://id.loc.gov/vocabulary/descriptionConventions/rakwb> ;
+                        bf:descriptionConventions  [ a        bf:DescriptionConventions ;
+                                                     bf:code  "isbd"
+                                                   ] ;
+                        bf:descriptionLanguage     <http://id.loc.gov/vocabulary/languages/ger> ;
+                        bf:descriptionModifier     [ a           bf:Agent ;
+                                                     rdfs:label  "UBW"
+                                                   ] ;
+                        bf:generationProcess       [ a           bf:GenerationProcess ;
+                                                     rdfs:label  "DLC marc2bibframe2 v1.4.0-SNAPSHOT: 2020-12-10T18:03:04.062+01:00"
+                                                   ] ;
+                        bf:identifiedBy            [ a          bf:Local ;
+                                                     rdf:value  "990066391650203331"
+                                                   ] ;
+                        bf:identifiedBy            [ a          bf:Local ;
+                                                     rdf:value  "ZDB-neu" ;
+                                                     bf:source  [ a           bf:Source ;
+                                                                  rdfs:label  "DE-600"
+                                                                ]
+                                                   ] ;
+                        bf:source                  [ a        bf:Source ;
+                                                     bf:code  "AT-OBV"
+                                                   ] ;
+                        bf:source                  [ a           bf:Agent , bf:Source ;
+                                                     rdfs:label  "UBW"
+                                                   ] ;
+                        bf:status                  [ a        bf:Status ;
+                                                     bf:code  "n"
+                                                   ]
+                      ] ;
+    bf:hasInstance    <http://example.org/990066391650203331#Instance> ;
+    bf:language       <http://id.loc.gov/vocabulary/languages/%23%23%23> ;
+    bf:title          [ a                  bf:Title ;
+                        rdfs:label         "Maîtres des littératures" ;
+                        bflc:titleSortKey  "Maîtres des littératures" ;
+                        bf:mainTitle       "Maîtres des littératures"
+                      ] .
+
+<http://id.loc.gov/vocabulary/languages/%23%23%23>
+    a       bf:Language .

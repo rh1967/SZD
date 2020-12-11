@@ -1,0 +1,498 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wdrs: <http://www.w3.org/2007/05/powder-s#> .
+@prefix gndo: <http://d-nb.info/standards/elementset/gnd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix wikibase: <http://wikiba.se/ontology#Statement> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix schema: <http://schema.org/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix bflc: <http://id.loc.gov/ontologies/bflc/> .
+
+@prefix gams:  <https://gams.uni-graz.at/o:gams-ontology#> .
+@prefix szd:   <https://gams.uni-graz.at/o:szd.ontology#> .
+@prefix t:     <http://www.tei-c.org/ns/1.0> .
+@prefix skos:  <https://gams.uni-graz.at/skos/scheme/o:oth/#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix szdg:  <https://gams.uni-graz.at/o:szd.glossar#> .
+
+@prefix szdi: <http://dhplus.sbg.ac.at/szd/instance/> .
+@prefix dhpluso: <https://dhplus.sbg.ac.at/ontology#> .
+@prefix dhplusi: <http://dhplus.sbg.ac.at/szd/instance/> .
+
+#dhplus
+##standard model
+<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004>
+    a   <https://dhplus.sbg.ac.at/ontology#E71_Human-Made_Thing> ;
+
+    <https://dhplus.sbg.ac.at/ontology#creator> "NN"^^xsd:string ;
+    <https://dhplus.sbg.ac.at/ontology#dateCreated> "0001-01-01T00:00:00"^^xsd:dateTime ;
+    <https://dhplus.sbg.ac.at/ontology#dateModified> "0001-01-01T00:00:00"^^xsd:dateTime ;
+    <https://dhplus.sbg.ac.at/ontology#datePublished> "0001-01-01T00:00:00"^^xsd:dateTime ;
+
+    <https://dhplus.sbg.ac.at/ontology#source>
+        <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Bf-LoC> ,
+        <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/projSpec> ;
+
+    <https://dhplus.sbg.ac.at/ontology#P1_is_identified_by> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work> ;
+.
+#work
+<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work>
+    a <https://dhplus.sbg.ac.at/ontology#Work> ;
+
+    ##author, title - short
+    rdfs:label "Proust recherches sur la création intellectuelle"^^xsd:string ;
+
+    ##adminMetadata
+    #MARC 001. 003, 016
+    <https://dhplus.sbg.ac.at/ontology#adminMetadata> [
+        a <https://dhplus.sbg.ac.at/ontology#AdminMetadata> ;
+
+        #date and time of latest transaction
+        #MARC 005
+        <https://dhplus.sbg.ac.at/ontology#changeDate> "2017-11-14T18:20:00"^^xsd:dateTime ;
+        #date of creation
+        #MARC 008, character 0-5
+        <https://dhplus.sbg.ac.at/ontology#creationDate> "2008-04-23"^^xsd:date ;
+    ] ;
+
+    ##contribution
+    #MARC 100, 500, 700
+    <https://dhplus.sbg.ac.at/ontology#contribution> [
+        a <https://dhplus.sbg.ac.at/ontology#Contribution>;
+
+        #relation to dhplus:Person dataset
+        <https://dhplus.sbg.ac.at/ontology#agent> <http://dhplus.sbg.ac.at/instance/828f9830-91b1-11ea-bb37-0242ac130002> ;
+
+        #Relator term
+        #author
+        <https://dhplus.sbg.ac.at/ontology#role> <http://id.loc.gov/vocabulary/relators/aut> ;
+    ] ;
+
+    ##language
+    #MARC 041
+    <https://dhplus.sbg.ac.at/ontology#language> <http://id.loc.gov/vocabulary/languages/fre> ;
+
+    ##title
+    #MARC 245
+    <https://dhplus.sbg.ac.at/ontology#title> [
+        a <https://dhplus.sbg.ac.at/ontology#Title> ;
+        #MARC summary of $afgknps
+        rdfs:label "Proust recherches sur la création intellectuelle"^^xsd:string ;
+
+        #MARC $a
+        <https://dhplus.sbg.ac.at/ontology#mainTitle> "Proust"^^xsd:string ;
+        #MARC $b
+        <https://dhplus.sbg.ac.at/ontology#subtitle> "recherches sur la création intellectuelle"^^xsd:string ;
+    ] ;
+
+    <https://dhplus.sbg.ac.at/ontology#hasInstance> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Instance> ;
+.
+
+##series-work
+#MARC 8xx
+<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work8xx>
+    a <https://dhplus.sbg.ac.at/ontology#Work>, <https://dhplus.sbg.ac.at/ontology#Text> ;
+    #series added entry-uniform title
+    #MARC 8xx
+    <https://dhplus.sbg.ac.at/ontology#identifiedBy> [
+        a <https://dhplus.sbg.ac.at/ontology#Identifier> ;
+        rdf:value "AC06711755"^^xsd:string ;
+        <https://dhplus.sbg.ac.at/ontology#source> [
+            a <https://dhplus.sbg.ac.at/ontology#Source> ;
+            rdfs:label "AT-OBV"^^xsd:string ;
+        ]
+    ] ;
+.
+
+#instance
+<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Instance>
+    a   <https://dhplus.sbg.ac.at/ontology#Instance> ;
+
+    #adminMetadata
+    #Marc 035 used in ALMA
+    <https://dhplus.sbg.ac.at/ontology#identifiedBy> [
+        #number
+        a <https://dhplus.sbg.ac.at/ontology#Local> ;
+        rdf:value "AC06711768"^^xsd:string ;
+        <https://dhplus.sbg.ac.at/ontology#source> [
+            #ISIL e.g. AT-OBV
+            a <https://dhplus.sbg.ac.at/ontology#Source> ;
+            rdfs:label "AT-OBV"^^xsd:string ;
+        ] ;
+    ] ;
+
+    #title
+    #MARC 245
+    <https://dhplus.sbg.ac.at/ontology#title> [
+         a <https://dhplus.sbg.ac.at/ontology#Title> ;
+     #MARC summary of $afgknps
+         rdfs:label "Proust recherches sur la création intellectuelle"^^xsd:string ;
+     #MARC $a
+         <https://dhplus.sbg.ac.at/ontology#mainTitle> "Proust"^^xsd:string ;
+     #MARC $b
+         <https://dhplus.sbg.ac.at/ontology#subtitle> "recherches sur la création intellectuelle"^^xsd:string ;
+     ] ;
+
+    #Production, Publication, Distribution, Manufacture, and Copyright Notice
+    #MARC 264
+    <https://dhplus.sbg.ac.at/ontology#provisionActivity> [
+        a <https://dhplus.sbg.ac.at/ontology#ProvisionActivity>, <https://dhplus.sbg.ac.at/ontology#Publication> ;
+        #MARC $a
+        <https://dhplus.sbg.ac.at/ontology#place> [
+            #place of production
+            a <https://dhplus.sbg.ac.at/ontology#Place> ;
+            rdfs:label "Paris"^^xsd:string ;
+        ] ;
+        #MARC $b
+        <https://dhplus.sbg.ac.at/ontology#agent> [
+            #publisher
+            a <https://dhplus.sbg.ac.at/ontology#Agent> ;
+            rdfs:label "Rieder"^^xsd:string ;
+        ] ;
+        #MARC $c
+        #date of production
+        <https://dhplus.sbg.ac.at/ontology#date> "1930"^^xsd:date ;
+    ] ;
+    #MARC 264 summary of $abc
+    <https://dhplus.sbg.ac.at/ontology#provisionActivityStatement> "Paris; Rieder; 1930"^^xsd:string ;
+    #statement of responsibility
+    #MARC 245 $c
+    <https://dhplus.sbg.ac.at/ontology#responsibilityStatement> "par Pierre Abraham"^^xsd:string ;
+    #extent
+    #MARC 300 $a
+    <https://dhplus.sbg.ac.at/ontology#extent> [
+        a dhpluso:Extent ;
+        rdfs:label  "91, LX S."
+    ] ;
+    #issuance
+    <https://dhplus.sbg.ac.at/ontology#issuance> <http://id.loc.gov/vocabulary/issuance/mono> ;
+
+    #in series
+    #MARC 8xx
+    <https://dhplus.sbg.ac.at/ontology#hasSeries> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Instance8xx> ;
+
+    <https://dhplus.sbg.ac.at/ontology#instanceOf> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work> ;
+.
+##series-instance
+#MARC 8xx
+<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Instance8xx>
+    a <https://dhplus.sbg.ac.at/ontology#Instance> ;
+    #series statement
+    #MARC $a
+    rdfs:label "Maîtres des littératures"^^xsd:string ;
+    #volume/sequential designation
+    #MARC $v
+    <https://dhplus.sbg.ac.at/ontology#seriesEnumeration> "7"^^xsd:string ;
+    #MARC summary of $av
+    <https://dhplus.sbg.ac.at/ontology#seriesStatement> "Maîtres des littératures 7"^^xsd:string ;
+
+    <https://dhplus.sbg.ac.at/ontology#instanceOf> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work8xx> ;
+.
+
+#item
+
+##no standard model
+<http://dhplus.sbg.ac.at/szd/instance/68318440-3b1a-11eb-adc1-0242ac120002/Resource>
+    a <https://dhplus.sbg.ac.at/ontology#Resource> ;
+    <https://dhplus.sbg.ac.at/ontology#extent> [
+        a dhpluso:Extent ;
+        dhpluso:binding  "Brochur"@de , "wrappers"@en ;
+        dhpluso:format   "8°" ;
+        dhpluso:extentadd "illustriert"@de, "illustrated"@en ;
+        dhpluso:text     "91, LX Seiten : illustriert.  8°"@de , "91, LX pages : illustrated.  8°"@en
+    ] ;
+    <https://dhplus.sbg.ac.at/ontology#location> <http://dhplus.sbg.ac.at/szd/instance/4abf89eb-cafa-4972-b5da-934e9d2ca4d9> ;
+    <https://dhplus.sbg.ac.at/ontology#location> [
+      a dhpluso:Location ;
+      dhpluso:name "Erben Stefan Zweigs"@de, "Heirs of Stefan Zweig"@en ;
+    ] ;
+    <https://dhplus.sbg.ac.at/ontology#provenanceCharacteristic> [
+        a dhpluso:ProvenanceCharacteristic ;
+        dhpluso:presentationinscription [
+            rdfs:label "Widmung"@de, "Presentation Inscription"@en ;
+            rdf:value "Pour Stefan Zweig, | en sympathie et en admiration | Pierre Abraham."@de,
+                       "Pour Stefan Zweig, | en sympathie et en admiration | Pierre Abraham."@en ;
+        ] ;
+        dhpluso:marginalia [
+            rdfs:label "Marginalie"@de, "Marginalia"@en ;
+            rdf:value "Anmerkungen von Stefan Zweig in Bleistift"@de, "Pencil annotations by Stefan Zweig"@en ;
+        ] ;
+        dhpluso:marker [
+            rdfs:label "Merkzeichen"@de, "Underlining / Marker"@en ;
+            rdf:value "Unterstreichungen in Bleistift"@de, "Pencil underlinings"@en ;
+        ] ;
+        dhpluso:originalShelfmark [
+            a dhpluso:OriginalShelfmark ;
+            dhpluso:singleletter  "B 3" ;
+        ] ;
+    ] ;
+    <https://dhplus.sbg.ac.at/ontology#relationToPerson> <http://dhplus.sbg.ac.at/szd/instance/0726e800-3b30-11eb-adc1-0242ac120002> ;
+    <https://dhplus.sbg.ac.at/ontology#signature> "A.I.01" ;
+.
+
+
+#################################################################
+#MarcToBf-LoC
+<http://example.org/990066391760203331#Work>
+    a                  bf:Text , bf:Work ;
+    rdfs:label         "Proust recherches sur la création intellectuelle" ;
+    bf:adminMetadata   [ a                          bf:AdminMetadata ;
+                         bflc:encodingLevel         [ a        bflc:EncodingLevel ;
+                                                      bf:code  "f"
+                                                    ] ;
+                         bf:changeDate              "2017-11-14T18:20:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                         bf:creationDate            "2008-04-23"^^<http://www.w3.org/2001/XMLSchema#date> ;
+                         bf:descriptionConventions  <http://id.loc.gov/vocabulary/descriptionConventions/rakwb> ;
+                         bf:descriptionConventions  [ a        bf:DescriptionConventions ;
+                                                      bf:code  "isbd"
+                                                    ] ;
+                         bf:descriptionLanguage     <http://id.loc.gov/vocabulary/languages/ger> ;
+                         bf:descriptionModifier     [ a           bf:Agent ;
+                                                      rdfs:label  "UBW"
+                                                    ] ;
+                         bf:generationProcess       [ a           bf:GenerationProcess ;
+                                                      rdfs:label  "DLC marc2bibframe2 v1.4.0-SNAPSHOT: 2020-12-10T16:13:54.901+01:00"
+                                                    ] ;
+                         bf:identifiedBy            [ a          bf:Local ;
+                                                      rdf:value  "990066391760203331"
+                                                    ] ;
+                         bf:source                  [ a        bf:Source ;
+                                                      bf:code  "AT-OBV"
+                                                    ] ;
+                         bf:source                  [ a           bf:Agent , bf:Source ;
+                                                      rdfs:label  "UBW"
+                                                    ] ;
+                         bf:source                  [ a           bf:Agent , bf:Source ;
+                                                      rdfs:label  "BAY"
+                                                    ] ;
+                         bf:status                  [ a        bf:Status ;
+                                                      bf:code  "n"
+                                                    ]
+                       ] ;
+    bf:classification  [ a                         bf:Classification ;
+                         bf:classificationPortion  "IH 74361" ;
+                         bf:source                 [ a           bf:Source ;
+                                                     rdfs:label  "rvk"
+                                                   ]
+                       ] ;
+    bf:contribution    [ a         bflc:PrimaryContribution , bf:Contribution ;
+                         bf:agent  <http://example.org/990066391760203331#Agent100-17> ;
+                         bf:role   <http://id.loc.gov/vocabulary/relators/aut>
+                       ] ;
+    bf:hasInstance     <http://example.org/990066391760203331#Instance> ;
+    bf:language        <http://id.loc.gov/vocabulary/languages/fre> ;
+    bf:language        [ a                bf:Language ;
+                         bf:identifiedBy  [ a          bf:Identifier ;
+                                            rdf:value  <http://id.loc.gov/vocabulary/languages/fre> ;
+                                            bf:source  <http://id.loc.gov/vocabulary/languages>
+                                          ]
+                       ] ;
+    bf:title           [ a                  bf:Title ;
+                         rdfs:label         "Proust recherches sur la création intellectuelle" ;
+                         bflc:titleSortKey  "Proust recherches sur la création intellectuelle" ;
+                         bf:mainTitle       "Proust" ;
+                         bf:subtitle        "recherches sur la création intellectuelle"
+                       ] .
+
+<http://example.org/990066391760203331#Work830-24>
+    a                bf:Work ;
+    bf:identifiedBy  [ a          bf:Identifier ;
+                       rdf:value  "AC06711755" ;
+                       bf:source  [ a           bf:Source ;
+                                    rdfs:label  "AT-OBV"
+                                  ]
+                     ] ;
+    bf:title         [ a                    bf:Title ;
+                       bflc:title30MarcKey  "830 0$w(AT-OBV)AC06711755$v7$9O:1"
+                     ] .
+
+<http://example.org/990066391760203331#Instance>
+    a                              bf:Instance ;
+    rdfs:label                     "Proust recherches sur la création intellectuelle" ;
+    bf:extent                      [ a           bf:Extent ;
+                                     rdfs:label  "91, LX S."
+                                   ] ;
+    bf:hasItem                     <http://example.org/990066391760203331#Item852-26> , <http://example.org/990066391760203331#Item852-27> , <http://example.org/990066391760203331#Item852-25> ;
+    bf:hasSeries                   [ a                     bf:Instance ;
+                                     rdfs:label            "Maîtres des littératures" ;
+                                     bf:instanceOf         <http://example.org/990066391760203331#Work830-24> ;
+                                     bf:seriesEnumeration  "7" ;
+                                     bf:seriesStatement    "Maîtres des littératures 7"
+                                   ] ;
+    bf:identifiedBy                [ a          bf:Local ;
+                                     rdf:value  "OBVAC06711768" ;
+                                     bf:source  [ a           bf:Source ;
+                                                  rdfs:label  "DE-599"
+                                                ]
+                                   ] ;
+    bf:identifiedBy                [ a          bf:Local ;
+                                     rdf:value  "050547429" ;
+                                     bf:source  [ a           bf:Source ;
+                                                  rdfs:label  "DE-604"
+                                                ]
+                                   ] ;
+    bf:identifiedBy                [ a          bf:Local ;
+                                     rdf:value  "AC06711768"
+                                   ] ;
+    bf:identifiedBy                [ a          bf:Local ;
+                                     rdf:value  "006639176ACC01" ;
+                                     bf:source  [ a           bf:Source ;
+                                                  rdfs:label  "Aleph"
+                                                ]
+                                   ] ;
+    bf:identifiedBy                [ a          bf:Local ;
+                                     rdf:value  "AC06711768" ;
+                                     bf:source  [ a           bf:Source ;
+                                                  rdfs:label  "AT-OBV"
+                                                ]
+                                   ] ;
+    bf:instanceOf                  <http://example.org/990066391760203331#Work> ;
+    bf:issuance                    <http://id.loc.gov/vocabulary/issuance/mono> ;
+    bf:note                        [ a            bf:Note ;
+                                     rdfs:label   "Ill." ;
+                                     bf:noteType  "Physical details"
+                                   ] ;
+    bf:place                       [ a          bf:Place ;
+                                     bf:code    "XA-FR" ;
+                                     bf:source  [ a           bf:Source ;
+                                                  rdfs:label  "ISO 3166"
+                                                ]
+                                   ] ;
+    bf:provisionActivity           [ a         bf:Publication , bf:ProvisionActivity ;
+                                     bf:agent  [ a           bf:Agent ;
+                                                 rdfs:label  "Rieder"
+                                               ] ;
+                                     bf:date   "1930" ;
+                                     bf:place  [ a           bf:Place ;
+                                                 rdfs:label  "Paris"
+                                               ]
+                                   ] ;
+    bf:provisionActivity           [ a         bf:Publication , bf:ProvisionActivity ;
+                                     bf:date   "1930/####"^^<http://id.loc.gov/datatypes/edtf> ;
+                                     bf:place  <http://id.loc.gov/vocabulary/countries/fr%23>
+                                   ] ;
+    bf:provisionActivityStatement  "Paris; Rieder; 1930" ;
+    bf:responsibilityStatement     "par Pierre Abraham" ;
+    bf:title                       [ a                  bf:Title ;
+                                     rdfs:label         "Proust recherches sur la création intellectuelle" ;
+                                     bflc:titleSortKey  "Proust recherches sur la création intellectuelle" ;
+                                     bf:mainTitle       "Proust" ;
+                                     bf:subtitle        "recherches sur la création intellectuelle"
+                                   ] .
+
+<http://example.org/990066391760203331#Item852-27>
+    a          bf:Item ;
+    bf:heldBy  <http://id.loc.gov/vocabulary/organizations/43ACC_ONB> ;
+    bf:itemOf  <http://example.org/990066391760203331#Instance> .
+<http://example.org/990066391760203331#Item852-26>
+    a          bf:Item ;
+    bf:heldBy  <http://id.loc.gov/vocabulary/organizations/43ACC_UBW> ;
+    bf:itemOf  <http://example.org/990066391760203331#Instance> .
+<http://example.org/990066391760203331#Item852-25>
+    a          bf:Item ;
+    bf:heldBy  <http://id.loc.gov/vocabulary/organizations/43ACC_WUW> ;
+    bf:itemOf  <http://example.org/990066391760203331#Instance> .
+
+<http://example.org/990066391760203331#Agent100-17>
+    a                    bf:Person , bf:Agent ;
+    rdfs:label           "Abraham, Pierre 1892-1974" ;
+    bflc:name00MarcKey   "1001 $aAbraham, Pierre$d1892-1974$0(DE-588)12490310X$4aut" ;
+    bflc:name00MatchKey  "Abraham, Pierre 1892-1974" ;
+    bflc:primaryContributorName00MatchKey
+                         "Abraham, Pierre 1892-1974" ;
+    bf:identifiedBy      [ a          bf:Identifier ;
+                           rdf:value  "12490310X" ;
+                           bf:source  [ a           bf:Source ;
+                                        rdfs:label  "DE-588"
+                                      ]
+                         ] .
+
+#################################################################
+#projspec
+<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/projSpec>
+    a       <https://dhplus.sbg.ac.at/ontology#ProjectSpecific> ;
+    dhpluso:hasPart [
+        a szd:Book ;
+        gams:isMemberOfCollection     <https://gams.uni-graz.at/o:szd.bibliothek> ;
+        gams:textualContent           "  Proust : recherches sur la création intellectuelle    Pierre  Abraham      Rieder  1930  Paris    Maîtres des littératures 7      London  Erben Stefan Zweigs  A.I.01   B 3             91, LX  8°        illustriert  illustrated       Widmung  Presentation Inscription  Pour Stefan Zweig, | en sympathie et en admiration | Pierre Abraham.  Pour Stefan Zweig, | en sympathie et en admiration | Pierre Abraham.     Marginalie  Marginalia  Anmerkungen von Stefan Zweig in Bleistift  Pencil annotations by Stefan Zweig     Merkzeichen  Underlining / Marker  Unterstreichungen in Bleistift  Pencil underlinings       Broschur  wrappers            Marcel  Proust      SZDBIB.365" ;
+        szd:author                    <https://gams.uni-graz.at/o:szd.personen#SZDPER.1> ;
+        szd:extent                    <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.365EX> ;
+        szd:language                  <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        szd:location                  <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.18> ;
+        szd:provenance                ""@de ;
+        szd:provenanceCharacteristic  <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.365PS> ;
+        szd:publicationStmt           <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.365PUS> ;
+        szd:relationToPerson          <https://gams.uni-graz.at/o:szd.personen#SZDPER.1127> ;
+        szd:series                    "Maîtres des littératures 7" ;
+        szd:signature                 "A.I.01" ;
+        szd:title                     "Proust : recherches sur la création intellectuelle"@en , "Proust : recherches sur la création intellectuelle"@de
+    ]
+.
+<https://gams.uni-graz.at/o:szd.personen#SZDPER.1>
+    a                          szd:Agent ;
+    foaf:page                  <https://de.wikipedia.org/wiki/Pierre_Abraham> ;
+    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.personen> ;
+    gams:textualContent        " Abraham  Pierre  Bloch Pierre Abraham http://www.wikidata.org/entity/Q3383636 SZDPER.1" ;
+    szd:birth                  "1892" ;
+    szd:death                  "1974" ;
+    szd:forename               "Pierre" ;
+    szd:gnd                    <http://d-nb.info/gnd/12490310X> ;
+    szd:surname                "Abraham" ;
+    szd:wikidata               <http://www.wikidata.org/entity/Q3383636>
+.
+<https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.365EX>
+    a            szd:Extent ;
+    szd:binding  "wrappers"@en ;
+    szd:format   "8°" ;
+    szd:page     "91, LX" ;
+    szd:text     "91, LX Seiten : illustriert.  8°"@de , "91, LX pages : illustrated.  8°"@en
+.
+<https://gams.uni-graz.at/o:szd.standorte#SZDSTA.18>
+    a                          szd:Location ;
+    wgs84_pos:lat              "51.50853" ;
+    wgs84_pos:long             "-0.12574" ;
+    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+    gams:textualContent        "Erben Stefan Zweigs Heirs of Stefan Zweig England London  51.50853, -0.12574  SZDSTA.18" ;
+    szd:name                   "Heirs of Stefan Zweig"@en ;
+    szd:settlement             "London"
+.
+<https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.365PS>
+    a                            szd:ProvenanceCharacteristic ;
+    szd:glossar                  szdg:Marker , szdg:SingleLetter , szdg:Marginalia , szdg:PresentationInscription ;
+    szd:marginalia               "todo EN/DE" ;
+    szd:marker                   "todo EN/DE" ;
+    szd:originalShelfmark        <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.365OS> ;
+    szd:presentationinscription  "todo EN/DE" ;
+    szd:text                     "Presentation Inscription,Marginalia,Underlining / Marker, Original Shelfmark"@en , "Widmung, Marginalie, Merkzeichen, Originalsignatur"@de
+.
+<https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.365PUS>
+    a              szd:PublicationStmt ;
+    szd:pubDate    "1930" ;
+    szd:pubPlace   "Paris" ;
+    szd:publisher  "Rieder" ;
+    szd:text       "Paris : Rieder, 1930"
+.
+<https://gams.uni-graz.at/o:szd.personen#SZDPER.1127>
+    a                          szd:Agent ;
+    foaf:page                  <https://de.wikipedia.org/wiki/Marcel_Proust> ;
+    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.personen> ;
+    gams:textualContent        " Proust  Marcel  Proust Valentin Louis Georges Eugène Marcel Prust Marcelʹ Prust Marselʹ Prust M. Пруст М. Пруст Марсель http://www.wikidata.org/entity/Q7199 SZDPER.1127" ;
+    szd:birth                  "1871-07-10" ;
+    szd:death                  "1922-11-18" ;
+    szd:forename               "Marcel" ;
+    szd:gnd                    <http://d-nb.info/gnd/118596799> ;
+    szd:surname                "Proust" ;
+    szd:wikidata               <http://www.wikidata.org/entity/Q7199> .
+<https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.365OS>
+    a                 szd:OriginalShelfmark ;
+    szd:singleletter  "B 3" .
+

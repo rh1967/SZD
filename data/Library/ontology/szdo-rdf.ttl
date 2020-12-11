@@ -1,0 +1,329 @@
+
+@prefix :      <https://gams.uni-graz.at/o:szd.ontology#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cidoc-crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix wiki:  <https://www.wikidata.org/wiki/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ric:   <http://purl.org/ica/ric> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://xmlns.com/foaf/0.1/knows>
+    a                 rdf:Property ;
+    rdfs:comment      "A person known by this person (indicating some level of reciprocated interaction between the parties)"@en , "Eine person kennt eine andere Person."@de ;
+    rdfs:domain       :Person ;
+    rdfs:isDefinedBy  <http://xmlns.com/foaf/0.1/> ;
+    rdfs:label        "kennt"@de , "knows"@en ;
+    rdfs:range        :Person .
+
+:Autograph  a            rdfs:Class ;
+            rdfs:comment     "Ein Autograph in einer Autographensammlung."@de ;
+            rdfs:label       "Autograph"@de , "Autograph"@en ;
+            rdfs:subClassOf  cidoc-crm:E71_Man-Made_Thing , <http://purl.org/ica/ric#RiC-E1-Record> .
+
+:origin  a            rdf:Property ;
+         rdfs:comment  "beschreibt den Ursprung eines Records."@de ;
+         rdfs:domain   <http://purl.org/ica/ric#RiC-E1-Record> ;
+         rdfs:label    "origin"@en , "hat ursprung"@de ;
+         rdfs:range    rdfs:Literal ;
+         skos:example  "Karteikarte aus der Sammlung Zweig (Privatsammlung Schweiz). Hinterberger XX, Nr. 590a" .
+
+:Correspondence  a       rdfs:Class ;
+                 rdfs:comment     "Als Werk gelten alle privat oder beruflich verfassten oder geschaffenen Aufzeichnungen, Skizzen, Entwürfe und Ausarbeitungen, seien sie z.B. künstlerischen,\n\t\t\twissenschaftlichen, journalistischen und politischen Inhalts, unabhängig von der Form, in der sie überliefert sind und davon, ob sie abgeschlossen oder unvollendet sind."@de ;
+                 rdfs:label       "Korrespondenz"@de , "Correspondence"@en ;
+                 rdfs:subClassOf  cidoc-crm:E71_Man-Made_Thing , <http://purl.org/ica/ric#RiC-E1-Record> .
+
+<http://xmlns.com/foaf/0.1/page>
+    a                 rdf:Property ;
+    rdfs:comment      "A page or document about this thing."@en , "Eine Webseite oder Dokument, das mit der Person in Beziehung steht."@de ;
+    rdfs:domain       :Agent ;
+    rdfs:isDefinedBy  <http://xmlns.com/foaf/0.1/> ;
+    rdfs:label        "page"@de , "page"@en ;
+    rdfs:range        xsd:anyURI ;
+    skos:example      "https://www.uni-salzburg.at" , "https://de.wikipedia.org/wiki/Stefan_Zweig" .
+
+:digitizedObject  a   rdf:Property ;
+                  rdfs:comment  "URI zum Digitalisat"@de ;
+                  rdfs:domain   <http://purl.org/ica/ric#RiC-E1-Record> ;
+                  rdfs:label    "has digitazied Object"@en , "hat Digitalisat"@de ;
+                  rdfs:range    xsd:anyURI ;
+                  skos:example  "gams.uni-graz.at/o:szd.6826" .
+
+:wasEditedBy  a       rdf:Property ;
+              rdfs:comment  "Person, die schriftstellerische, publizistische oder wissenschaftliche Texte oder Werke von Autoren und Künstlern zur Publikation vorbereitet."@de ;
+              rdfs:domain   <http://purl.org/ica/ric#RiC-E1-Record> ;
+              rdfs:label    "herausgeben von"@de , "edited by"@en ;
+              rdfs:range    :Agent ;
+              rdfs:seeAlso  <http://d-nb.info/standards/elementset/gnd#editor> , wiki:Q1607826 .
+
+:AfterwordWrittenBy  a  rdf:Property ;
+                     rdfs:comment  "Person, die ein Nachwort verfasst"@de ;
+                     rdfs:domain   <http://purl.org/ica/ric#RiC-E1-Record> ;
+                     rdfs:label    "afterword written by "@en , "Nachwort verfasst von"@de ;
+                     rdfs:range    :Agent .
+
+:Work   a                rdfs:Class ;
+        rdfs:comment     "Als Werk gelten alle privat oder beruflich verfassten oder geschaffenen Aufzeichnungen, Skizzen, Entwürfe und Ausarbeitungen, seien sie z.B. künstlerischen,\n\t\t\twissenschaftlichen, journalistischen und politischen Inhalts, unabhängig von der Form, in der sie überliefert sind und davon, ob sie abgeschlossen oder unvollendet sind."@de ;
+        rdfs:label       "Work"@en , "Werk"@de ;
+        rdfs:seeAlso     wiki:Q386724 ;
+        rdfs:subClassOf  cidoc-crm:E71_Man-Made_Thing , <http://purl.org/ica/ric#RiC-E1-Record> .
+
+:hasIllustrationsFrom
+    a             rdf:Property ;
+    rdfs:comment  "Person, die Druckerzeugnisse bebildert"@de ;
+    rdfs:domain   <http://purl.org/ica/ric#RiC-E1-Record> ;
+    rdfs:label    "has Illustrations From"@en , "hat Illustrationen von"@de ;
+    rdfs:range    :Agent ;
+    rdfs:seeAlso  wiki:Q644687 , <http://d-nb.info/standards/elementset/gnd#illustratorOrIlluminator> .
+
+:BiographicalEvent  a    rdfs:Class ;
+                    rdfs:comment     "Ein Ereignis im Leben des Nachlassbildners"@de ;
+                    rdfs:label       "Lebensereignis"@de , "Biographical Event"@en ;
+                    rdfs:subClassOf  cidoc-crm:E5_Event .
+
+:hatSchreiberhand  a  rdf:Property ;
+                   rdfs:comment  "person kommt als Schreiber in einerm Record vor."@de ;
+                   rdfs:domain   <http://purl.org/ica/ric#RiC-E1-Record> ;
+                   rdfs:label    "has writer"@en , "hat Schreiberhand"@de ;
+                   rdfs:range    :Person ;
+                   skos:example  "gams.uni-graz.at/o:szd.personen#SZDPER.1560" .
+
+:PersonalDocument  a     rdfs:Class ;
+                   rdfs:comment     "Als Lebensdokumente gelten Materialien der beruflichen und privaten Lebensführung des Bestandsbildners. Neben Einzeldokumenten (Lebensdokumenten) zählen zu dieser\n\t\t\tGruppe auch Konvolute (private Sachakten), die der Bestandsbildner angelegt hat. "@de ;
+                   rdfs:label       "Lebensdokumente"@de , "Personal document"@en ;
+                   rdfs:subClassOf  cidoc-crm:E71_Man-Made_Thing , <http://purl.org/ica/ric#RiC-E1-Record> .
+
+<https://www.wikidata.org/wiki/Property:P735>
+    a             rdf:Property ;
+    rdfs:domain   :Person ;
+    rdfs:label    "hat Nachname"@de , "has given Name"@en ;
+    rdfs:range    rdfs:Literal ;
+    skos:example  "Zweig" .
+
+<http://purl.org/ica/ric#RiC-E14-ConceptThing>
+    a                 rdfs:Class ;
+    rdfs:isDefinedBy  ric: .
+
+<https://www.wikidata.org/wiki/Property:P569>
+    a             rdf:Property ;
+    rdfs:domain   :Person ;
+    rdfs:label    "hat Geburstdatum"@de , "date of Birth"@en ;
+    rdfs:range    rdfs:Literal ;
+    skos:example  "1881-11-28" .
+
+<http://purl.org/ica/ric#RiC-E12-Date>
+    a                 rdfs:Class ;
+    rdfs:isDefinedBy  ric: .
+
+<http://purl.org/ica/ric#RiC-P-physicalOrLogicalExtent>
+    a                rdf:Property ;
+    rdfs:comment     "Property for RiC-P15, RiC-P30"@en ;
+    rdfs:domain      [ a            owl:Class ;
+                       owl:unionOf  ( <http://purl.org/ica/ric#RiC-E1-Record> <http://purl.org/ica/ric#RiC-E3-RecordSet> )
+                     ] ;
+    rdfs:label       "physical or logical extent"@en ;
+    rdfs:range       rdfs:Literal ;
+    skos:definition  "For RiC-P30: Number of physical units and/or physical dimensions of Record Set carriers or, in the case of digital media carriers, the size of storage space\n\t\t\toccupied."@en , "For RiC-P30: 40 pages; 5 folios; 25 m2; 1 USB stick; 3GB"@en , "For RiC-P15: Number of physical units and/or physical dimensions of Record carriers or, in the case of digital media carriers, the size of storage space\n\t\t\toccupied."@en ;
+    skos:example     "For RiC-P15: 1 page; 5 folios; 17 x 34.5 cm; 1 USB stick; 3GB" .
+
+<https://gams.uni-graz.at/o:szd.ontology>
+    a                owl:Ontology ;
+    rdfs:comment     " Nachlasssystematik von Stefan Zweig. 5 Hauptkategorien: Creation, Korrospodenzen, Lebenskalendar, Sammlung und Bibliothek. Sowie Definition der\n\t\t\tProvenienzkriterien, die im Nachlass vorzufinden sind. Literaturarchiv Salzburg "@de ;
+    rdfs:label       "Literary Estate Ontology"@en , "Nachlassontologie"@de ;
+    dc:description   "Nachlasssystematik des Nachlasses von Stefan Zweig." ;
+    dc:identifier    "gams/o:szd.ontology" ;
+    dc:publisher     "Zentrum für Informationsmodellierung, Universität Graz" ;
+    dc:rights        "https://creativecommons.org/licenses/by-nc/4.0" ;
+    dc:title         "Nachlassontologie Stefan Zweig" ;
+    owl:versionInfo  "Version 1.0" .
+
+<https://www.wikidata.org/wiki/Property:P570>
+    a             rdf:Property ;
+    rdfs:domain   :Person ;
+    rdfs:label    "hat Sterbedatum"@de , "date of Death"@en ;
+    rdfs:range    rdfs:Literal ;
+    skos:example  "1942-02-23" .
+
+:originalSignatur  a  rdf:Property ;
+                   rdfs:comment  "Aufgrund einer Originalsignatur (Provenienzkriterien) kann ein Buch der Bibliothek Stefan Zweigs zugeordnet werden."@de ;
+                   rdfs:domain   :Book ;
+                   rdfs:label    "has original signature"@en , "hat Originalsignatur"@de ;
+                   rdfs:range    <https://gams.uni-graz.at/o:szd.glossar#Originalsignaturen> .
+
+<http://purl.org/ica/ric#RiC-R-isAssociatedWith>
+    a             owl:SymmetricProperty , rdf:Property ;
+    rdfs:domain   [ a            owl:Class ;
+                    owl:unionOf  ( <http://purl.org/ica/ric#RiC-E1-Record> <http://purl.org/ica/ric#RiC-E11-DocumentaryForm> <http://purl.org/ica/ric#RiC-E12-Date> <http://purl.org/ica/ric#RiC-E13-Place> <http://purl.org/ica/ric#RiC-E14-ConceptThing> <http://purl.org/ica/ric#RiC-E2-RecordComponent> <http://purl.org/ica/ric#RiC-E3-RecordSet> <http://purl.org/ica/ric#RiC-E4-Agent> :BiographicalEvent :Issue )
+                  ] ;
+    rdfs:label    "is associated with"@en ;
+    rdfs:range    [ a            owl:Class ;
+                    owl:unionOf  ( <http://purl.org/ica/ric#RiC-E1-Record> <http://purl.org/ica/ric#RiC-E11-DocumentaryForm> <http://purl.org/ica/ric#RiC-E12-Date> <http://purl.org/ica/ric#RiC-E13-Place> <http://purl.org/ica/ric#RiC-E14-ConceptThing> <http://purl.org/ica/ric#RiC-E2-RecordComponent> <http://purl.org/ica/ric#RiC-E3-RecordSet> <http://purl.org/ica/ric#RiC-E4-Agent> :BiographicalEvent :Issue )
+                  ] ;
+    rdfs:seeAlso  <http://purl.org/ica/ric#RiC-R-wasAssociatedWith> .
+
+<https://www.wikidata.org/wiki/Property:P734>
+    a             rdf:Property ;
+    rdfs:domain   :Person ;
+    rdfs:label    "hat Vorname"@de , "has surname"@en ;
+    rdfs:range    rdfs:Literal ;
+    skos:example  "Stefan" .
+
+<http://purl.org/ica/ric#RiC-E1-Record>
+    a                 rdfs:Class ;
+    rdfs:isDefinedBy  ric: .
+
+<http://purl.org/ica/ric#RiC-E3-RecordSet>
+    a                 rdfs:Class ;
+    rdfs:isDefinedBy  ric: .
+
+<http://purl.org/ica/ric#RiC-E2-RecordComponent>
+    a                 rdfs:Class ;
+    rdfs:isDefinedBy  ric: .
+
+<http://purl.org/ica/ric#RiC-R-wasAuthoredBy>
+    a             rdf:Property ;
+    rdfs:comment  "Urheber und Verfasser eines Texte"@de ;
+    rdfs:domain   [ a            rdfs:Class ;
+                    owl:unionOf  ( <http://purl.org/ica/ric#RiC-E1-Record> <http://purl.org/ica/ric#RiC-E2-RecordComponent> )
+                  ] ;
+    rdfs:label    "was authored by"@en ;
+    rdfs:range    :Agent ;
+    rdfs:seeAlso  wiki:Q5 .
+
+<https://www.wikidata.org/wiki/Property:P214>
+    a             rdf:Property ;
+    rdfs:domain   :Agent ;
+    rdfs:label    "has VIAF Identifier"@en ;
+    rdfs:range    xsd:anyURI ;
+    skos:example  "https://viaf.org/viaf/19685936" .
+
+<http://purl.org/ica/ric#RiC-E11-DocumentaryForm>
+    a                 rdfs:Class ;
+    rdfs:isDefinedBy  ric: .
+
+:Person  a               rdfs:Class ;
+         rdfs:label       "Person"@de , "Person"@en ;
+         rdfs:seeAlso     <http://d-nb.info/standards/elementset/gnd#Person> ;
+         rdfs:subClassOf  :Agent .
+
+<https://www.wikidata.org/wiki/Property:P227>
+    a             rdf:Property ;
+    rdfs:domain   :Agent ;
+    rdfs:label    "has GND Identifier"@en ;
+    rdfs:range    xsd:anyURI ;
+    skos:example  "http://d-nb.info/gnd/118637479" .
+
+:Book   a                rdfs:Class ;
+        rdfs:comment     "Ein Buch in einer Bibliothek (Sammlung)."@de ;
+        rdfs:label       "Buch"@de , "Book"@en ;
+        rdfs:seeAlso     wiki:Q571 ;
+        rdfs:subClassOf  cidoc-crm:E71_Man-Made_Thing , <http://purl.org/ica/ric#RiC-E1-Record> .
+
+:wasTranslatedBy  a   rdf:Property ;
+                  rdfs:comment  "Person, die Text von einer Ausgangssprache in eine Zielsprache übersetzt."@de ;
+                  rdfs:domain   <http://purl.org/ica/ric#RiC-E1-Record> ;
+                  rdfs:label    "Übersetzung von"@de , "translation from"@en ;
+                  rdfs:range    :Agent ;
+                  rdfs:seeAlso  wiki:Q333634 .
+
+<https://www.wikidata.org/wiki/Property:P2561>
+    a             rdf:Property ;
+    rdfs:comment  "Name the subject is known by."@en , "hat einen Namen unter dem eine person bekannt ist."@de ;
+    rdfs:domain   :Agent ;
+    rdfs:label    "hat Name"@de , "has name"@en ;
+    rdfs:range    rdfs:Literal ;
+    skos:example  "Stefzi" .
+
+<http://purl.org/ica/ric#RiC-R-hasMember>
+    a              rdf:Property ;
+    rdfs:comment   "Relations RiC-R135, RiC-R141, RiC-R258"@en ;
+    rdfs:domain    <http://purl.org/ica/ric#RiC-E3-RecordSet> ;
+    rdfs:label     "has member"@en ;
+    rdfs:range     <http://purl.org/ica/ric#RiC-E1-Record> ;
+    owl:inverseOf  <http://purl.org/ica/ric#RiC-R-isMemberOf> .
+
+:hatBeschreibstoff  a  rdf:Property ;
+                    rdfs:comment  "Das Material bzw. Medium auf das geschrieben wurde."@de ;
+                    rdfs:domain   <http://purl.org/ica/ric#RiC-E1-Record> ;
+                    rdfs:label    "has writing surface"@en , "hat Beschreibstoff"@de ;
+                    rdfs:range    rdfs:Literal .
+
+:ForewordWrittenBy  a  rdf:Property ;
+                    rdfs:comment  "Person, die ein Vorwort verfasst"@de ;
+                    rdfs:domain   <http://purl.org/ica/ric#RiC-E1-Record> ;
+                    rdfs:label    "foreword written by"@en , "Vorwort verfasst von"@de ;
+                    rdfs:range    :Agent .
+
+:provenanceCriteria  a  rdf:Property ;
+                     rdfs:comment  "Aufgrund eines oder mehrer Provenienzkriterien  kann ein Buch der Bibliothek Stefan Zweigs zugeordnet werden."@de ;
+                     rdfs:domain   :Book ;
+                     rdfs:label    "has provenance criteria"@en , "hat Provenienzkriterium"@de ;
+                     rdfs:range    <https://gams.uni-graz.at/o:szd.glossar#Provenienzkriterien> .
+
+:hatSchreibstoff  a   rdf:Property ;
+                  rdfs:comment  "Das Material bzw. Medium mit dem geschrieben wurde."@de ;
+                  rdfs:domain   <http://purl.org/ica/ric#RiC-E1-Record> ;
+                  rdfs:label    "has writing material"@en , "hat Schreibstoff"@de ;
+                  rdfs:range    rdfs:Literal ;
+                  skos:example  "violette Tinte, Bleistift" .
+
+<http://purl.org/ica/ric#RiC-E4-Agent>
+    a                 rdfs:Class ;
+    rdfs:isDefinedBy  ric: .
+
+<http://purl.org/ica/ric#RiC-R-hasPart>
+    a              rdf:Property ;
+    rdfs:comment   "Person, die ein Nachwort verfasst"@de ;
+    rdfs:domain    <http://purl.org/ica/ric#RiC-E1-Record> ;
+    rdfs:label     "has part"@en ;
+    rdfs:range     <http://purl.org/ica/ric#RiC-E2-RecordComponent> ;
+    owl:inverseOf  <http://purl.org/ica/ric#RiC-R-isPartOf> .
+
+:Organisation  a         rdfs:Class ;
+               rdfs:label       "Organisation"@de , "Organisation"@en ;
+               rdfs:seeAlso     <http://d-nb.info/standards/elementset/gnd#Person> ;
+               rdfs:subClassOf  :Agent .
+
+:Agent  a                rdfs:Class ;
+        rdfs:label       "Akteur"@de , "Agent"@en ;
+        rdfs:subClassOf  <http://xmlns.com/foaf/0.1/Person> , <http://purl.org/ica/ric#RiC-E4-Agent> , cidoc-crm:E21_Person .
+
+<http://purl.org/ica/ric#RiC-P-languageInformation>
+    a             rdf:Property ;
+    rdfs:comment  "Sprache kommt in irgendeiner Form vor."@de ;
+    rdfs:domain   [ a            owl:Class ;
+                    owl:unionOf  ( <http://purl.org/ica/ric#RiC-E1-Record> <http://purl.org/ica/ric#RiC-E3-RecordSet> <http://purl.org/ica/ric#RiC-E2-RecordComponent> )
+                  ] ;
+    rdfs:label    "has language Information"@en , "hat Sprache"@de ;
+    rdfs:range    rdfs:Literal .
+
+:Issue  a                rdfs:Class ;
+        rdfs:comment     "A project-specific commented selection of records  on a issue."@en ;
+        rdfs:label       "Thema"@de , "Issue"@en ;
+        rdfs:subClassOf  cidoc-crm:E73_Information_Object .
+
+:wasComposedBy  a     rdf:Property ;
+                rdfs:domain   <http://purl.org/ica/ric#RiC-E1-Record> ;
+                rdfs:label    "komponiert von"@de , "composed by"@en ;
+                rdfs:range    :Agent ;
+                rdfs:seeAlso  wiki:Q36834 .
+
+:acquisition  a       rdf:Property ;
+              rdfs:comment  "beschreibt den Erwerb eines Records"@de ;
+              rdfs:domain   <http://purl.org/ica/ric#RiC-E1-Record> ;
+              rdfs:label    "acquisition"@en , "hat Erwerb"@de ;
+              rdfs:range    rdfs:Literal ;
+              skos:example  "1911, Antiquariat Charavay, Paris" .
+
+:provenance  a        rdf:Property ;
+             rdfs:comment  "beschreibt die Provenienz eines Records"@de ;
+             rdfs:domain   <http://purl.org/ica/ric#RiC-E1-Record> ;
+             rdfs:label    "has provenance"@en , "hat Provenienz"@de ;
+             rdfs:range    rdfs:Literal ;
+             skos:example  "The Jewish National Library, Jerusalem, Signatur: Arc. Ms. Var. 305 / 93" .
+
+<http://purl.org/ica/ric#RiC-E13-Place>
+    a                 rdfs:Class ;
+    rdfs:isDefinedBy  ric: .
