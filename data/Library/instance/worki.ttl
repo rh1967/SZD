@@ -1,0 +1,754 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix wdrs: <http://www.w3.org/2007/05/powder-s#> .
+@prefix gndo: <http://d-nb.info/standards/elementset/gnd#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix wikibase: <http://wikiba.se/ontology#Statement> .
+@prefix p: <http://www.wikidata.org/prop/> .
+@prefix pq: <http://www.wikidata.org/prop/qualifier/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix schema: <http://schema.org/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix bflc: <http://id.loc.gov/ontologies/bflc/> .
+
+@prefix gams:  <https://gams.uni-graz.at/o:gams-ontology#> .
+@prefix szd:   <https://gams.uni-graz.at/o:szd.ontology#> .
+@prefix t:     <http://www.tei-c.org/ns/1.0> .
+@prefix skos:  <https://gams.uni-graz.at/skos/scheme/o:oth/#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix szdg:  <https://gams.uni-graz.at/o:szd.glossar#> .
+
+@prefix szdi: <http://dhplus.sbg.ac.at/szd/instance/> .
+@prefix dhpluso: <https://dhplus.sbg.ac.at/ontology#> .
+@prefix dhplusi: <http://dhplus.sbg.ac.at/szd/instance/> .
+
+#dhplus
+<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004>
+    a   <https://dhplus.sbg.ac.at/ontology#E71_Human-Made_Thing> ;
+
+    <https://dhplus.sbg.ac.at/ontology#creator> "NN"^^xsd:string ;
+    <https://dhplus.sbg.ac.at/ontology#dateCreated> "0001-01-01T00:00:00"^^xsd:dateTime ;
+    <https://dhplus.sbg.ac.at/ontology#dateModified> "0001-01-01T00:00:00"^^xsd:dateTime ;
+    <https://dhplus.sbg.ac.at/ontology#datePublished> "0001-01-01T00:00:00"^^xsd:dateTime ;
+
+    <https://dhplus.sbg.ac.at/ontology#source>
+        <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Bf-LoC> ,
+        <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/projSpec> ;
+
+    <https://dhplus.sbg.ac.at/ontology#P1_is_identified_by> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work> ;
+.
+#work
+<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work>
+    a <https://dhplus.sbg.ac.at/ontology#Work> ;
+
+    ##author, title - short
+    rdfs:label "NN"^^xsd:string ;
+
+    ##adminMetadata
+    #MARC 001. 003, 016
+    <https://dhplus.sbg.ac.at/ontology#adminMetadata> [
+        a <https://dhplus.sbg.ac.at/ontology#AdminMetadata> ;
+        #ATTENTION: DNB uses 001 and 016, ALMA uses 035 (under instance)
+        #control number
+        #MARC 001
+        <https://dhplus.sbg.ac.at/ontology#identifiedBy> [
+            a <https://dhplus.sbg.ac.at/ontology#Local> ;
+            rdf:value "NN"^^xsd:string ;
+        ] ;
+        #national bibliographic agency control number
+        #MARC 016
+        <https://dhplus.sbg.ac.at/ontology#identifiedBy> [
+
+            a <https://dhplus.sbg.ac.at/ontology#Local> ;
+            #record control number
+            #Marc 016 $a
+            rdf:value "NN"^^xsd:string ;
+            <https://dhplus.sbg.ac.at/ontology#source> [
+                #source e.g. ISIL
+                #Marc 016 $2
+                a <https://dhplus.sbg.ac.at/ontology#Source> ;
+                rdfs:label "NN"^^xsd:string ;
+            ]
+        ] ;
+        #control number identifier e.g. ISIL
+        #MARC 003
+        <https://dhplus.sbg.ac.at/ontology#source> [
+            a <https://dhplus.sbg.ac.at/ontology#Source> ;
+            <https://dhplus.sbg.ac.at/ontology#code> "NN"^^xsd:string ;
+        ] ;
+        #date and time of latest transaction
+        #MARC 005
+        <https://dhplus.sbg.ac.at/ontology#changeDate> "0001-01-01T00:00:00"^^xsd:dateTime ;
+        #date of creation
+        #MARC 008, character 0-5
+        <https://dhplus.sbg.ac.at/ontology#creationDate> "0001-01-01"^^xsd:date ;
+    ] ;
+
+    ##contribution
+    #MARC 100, 500, 700
+    <https://dhplus.sbg.ac.at/ontology#contribution> [
+        a <https://dhplus.sbg.ac.at/ontology#Contribution>, bflc:PrimaryContribution ;
+        #Main Entry-Personal Name
+        #MARC 100
+        #OR
+        #General Note - Personenname (DNB)
+        #MARC 500
+        #ATTENTION: Record Control Number (GND) in 500 is not converted by LoC
+        #OR
+        #Added Entry-Personal Name
+        #MARC 700
+
+        #relation to dhplus:Person dataset
+        <https://dhplus.sbg.ac.at/ontology#agent> <Person-URI> ;
+
+        #Relator term
+        #MARC $e
+        <https://dhplus.sbg.ac.at/ontology#role> [
+            a <https://dhplus.sbg.ac.at/ontology#Role> ;
+            rdfs:label "NN"^^xsd:string ;
+            bflc:relatorMatchKey "NN"^^xsd:string
+        ] ;
+        #author
+        <https://dhplus.sbg.ac.at/ontology#role> <http://id.loc.gov/vocabulary/relators/aut> ;
+        #contributor
+        <https://dhplus.sbg.ac.at/ontology#role> <http://id.loc.gov/vocabulary/relators/ctb> ;
+        #editor
+        <https://dhplus.sbg.ac.at/ontology#role> <http://id.loc.gov/vocabulary/relators/edt> ;
+    ] ;
+
+    ##language
+    #MARC 041
+    <https://dhplus.sbg.ac.at/ontology#language> <http://id.loc.gov/vocabulary/languages/nnnn> ;
+
+    ##title
+    #MARC 245
+    <https://dhplus.sbg.ac.at/ontology#title> [
+        a <https://dhplus.sbg.ac.at/ontology#Title> ;
+        #MARC summary of $afgknps
+        rdfs:label "NN"^^xsd:string ;
+        #string for sorting
+        bflc:titleSortKey "NN"^^xsd:string ;
+        #MARC $a
+        <https://dhplus.sbg.ac.at/ontology#mainTitle> "NN"^^xsd:string ;
+        #MARC $b
+        <https://dhplus.sbg.ac.at/ontology#subtitle> "NN"^^xsd:string ;
+        #MARC $n
+        <https://dhplus.sbg.ac.at/ontology#partNumber> "NN"^^xsd:string ;
+        #MARC $p
+        <https://dhplus.sbg.ac.at/ontology#partName> "NN"^^xsd:string ;
+    ] ;
+    ##content type
+    #MARC 336 $b
+    dhpluso:content <http://id.loc.gov/vocabulary/contentTypes/nnnn> ;
+    ##host item entry e.g. monography -> series
+    #MARC 773
+    <https://dhplus.sbg.ac.at/ontology#partOf> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work773> ;
+
+    <https://dhplus.sbg.ac.at/ontology#hasInstance> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Instance> ;
+.
+##host item work
+#MARC 773
+<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work773>
+    a <https://dhplus.sbg.ac.at/ontology#Work> ;
+    #host item entry
+    #MARC 773
+        <https://dhplus.sbg.ac.at/ontology#identifiedBy> [
+        #record control number
+        #MARC 773 $w
+        a <https://dhplus.sbg.ac.at/ontology#Identifier> ;
+        #number
+        rdf:value "NN"^^xsd:string ;
+        <https://dhplus.sbg.ac.at/ontology#source> [
+            #ISIL e.g. AT-OBV
+            a <https://dhplus.sbg.ac.at/ontology#Source> ;
+            rdfs:label "NN"^^xsd:string ;
+        ]
+    ] ;
+        <https://dhplus.sbg.ac.at/ontology#hasInstance> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Instance773>
+.
+##series-work
+#MARC 8xx
+<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work8xx>
+    a <https://dhplus.sbg.ac.at/ontology#Work>, <https://dhplus.sbg.ac.at/ontology#Text> ;
+    #series added entry-uniform title
+    #MARC 8xx
+    rdfs:label "NN"^^xsd:string ;
+        <https://dhplus.sbg.ac.at/ontology#title> [
+        a <https://dhplus.sbg.ac.at/ontology#Title> ;
+        #MARC summary of $afgknps
+        rdfs:label "NN"^^xsd:string ;
+        #string for sorting
+        bflc:titleSortKey "NN"^^xsd:string ;
+        #uniform title
+        #MARC $a
+        <https://dhplus.sbg.ac.at/ontology#mainTitle> "NN"^^xsd:string ;
+        bflc:title30MatchKey "NN"^^xsd:string ;
+        bflc:title30MarcKey "NN"^^xsd:string ;
+    ] ;
+        <https://dhplus.sbg.ac.at/ontology#identifiedBy> [
+        a <https://dhplus.sbg.ac.at/ontology#Identifier> ;
+        rdf:value "NN"^^xsd:string ;
+        <https://dhplus.sbg.ac.at/ontology#source> [
+            a <https://dhplus.sbg.ac.at/ontology#Source> ;
+            rdfs:label "NN"^^xsd:string ;
+        ]
+    ] ;
+    #Control subfield
+    #MARC $7
+        <https://dhplus.sbg.ac.at/ontology#issuance> [
+        a <https://dhplus.sbg.ac.at/ontology#Issuance> ;
+        #Bibliographic level
+        #MARC $7, second character e.g. s = series
+        <https://dhplus.sbg.ac.at/ontology#code> "s" ;
+    ] ;
+.
+
+#instance
+<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Instance>
+    a   <https://dhplus.sbg.ac.at/ontology#Instance> ;
+
+    #adminMetadata
+    #Marc 035 used in ALMA
+    <https://dhplus.sbg.ac.at/ontology#identifiedBy> [
+        #number
+        a <https://dhplus.sbg.ac.at/ontology#Local> ;
+        rdf:value "NN"^^xsd:string ;
+    ] ;
+    <https://dhplus.sbg.ac.at/ontology#identifiedBy> [
+        #number
+        a <https://dhplus.sbg.ac.at/ontology#Local> ;
+        rdf:value "NN"^^xsd:string ;
+        <https://dhplus.sbg.ac.at/ontology#source> [
+            #ISIL e.g. AT-OBV
+            a <https://dhplus.sbg.ac.at/ontology#Source> ;
+            rdfs:label "NN"^^xsd:string ;
+        ] ;
+    ] ;
+
+    #title
+    #MARC 245
+    <https://dhplus.sbg.ac.at/ontology#title> [
+         a <https://dhplus.sbg.ac.at/ontology#Title> ;
+     #MARC summary of $afgknps
+         rdfs:label "NN"^^xsd:string ;
+         bflc:titleSortKey "NN"^^xsd:string ;
+     #MARC $a
+         <https://dhplus.sbg.ac.at/ontology#mainTitle> "NN"^^xsd:string ;
+     #MARC $b
+         <https://dhplus.sbg.ac.at/ontology#subtitle> "NN"^^xsd:string ;
+     #MARC $n
+         <https://dhplus.sbg.ac.at/ontology#partNumber> "NN"^^xsd:string ;
+     #MARC $p
+         <https://dhplus.sbg.ac.at/ontology#partName> "NN"^^xsd:string ;
+     ] ;
+
+    #Production, Publication, Distribution, Manufacture, and Copyright Notice
+    #MARC 264
+    <https://dhplus.sbg.ac.at/ontology#provisionActivity> [
+        a <https://dhplus.sbg.ac.at/ontology#ProvisionActivity>, <https://dhplus.sbg.ac.at/ontology#Publication> ;
+        #MARC $a
+        <https://dhplus.sbg.ac.at/ontology#place> [
+            #place of production
+            a <https://dhplus.sbg.ac.at/ontology#Place> ;
+            rdfs:label "NN"^^xsd:string ;
+        ] ;
+        #MARC $b
+        <https://dhplus.sbg.ac.at/ontology#agent> [
+            #publisher
+            a <https://dhplus.sbg.ac.at/ontology#Agent> ;
+            rdfs:label "NN"^^xsd:string ;
+        ] ;
+        #MARC $c
+        #date of production
+        <https://dhplus.sbg.ac.at/ontology#date> "0001"^^xsd:date ;
+    ] ;
+    #MARC 264 summary of $abc
+    <https://dhplus.sbg.ac.at/ontology#provisionActivityStatement> "NN"^^xsd:string ;
+    #statement of responsibility
+    #MARC 245 $c
+    <https://dhplus.sbg.ac.at/ontology#responsibilityStatement> "NN"^^xsd:string ;
+    #edition
+    #MARC 250 $a
+    <https://dhplus.sbg.ac.at/ontology#editionStatement> "NN"^^xsd:string ;
+    #extent
+    #MARC 300 $a
+    <https://dhplus.sbg.ac.at/ontology#extent> [
+        a dhpluso:Extent ;
+        rdfs:label "NN"^^xsd:string ;
+    ] ;
+    #issuance
+    <https://dhplus.sbg.ac.at/ontology#issuance> <http://id.loc.gov/vocabulary/issuance/nnnn> ;
+    #in series
+    #MARC 8xx
+    <https://dhplus.sbg.ac.at/ontology#hasSeries> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Instance8xx> ;
+
+    <https://dhplus.sbg.ac.at/ontology#instanceOf> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work> ;
+    <https://dhplus.sbg.ac.at/ontology#hasItem> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Item> ;
+.
+##host item instance
+#MARC 773
+<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Instance773>
+    a <https://dhplus.sbg.ac.at/ontology#Instance> ;
+    #edition number
+    #MARC 773 $b
+    <https://dhplus.sbg.ac.at/ontology#editionStatement> "NN"^^xsd:string ;
+    #place, publisher, and date of publication (ort, verlag)
+    #MARC 773 $d
+    <https://dhplus.sbg.ac.at/ontology#provisionActivityStatement> "NN"^^xsd:string ;
+    #related parts e.g. pages
+    #MARC 773 $g
+    <https://dhplus.sbg.ac.at/ontology#part> "NN"^^xsd:string ;
+    #series data for related item
+    #MARC 773 $k
+    <https://dhplus.sbg.ac.at/ontology#seriesStatement> "NN"^^xsd:string ;
+    #title
+    #MARC 773 $t
+        <https://dhplus.sbg.ac.at/ontology#title> [
+        a <https://dhplus.sbg.ac.at/ontology#Title> ;
+        rdfs:label "NN"^^xsd:string ;
+    ] ;
+        <https://dhplus.sbg.ac.at/ontology#instanceOf> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work773> ;
+.
+##series-instance
+#MARC 8xx
+<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Instance8xx>
+    a <https://dhplus.sbg.ac.at/ontology#Instance> ;
+    #series statement
+    #MARC $a
+    rdfs:label "NN"^^xsd:string ;
+    #volume/sequential designation
+    #MARC $v
+    <https://dhplus.sbg.ac.at/ontology#seriesEnumeration> "NN"^^xsd:string ;
+    #MARC summary of $av
+    <https://dhplus.sbg.ac.at/ontology#seriesStatement> "NN"^^xsd:string ;
+
+    <https://dhplus.sbg.ac.at/ontology#instanceOf> <http://dhplus.sbg.ac.at/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work8xx> ;
+.
+##additional physical form entry-instance
+#MARC 776
+<http://dhplus.sbg.ac.at/kngoe/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Instance776>
+  a <https://dhplus.sbg.ac.at/ontology#Instance> ;
+  dhpluso:note [
+    a dhpluso:Note ;
+    rdfs:label "NN"^^xsd:string ;
+  ] ;
+  dhpluso:identifiedBy [
+    a dhpluso:Isbn ;
+    rdf:value "NN"^^xsd:string ;
+  ] ;
+  dhpluso:instanceOf <http://dhplus.sbg.ac.at/kngoe/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work>
+.
+
+#item
+<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Item>
+    a   <https://dhplus.sbg.ac.at/ontology#Item> ;
+
+    <https://dhplus.sbg.ac.at/ontology#itemOf> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Instance> ;
+.
+
+#################################################################
+#MarcToBf-LoC
+<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Bf-LoC>
+    a   <https://dhplus.sbg.ac.at/ontology#MarcToBf-LoC> ;
+    <https://dhplus.sbg.ac.at/ontology#hasPart> [
+ #work
+    a <http://id.loc.gov/ontologies/bibframe/Work> ;
+    a <http://id.loc.gov/ontologies/bibframe/Text> ;
+
+    ##author, title - short
+    rdfs:label "NN"^^xsd:string ;
+
+    ##adminMetadata
+    #MARC 001. 003, 016
+    bf:adminMetadata [
+        a bf:AdminMetadata ;
+        #ATTENTION: DNB uses 001 and 016, ALMA uses 035 (under instance)
+        #control number
+        #MARC 001
+        bf:identifiedBy [
+            a bf:Local ;
+            rdf:value "NN"^^xsd:string ;
+        ] ;
+        #national bibliographic agency control number
+        #MARC 016
+        bf:identifiedBy [
+
+            a bf:Local ;
+            #record control number
+            #Marc 016 $a
+            rdf:value "NN"^^xsd:string ;
+            bf:source [
+                #source e.g. ISIL
+                #Marc 016 $2
+                a bf:Source ;
+                rdfs:label "NN"^^xsd:string ;
+            ]
+        ] ;
+        #control number identifier e.g. ISIL
+        #MARC 003
+        bf:source [
+            a bf:Source ;
+            bf:code "NN"^^xsd:string ;
+        ] ;
+        #date and time of latest transaction
+        #MARC 005
+        bf:changeDate "0001-01-01T00:00:00"^^xsd:dateTime ;
+        #date of creation
+        #MARC 008, character 0-5
+        bf:creationDate "0001-01-01"^^xsd:date ;
+    ] ;
+
+    ##contribution
+    #MARC 100, 500, 700
+    bf:contribution [
+        a bf:Contribution, bflc:PrimaryContribution ;
+        #Main Entry-Personal Name
+        #MARC 100
+        #OR
+        #General Note - Personenname (DNB)
+        #MARC 500
+        #ATTENTION: Record Control Number (GND) in 500 is not converted by LoC
+        #OR
+        #Added Entry-Personal Name
+        #MARC 700
+
+        #Authority record control number or standard number
+        #MARC $0
+        bf:agent <https://d-nb.info/gnd/000000> ;
+        #or
+        bf:agent <http://example.org/000000#Agent100-00> ;
+        #Relator term
+        #MARC $e
+        bf:role [
+            a bf:Role ;
+            rdfs:label "NN"^^xsd:string ;
+            bflc:relatorMatchKey "NN"^^xsd:string
+        ] ;
+        #author
+        bf:role <http://id.loc.gov/vocabulary/relators/aut> ;
+        #contributor
+        bf:role <http://id.loc.gov/vocabulary/relators/ctb> ;
+        #editor
+        bf:role <http://id.loc.gov/vocabulary/relators/edt> ;
+    ] ;
+
+    ##title
+    #MARC 245
+    bf:title [
+        a bf:Title ;
+        #MARC summary of $afgknps
+        rdfs:label "NN"^^xsd:string ;
+        #string for sorting
+        bflc:titleSortKey "NN"^^xsd:string ;
+        #MARC $a
+        bf:mainTitle "NN"^^xsd:string ;
+        #MARC $b
+        bf:subtitle "NN"^^xsd:string ;
+        #MARC $n
+        bf:partNumber "NN"^^xsd:string ;
+        #MARC $p
+        bf:partName "NN"^^xsd:string ;
+    ] ;
+
+    ##Constituent Unit e.g. series -> monography
+    #MARC 774
+    #ATTENTION: 774 is not used by DNB or OBVSG
+    bf:hasPart <http://example.org/455751595#Work774> ;
+
+    ##host item entry e.g. monography -> series
+    #MARC 773
+    bf:partOf <http://example.org/455751595#Work773-25> ;
+
+    <http://id.loc.gov/ontologies/bibframe/hasInstance> <http://example.org/000000#Instance> ;
+
+
+    ]
+
+.
+
+#instance
+<http://example.org/000000#Instance>
+    a <http://id.loc.gov/ontologies/bibframe/Instance> ;
+    #adminMetadata
+    #Marc 035 used in ALMA
+    bf:identifiedBy [
+        a bf:Local ;
+        rdf:value "NN"^^xsd:string ;
+    ] ;
+    bf:identifiedBy [
+        a bf:Local ;
+        rdf:value "NN"^^xsd:string ;
+        bf:source [
+            a bf:Source ;
+            rdfs:label "NN"^^xsd:string ;
+        ] ;
+    ] ;
+
+    #title
+    #MARC 245
+    bf:title [
+         a bf:Title ;
+     #MARC summary of $afgknps
+         rdfs:label "NN"^^xsd:string ;
+         bflc:titleSortKey "NN"^^xsd:string ;
+     #MARC $a
+         bf:mainTitle "NN"^^xsd:string ;
+     #MARC $b
+         bf:subtitle "NN"^^xsd:string ;
+     #MARC $n
+         bf:partNumber "NN"^^xsd:string ;
+     #MARC $p
+         bf:partName "NN"^^xsd:string ;
+     ] ;
+
+    #Production, Publication, Distribution, Manufacture, and Copyright Notice
+    #MARC 264
+    bf:provisionActivity [
+        a bf:ProvisionActivity, bf:Publication ;
+        #MARC $a
+        bf:place [
+            #place of production
+            a bf:Place ;
+            rdfs:label "NN"^^xsd:string ;
+        ] ;
+        #MARC $b
+        bf:agent [
+            #publisher
+            a bf:Agent ;
+            rdfs:label "NN"^^xsd:string ;
+        ] ;
+        #MARC $c
+        #date of production
+        bf:date "0001"^^xsd:date ;
+    ] ;
+    #MARC 264 summary of $abc
+    bf:provisionActivityStatement "NN"^^xsd:string ;
+    #statement of responsibility
+    #MARC 245 $c
+    bf:responsibilityStatement "NN"^^xsd:string ;
+    #edition
+    #MARC 250 $a
+    bf:editionStatement "NN"^^xsd:string ;
+    #in series
+    #MARC 8xx
+    bf:hasSeries [
+        #series-instance
+        a bf:Instance ;
+        #series statement
+        #MARC $a
+        rdfs:label "NN"^^xsd:string ;
+        #volume/sequential designation
+        #MARC $v
+        bf:seriesEnumeration "NN"^^xsd:string ;
+        #MARC summary of $av
+        bf:seriesStatement "NN"^^xsd:string ;
+
+        bf:instanceOf <http://example.org/455751595#Work8xx> ;
+    ] ;
+
+    <http://id.loc.gov/ontologies/bibframe/instanceOf> <https://dhplus.sbg.ac.at/ontology#b0-Work> ;
+    <http://id.loc.gov/ontologies/bibframe/hasItem> <http://example.org/990023914800203341#Item856-45> ;
+.
+#item
+<http://example.org/000000#Item>
+    a <http://id.loc.gov/ontologies/bibframe/Item> ;
+
+    <http://id.loc.gov/ontologies/bibframe/instanceOf> <https://dhplus.sbg.ac.at/ontology#b0-Work> ;
+    <http://id.loc.gov/ontologies/bibframe/itemOf> <http://example.org/990023914800203341#Instance> ;
+.
+
+##contributor
+#MARC 100, 500, 700
+<https://d-nb.info/gnd/000000>
+    a bf:Agent, bf:Person ;
+    bflc:name00MatchKey "NN"^^xsd:string ;
+    bflc:primaryContributorName00MatchKey "NN"^^xsd:string ;
+    bflc:name00MarcKey "NN"^^xsd:string ;
+    rdfs:label "NN"^^xsd:string ;
+    #Idenitifier
+    #Authority record control number or standard number
+    #MARC $0
+    bf:identifiedBy [
+        #number
+        a bf:Identifier ;
+        rdf:value "NN"^^xsd:string ;
+        bf:source [
+          #ISIL e.g. AT-OBV
+          a bf:Source ;
+          rdfs:label "NN"^^xsd:string ;
+        ] ;
+    ]
+.
+#or
+<http://example.org/000000#Agent100-00>
+    a bf:Agent, bf:Person ;
+    #...
+    #like <https://d-nb.info/gnd/000000>
+.
+
+##series-work
+#MARC 8xx
+<http://example.org/455751595#Work8xx>
+    a bf:Work, bf:Text ;
+    #series added entry-uniform title
+    #MARC 830
+    rdfs:label "NN"^^xsd:string ;
+    bf:title [
+        a bf:Title ;
+        #MARC summary of $afgknps
+        rdfs:label "NN"^^xsd:string ;
+        #string for sorting
+        bflc:titleSortKey "NN"^^xsd:string ;
+        #uniform title
+        #MARC $a
+        bf:mainTitle "NN"^^xsd:string ;
+        bflc:title30MatchKey "NN"^^xsd:string ;
+        bflc:title30MarcKey "NN"^^xsd:string ;
+    ] ;
+    bf:identifiedBy [
+        a bf:Identifier ;
+        rdf:value "NN"^^xsd:string ;
+        bf:source [
+            a bf:Source ;
+            rdfs:label "NN"^^xsd:string ;
+        ]
+    ] ;
+    #Control subfield
+    #MARC $7
+    bf:issuance [
+        a bf:Issuance ;
+        #Bibliographic level
+        #MARC $7, second character e.g. s = series
+        bf:code "s" ;
+    ] ;
+.
+
+##host item-work
+#MARC 773
+<http://example.org/455751595#Work773-25>
+    a bf:Work ;
+    #host item entry
+    #MARC 773
+    bf:identifiedBy [
+        #record control number
+        #MARC 773 $w
+        a bf:Identifier ;
+        #number
+        rdf:value "NN"^^xsd:string ;
+        bf:source [
+            #ISIL e.g. AT-OBV
+            a bf:Source ;
+            rdfs:label "NN"^^xsd:string ;
+        ]
+    ] ;
+    bf:hasInstance <http://example.org/455751595#Instance773-25>
+.
+
+##host item-instance
+#MARC 773
+<http://example.org/455751595#Instance773-25>
+    a bf:Instance ;
+    #edition number
+    #MARC 773 $b
+    bf:editionStatement "NN"^^xsd:string ;
+    #place, publisher, and date of publication (ort, verlag)
+    #MARC 773 $d
+    bf:provisionActivityStatement "NN"^^xsd:string ;
+    #related parts e.g. pages
+    #MARC 773 $g
+    bf:part "NN"^^xsd:string ;
+    #series data for related item
+    #MARC 773 $k
+    bf:seriesStatement "NN"^^xsd:string ;
+    #title
+    #MARC 773 $t
+    bf:title [
+        a bf:Title ;
+        rdfs:label "NN"^^xsd:string ;
+    ] ;
+    bf:instanceOf <http://example.org/455751595#Work773-25> ;
+.
+
+#################################################################
+#projspec
+<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/projSpec>
+    a       <https://dhplus.sbg.ac.at/ontology#ProjectSpecific> ;
+    dhpluso:hasPart [
+        a szd:Book ;
+        gams:isMemberOfCollection     <https://gams.uni-graz.at/o:szd.bibliothek> ;
+        gams:textualContent           "  Proust : recherches sur la création intellectuelle    Pierre  Abraham      Rieder  1930  Paris    Maîtres des littératures 7      London  Erben Stefan Zweigs  A.I.01   B 3             91, LX  8°        illustriert  illustrated       Widmung  Presentation Inscription  Pour Stefan Zweig, | en sympathie et en admiration | Pierre Abraham.  Pour Stefan Zweig, | en sympathie et en admiration | Pierre Abraham.     Marginalie  Marginalia  Anmerkungen von Stefan Zweig in Bleistift  Pencil annotations by Stefan Zweig     Merkzeichen  Underlining / Marker  Unterstreichungen in Bleistift  Pencil underlinings       Broschur  wrappers            Marcel  Proust      SZDBIB.365" ;
+        szd:author                    <https://gams.uni-graz.at/o:szd.personen#SZDPER.1> ;
+        szd:extent                    <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.365EX> ;
+        szd:language                  <http://id.loc.gov/vocabulary/iso639-2/fre> ;
+        szd:location                  <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.18> ;
+        szd:provenance                ""@de ;
+        szd:provenanceCharacteristic  <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.365PS> ;
+        szd:publicationStmt           <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.365PUS> ;
+        szd:relationToPerson          <https://gams.uni-graz.at/o:szd.personen#SZDPER.1127> ;
+        szd:series                    "Maîtres des littératures 7" ;
+        szd:signature                 "A.I.01" ;
+        szd:title                     "Proust : recherches sur la création intellectuelle"@en , "Proust : recherches sur la création intellectuelle"@de
+    ]
+.
+<https://gams.uni-graz.at/o:szd.personen#SZDPER.1>
+    a                          szd:Agent ;
+    foaf:page                  <https://de.wikipedia.org/wiki/Pierre_Abraham> ;
+    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.personen> ;
+    gams:textualContent        " Abraham  Pierre  Bloch Pierre Abraham http://www.wikidata.org/entity/Q3383636 SZDPER.1" ;
+    szd:birth                  "1892" ;
+    szd:death                  "1974" ;
+    szd:forename               "Pierre" ;
+    szd:gnd                    <http://d-nb.info/gnd/12490310X> ;
+    szd:surname                "Abraham" ;
+    szd:wikidata               <http://www.wikidata.org/entity/Q3383636>
+.
+<https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.365EX>
+    a            szd:Extent ;
+    szd:binding  "wrappers"@en ;
+    szd:format   "8°" ;
+    szd:page     "91, LX" ;
+    szd:text     "91, LX Seiten : illustriert.  8°"@de , "91, LX pages : illustrated.  8°"@en
+.
+<https://gams.uni-graz.at/o:szd.standorte#SZDSTA.18>
+    a                          szd:Location ;
+    wgs84_pos:lat              "51.50853" ;
+    wgs84_pos:long             "-0.12574" ;
+    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+    gams:textualContent        "Erben Stefan Zweigs Heirs of Stefan Zweig England London  51.50853, -0.12574  SZDSTA.18" ;
+    szd:name                   "Heirs of Stefan Zweig"@en ;
+    szd:settlement             "London"
+.
+<https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.365PS>
+    a                            szd:ProvenanceCharacteristic ;
+    szd:glossar                  szdg:Marker , szdg:SingleLetter , szdg:Marginalia , szdg:PresentationInscription ;
+    szd:marginalia               "todo EN/DE" ;
+    szd:marker                   "todo EN/DE" ;
+    szd:originalShelfmark        <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.365OS> ;
+    szd:presentationinscription  "todo EN/DE" ;
+    szd:text                     "Presentation Inscription,Marginalia,Underlining / Marker, Original Shelfmark"@en , "Widmung, Marginalie, Merkzeichen, Originalsignatur"@de
+.
+<https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.365PUS>
+    a              szd:PublicationStmt ;
+    szd:pubDate    "1930" ;
+    szd:pubPlace   "Paris" ;
+    szd:publisher  "Rieder" ;
+    szd:text       "Paris : Rieder, 1930"
+.
+<https://gams.uni-graz.at/o:szd.personen#SZDPER.1127>
+    a                          szd:Agent ;
+    foaf:page                  <https://de.wikipedia.org/wiki/Marcel_Proust> ;
+    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.personen> ;
+    gams:textualContent        " Proust  Marcel  Proust Valentin Louis Georges Eugène Marcel Prust Marcelʹ Prust Marselʹ Prust M. Пруст М. Пруст Марсель http://www.wikidata.org/entity/Q7199 SZDPER.1127" ;
+    szd:birth                  "1871-07-10" ;
+    szd:death                  "1922-11-18" ;
+    szd:forename               "Marcel" ;
+    szd:gnd                    <http://d-nb.info/gnd/118596799> ;
+    szd:surname                "Proust" ;
+    szd:wikidata               <http://www.wikidata.org/entity/Q7199> .
+
