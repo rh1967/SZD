@@ -93,7 +93,7 @@
     ##contribution
     #MARC 100, 500, 700
     <https://dhplus.sbg.ac.at/ontology#contribution> [
-        a <https://dhplus.sbg.ac.at/ontology#Contribution>, bflc:PrimaryContribution ;
+        a <https://dhplus.sbg.ac.at/ontology#Contribution> ;
         #Main Entry-Personal Name
         #MARC 100
         #OR
@@ -105,7 +105,7 @@
         #MARC 700
 
         #relation to dhplus:Person dataset
-        <https://dhplus.sbg.ac.at/ontology#agent> <Person-URI> ;
+        <https://dhplus.sbg.ac.at/ontology#agent> <URI> ;
 
         #Relator term
         #MARC $e
@@ -114,12 +114,18 @@
             rdfs:label "NN"^^xsd:string ;
             bflc:relatorMatchKey "NN"^^xsd:string
         ] ;
+        #OR
         #author
         <https://dhplus.sbg.ac.at/ontology#role> <http://id.loc.gov/vocabulary/relators/aut> ;
+        #OR
         #contributor
         <https://dhplus.sbg.ac.at/ontology#role> <http://id.loc.gov/vocabulary/relators/ctb> ;
+        #OR
         #editor
         <https://dhplus.sbg.ac.at/ontology#role> <http://id.loc.gov/vocabulary/relators/edt> ;
+
+        dhpluso:P_szd_relationToPerson <URI> ;  #link to person object
+
     ] ;
 
     ##language
@@ -281,6 +287,11 @@
     <https://dhplus.sbg.ac.at/ontology#extent> [
         a dhpluso:Extent ;
         rdfs:label "NN"^^xsd:string ;
+        #SZD
+        dhpluso:P_szd_binding "NN" ;
+        dhpluso:P_szd_format "NN" ;
+        dhpluso:P_szd_extentadd "NN" ;
+        dhpluso:P_szd_text "NN" ;
     ] ;
     #issuance
     <https://dhplus.sbg.ac.at/ontology#issuance> <http://id.loc.gov/vocabulary/issuance/nnnn> ;
@@ -348,6 +359,35 @@
 #item
 <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Item>
     a   <https://dhplus.sbg.ac.at/ontology#Item> ;
+
+    <https://dhplus.sbg.ac.at/ontology#location> [
+        a dhpluso:E_szd_Location ;
+        dhpluso:P_szd_repository "NN" ;
+        dhpluso:P_szd_settlement <URI> ;  #link to place object
+        dhpluso:P_szd_idno "NN" ;
+    ] ;
+
+    <https://dhplus.sbg.ac.at/ontology#provenanceCharacteristic> [
+        a dhpluso:E_szd_ProvenanceCharacteristic ;
+        dhpluso:P_szd_presentationInscription [
+            rdfs:label "Widmung"@de, "Presentation Inscription"@en ;
+            rdf:value "Pour Stefan Zweig, | en sympathie et en admiration | Pierre Abraham."@de,
+                       "Pour Stefan Zweig, | en sympathie et en admiration | Pierre Abraham."@en ;
+        ] ;
+        dhpluso:P_szd_marginalia [
+            rdfs:label "Marginalie"@de, "Marginalia"@en ;
+            rdf:value "Anmerkungen von Stefan Zweig in Bleistift"@de, "Pencil annotations by Stefan Zweig"@en ;
+        ] ;
+        dhpluso:P_szd_marker [
+            rdfs:label "Merkzeichen"@de, "Underlining / Marker"@en ;
+            rdf:value "Unterstreichungen in Bleistift"@de, "Pencil underlinings"@en ;
+        ] ;
+        dhpluso:P_szd_originalShelfmark [
+            a dhpluso:E_szd_OriginalShelfmark ;
+            dhpluso:P_szd_singleletter  "B 3" ;
+        ] ;
+    ] ;
+
 
     <https://dhplus.sbg.ac.at/ontology#itemOf> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Instance> ;
 .

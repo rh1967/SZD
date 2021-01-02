@@ -1,2 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<result>title name publisher date pubPlace settlement repository idno note measure term desc ab orgName forename surname span</result>
+<result>
+    title 
+    name 
+    publisher 
+    date 
+    pubPlace 
+    settlement 
+    repository 
+    idno 
+    note 
+    measure 
+    term 
+    desc 
+    ab 
+    orgName 
+    forename 
+    surname 
+    span
+</result>

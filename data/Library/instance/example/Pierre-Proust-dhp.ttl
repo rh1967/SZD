@@ -171,7 +171,7 @@
     #MARC 300 $a
     <https://dhplus.sbg.ac.at/ontology#extent> [
         a dhpluso:Extent ;
-        rdfs:label  "91, LX S."
+        rdfs:label  "91, LX S." ;
     ] ;
     #issuance
     <https://dhplus.sbg.ac.at/ontology#issuance> <http://id.loc.gov/vocabulary/issuance/mono> ;
@@ -205,38 +205,38 @@
     a <https://dhplus.sbg.ac.at/ontology#Resource> ;
     <https://dhplus.sbg.ac.at/ontology#extent> [
         a dhpluso:Extent ;
-        dhpluso:binding  "Brochur"@de , "wrappers"@en ;
-        dhpluso:format   "8°" ;
-        dhpluso:extentadd "illustriert"@de, "illustrated"@en ;
-        dhpluso:text     "91, LX Seiten : illustriert.  8°"@de , "91, LX pages : illustrated.  8°"@en
+        dhpluso:P_szd_binding  "Brochur"@de , "wrappers"@en ;
+        dhpluso:P_szd_format   "8°" ;
+        dhpluso:P_szd_extentadd "illustriert"@de, "illustrated"@en ;
+        dhpluso:P_szd_text     "91, LX Seiten : illustriert.  8°"@de , "91, LX pages : illustrated.  8°"@en
     ] ;
     <https://dhplus.sbg.ac.at/ontology#location> <http://dhplus.sbg.ac.at/szd/instance/4abf89eb-cafa-4972-b5da-934e9d2ca4d9> ;
     <https://dhplus.sbg.ac.at/ontology#location> [
-      a dhpluso:Location ;
-      dhpluso:name "Erben Stefan Zweigs"@de, "Heirs of Stefan Zweig"@en ;
+      a dhpluso:E_szd_Location ;
+      dhpluso:P_szd_name "Erben Stefan Zweigs"@de, "Heirs of Stefan Zweig"@en ;
     ] ;
     <https://dhplus.sbg.ac.at/ontology#provenanceCharacteristic> [
-        a dhpluso:ProvenanceCharacteristic ;
-        dhpluso:presentationinscription [
+        a dhpluso:E_szd_ProvenanceCharacteristic ;
+        dhpluso:P_szd_presentationinscription [
             rdfs:label "Widmung"@de, "Presentation Inscription"@en ;
             rdf:value "Pour Stefan Zweig, | en sympathie et en admiration | Pierre Abraham."@de,
                        "Pour Stefan Zweig, | en sympathie et en admiration | Pierre Abraham."@en ;
         ] ;
-        dhpluso:marginalia [
+        dhpluso:P_szd_marginalia [
             rdfs:label "Marginalie"@de, "Marginalia"@en ;
             rdf:value "Anmerkungen von Stefan Zweig in Bleistift"@de, "Pencil annotations by Stefan Zweig"@en ;
         ] ;
-        dhpluso:marker [
+        dhpluso:P_szd_marker [
             rdfs:label "Merkzeichen"@de, "Underlining / Marker"@en ;
             rdf:value "Unterstreichungen in Bleistift"@de, "Pencil underlinings"@en ;
         ] ;
-        dhpluso:originalShelfmark [
-            a dhpluso:OriginalShelfmark ;
-            dhpluso:singleletter  "B 3" ;
+        dhpluso:P_szd_originalShelfmark [
+            a dhpluso:E_szd_OriginalShelfmark ;
+            dhpluso:P_szd_singleletter  "B 3" ;
         ] ;
     ] ;
-    <https://dhplus.sbg.ac.at/ontology#relationToPerson> <http://dhplus.sbg.ac.at/szd/instance/0726e800-3b30-11eb-adc1-0242ac120002> ;
-    <https://dhplus.sbg.ac.at/ontology#signature> "A.I.01" ;
+    dhpluso:P_szd_relationToPerson <http://dhplus.sbg.ac.at/szd/instance/0726e800-3b30-11eb-adc1-0242ac120002> ;
+    dhpluso:P_szd_signature "A.I.01" ;
 .
 
 
