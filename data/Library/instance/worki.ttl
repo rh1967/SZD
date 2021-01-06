@@ -363,6 +363,11 @@
 <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Item>
     a   <https://dhplus.sbg.ac.at/ontology#Item> ;
 
+    dhpluso:P_szd_note [    # //msContents/msItem/note
+        rdfs:label "Hinweis"@de, "Comment"@en ;
+        rdf:value "NN"@de, "NN"@en ;
+    ] ;
+
     dhpluso:P_szd_location [
         a dhpluso:E_szd_Location ;
         rdfs:label "Heutiger Standort"@de, "Current Location"@en ;
@@ -398,7 +403,10 @@
             dhpluso:P_szd_inventorynumbernew "NN" ;
             dhpluso:P_szd_inventorynumberold "NN" ;
             dhpluso:P_szd_singleletter  "NN" ;
-            dhpluso:P_szd_hausexemplar "NN" ;
+            dhpluso:P_szd_hausexemplar [
+                rdf:value "NN" ;
+                dhpluso:P_szd_note "NN"@de, "NN"@en ;
+            ] ;
             dhpluso:P_szd_furniturelocation "NN" ;
             dhpluso:P_szd_roomlocation "NN" ;
             dhpluso:P_szd_numbercollection "NN" ;
