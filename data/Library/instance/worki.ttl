@@ -25,6 +25,7 @@
 @prefix szdg:  <https://gams.uni-graz.at/o:szd.glossar#> .
 
 @prefix szdi: <http://dhplus.sbg.ac.at/szd/instance/> .
+@prefix szdv: <http://dhplus.sbg.ac.at/szd/vocabulary/> .
 @prefix dhpluso: <https://dhplus.sbg.ac.at/ontology#> .
 @prefix dhplusi: <http://dhplus.sbg.ac.at/szd/instance/> .
 
@@ -286,12 +287,14 @@
     #MARC 300 $a
     <https://dhplus.sbg.ac.at/ontology#extent> [
         a dhpluso:Extent ;
-        rdfs:label "NN"^^xsd:string ;
-        #SZD
-        dhpluso:P_szd_binding "NN" ;
-        dhpluso:P_szd_format "NN" ;
-        dhpluso:P_szd_extentadd "NN" ;
-        dhpluso:P_szd_text "NN" ;
+        #page
+        #ATTENTION: rdf:value instead of rdfs:label in bibframe
+        rdf:value "NN"^^xsd:string ;
+        #SZD: Umfang/Einband - Physical Description
+        dhpluso:P_szd_binding "NN"@de, "NN"@en ;    #bindingDesc/binding/ab
+        dhpluso:P_szd_format "NN" ; #extent/measure@type="format"
+        dhpluso:P_szd_extentadd "NN"@de, "NN"@en;   #list@type="extent"/item/span
+        dhpluso:P_szd_text "NN"@de, "NN"@en ;   # = label (page) + extentadd + format + binding
     ] ;
     #issuance
     <https://dhplus.sbg.ac.at/ontology#issuance> <http://id.loc.gov/vocabulary/issuance/nnnn> ;
@@ -360,34 +363,81 @@
 <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Item>
     a   <https://dhplus.sbg.ac.at/ontology#Item> ;
 
-    <https://dhplus.sbg.ac.at/ontology#location> [
+    dhpluso:P_szd_location [
         a dhpluso:E_szd_Location ;
+        rdfs:label "Heutiger Standort"@de, "Current Location"@en ;
         dhpluso:P_szd_repository "NN" ;
         dhpluso:P_szd_settlement <URI> ;  #link to place object
         dhpluso:P_szd_idno "NN" ;
     ] ;
 
-    <https://dhplus.sbg.ac.at/ontology#provenanceCharacteristic> [
+    dhpluso:P_szd_provenance [
+        dhpluso:P_szd_glossar szdv:LaterOwner ;
+        rdfs:label "Nachbesitzer/in"@de, "Later Owner"@en ; # //provenance/orgName
+        rdf:value "NN" ;
+    ] ;
+
+    dhpluso:P_szd_provenanceCharacteristic [
         a dhpluso:E_szd_ProvenanceCharacteristic ;
+        dhpluso:P_szd_glossar szdv:RemovedPage, szdv:InventoryNumberNew, szdv:InventoryNumberOld,szdv:SingleLetter, szdv:Hausexemplar, szdv:Stamp, szdv:Note, szdv:Bookplate, szdv:Autograph, szdv:Marginalia, szdv:Marker, szdv:Insertion, szdv:FurnitureLocation, szdv:Binding, szdv:RoomLocation, szdv:NumberCollection ;
         dhpluso:P_szd_presentationInscription [
             rdfs:label "Widmung"@de, "Presentation Inscription"@en ;
-            rdf:value "Pour Stefan Zweig, | en sympathie et en admiration | Pierre Abraham."@de,
-                       "Pour Stefan Zweig, | en sympathie et en admiration | Pierre Abraham."@en ;
+            rdf:value "NN"@de, "NN"@en ;
         ] ;
         dhpluso:P_szd_marginalia [
             rdfs:label "Marginalie"@de, "Marginalia"@en ;
-            rdf:value "Anmerkungen von Stefan Zweig in Bleistift"@de, "Pencil annotations by Stefan Zweig"@en ;
+            rdf:value "NN" ;
         ] ;
         dhpluso:P_szd_marker [
             rdfs:label "Merkzeichen"@de, "Underlining / Marker"@en ;
-            rdf:value "Unterstreichungen in Bleistift"@de, "Pencil underlinings"@en ;
+            rdf:value "NN" ;
         ] ;
         dhpluso:P_szd_originalShelfmark [
             a dhpluso:E_szd_OriginalShelfmark ;
-            dhpluso:P_szd_singleletter  "B 3" ;
+            rdfs:label "Originalsignatur"@de, "OriginalShelfmark"@en ;
+            dhpluso:P_szd_inventorynumbernew "NN" ;
+            dhpluso:P_szd_inventorynumberold "NN" ;
+            dhpluso:P_szd_singleletter  "NN" ;
+            dhpluso:P_szd_hausexemplar "NN" ;
+            dhpluso:P_szd_furniturelocation "NN" ;
+            dhpluso:P_szd_roomlocation "NN" ;
+            dhpluso:P_szd_numbercollection "NN" ;
         ] ;
+        dhpluso:P_szd_stamp [
+            rdfs:label "Stempel"@de, "Stamp"@en ;   #list@type="provenance"/item/stamp
+            rdf:value "NN" ;  #list@type="provenance"/item/desc
+        ] ;
+        dhpluso:P_szd_removedpage [
+            rdfs:label "Tektur"@de, "Removed Page"@en ;
+            rdf:value "NN"@de, "NN"@en ;
+        ] ;
+        dhpluso:P_szd_note [
+            rdfs:label "Notiz"@de, "Note"@en ;
+            rdf:value "NN"@de, "NN"@en ;
+        ] ;
+        dhpluso:P_szd_bookplate [
+            rdfs:label "Exlibris"@de, "Bookplate"@en ;
+            rdf:value "NN"@de, "NN"@en ;
+        ] ;
+        dhpluso:P_szd_autograph [
+            rdfs:label "Autogramm"@de, "Autograph"@en ;
+            rdf:value "NN"@de, "NN"@en ;
+        ] ;
+        dhpluso:P_szd_insertion [
+            rdfs:label "Einlage"@de, "Insertion"@en ;
+            rdf:value "NN"@de, "NN"@en ;
+        ] ;
+        dhpluso:P_szd_binding [
+            rdfs:label "Umfang/Einband"@de, "Physical Description"@en ;
+            rdf:value "NN"@de, "NN"@en ;
+        ]
     ] ;
 
+    dhpluso:P_szd_publicationStmt [
+        a dhpluso:E_szd_PublicationStmt ;
+        rdfs:label "Veröffentlichung"@de, "Publication Details"@en ;    # = publicationStmt + provisionActivityStatement
+        rdf:value "NN" ;    #//editionStmt/edition/span
+    ] ;
 
     <https://dhplus.sbg.ac.at/ontology#itemOf> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Instance> ;
 .

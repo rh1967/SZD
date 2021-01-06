@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- //biblFull//element()[child::text() and not( child::element() )] -->
 <result>
     title 
     name 
@@ -8,7 +9,7 @@
     settlement 
     repository 
     idno 
-    note 
+    note <!-- xxxx ?? -->
     measure 
     term 
     desc 

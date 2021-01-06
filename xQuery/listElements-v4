@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- //biblFull//provenance//attribute()[contains(.,"szdg")] -->
+<result>
+    szdg:RemovedPage 
+    szdg:LaterOwner 
+    szdg:InventoryNumberNew 
+    szdg:SingleLetter 
+    szdg:PresentationInscription 
+    szdg:Hausexemplar 
+    szdg:Stamp 
+    szdg:Note 
+    szdg:Bookplate 
+    szdg:Autograph 
+    szdg:Marginalia 
+    szdg:Marker 
+    szdg:InventoryNumberOld 
+    szdg:Insertion 
+    szdg:FurnitureLocation 
+    szdg:Binding 
+    szdg:RoomLocation 
+    szdg:Overpasting <!-- xxxx: ?? -->
+    szdg:NumberCollection
+</result>
