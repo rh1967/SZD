@@ -296,7 +296,7 @@
         dhpluso:P_szd_extentadd "NN"@de, "NN"@en;   #list@type="extent"/item/span
         dhpluso:P_szd_text "NN"@de, "NN"@en ;   # = label (page) + extentadd + format + binding
     ] ;
-    #issuance
+    #issuance e.g. mono
     <https://dhplus.sbg.ac.at/ontology#issuance> <http://id.loc.gov/vocabulary/issuance/nnnn> ;
     #in series
     #MARC 8xx
@@ -456,149 +456,162 @@
     a   <https://dhplus.sbg.ac.at/ontology#MarcToBf-LoC> ;
     <https://dhplus.sbg.ac.at/ontology#hasPart> [
  #work
-    a <http://id.loc.gov/ontologies/bibframe/Work> ;
-    a <http://id.loc.gov/ontologies/bibframe/Text> ;
+        a <http://id.loc.gov/ontologies/bibframe/Work> ;
+        a <http://id.loc.gov/ontologies/bibframe/Text> ;
 
-    ##author, title - short
-    rdfs:label "NN"^^xsd:string ;
+        ##author, title - short
+        rdfs:label "NN"^^xsd:string ;
 
-    ##adminMetadata
-    #MARC 001. 003, 016
-    bf:adminMetadata [
-        a bf:AdminMetadata ;
-        #ATTENTION: DNB uses 001 and 016, ALMA uses 035 (under instance)
-        #control number
-        #MARC 001
-        bf:identifiedBy [
-            a bf:Local ;
-            rdf:value "NN"^^xsd:string ;
-        ] ;
-        #national bibliographic agency control number
-        #MARC 016
-        bf:identifiedBy [
+        ##adminMetadata
+        #MARC 001. 003, 016
+        bf:adminMetadata [
+            a bf:AdminMetadata ;
+            #ATTENTION: DNB uses 001 and 016, ALMA uses 035 (under instance)
+            #control number
+            #MARC 001
+            bf:identifiedBy [
+                a bf:Local ;
+                rdf:value "NN"^^xsd:string ;
+            ] ;
+            #national bibliographic agency control number
+            #MARC 016
+            bf:identifiedBy [
 
-            a bf:Local ;
-            #record control number
-            #Marc 016 $a
-            rdf:value "NN"^^xsd:string ;
+                a bf:Local ;
+                #record control number
+                #Marc 016 $a
+                rdf:value "NN"^^xsd:string ;
+                bf:source [
+                    #source e.g. ISIL
+                    #Marc 016 $2
+                    a bf:Source ;
+                    rdfs:label "NN"^^xsd:string ;
+                ]
+            ] ;
+            #control number identifier e.g. ISIL
+            #MARC 003
             bf:source [
-                #source e.g. ISIL
-                #Marc 016 $2
                 a bf:Source ;
+                bf:code "NN"^^xsd:string ;
+            ] ;
+            #Cataloging Source
+            #MARC 040
+            #$a,c
+            bf:source   [
+                a bf:Agent , bf:Source ;
+                rdfs:label  "NN" ;
+            ] ;
+            #Language of cataloging
+            #$b
+            bf:descriptionLanguage <http://id.loc.gov/vocabulary/languages/nnnn> ;
+            #$e
+            bf:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/nnn> ;
+            #date and time of latest transaction
+            #MARC 005
+            bf:changeDate "0001-01-01T00:00:00"^^xsd:dateTime ;
+            #date of creation
+            #MARC 008, character 0-5
+            bf:creationDate "0001-01-01"^^xsd:date ;
+        ] ;
+
+        ##contribution
+        #MARC 100, 500, 700
+        bf:contribution [
+            a bf:Contribution, bflc:PrimaryContribution ;
+            #Main Entry-Personal Name
+            #MARC 100
+            #OR
+            #General Note - Personenname (DNB)
+            #MARC 500
+            #ATTENTION: Record Control Number (GND) in 500 is not converted by LoC
+            #OR
+            #Added Entry-Personal Name
+            #MARC 700
+
+            #Authority record control number or standard number
+            #MARC $0
+            bf:agent <https://d-nb.info/gnd/000000> ;
+            #or
+            bf:agent <http://example.org/000000#Agent100-nn> ;
+            #Relator term
+            #MARC $e
+            bf:role [
+                a bf:Role ;
                 rdfs:label "NN"^^xsd:string ;
-            ]
+                bflc:relatorMatchKey "NN"^^xsd:string
+            ] ;
+            #author
+            bf:role <http://id.loc.gov/vocabulary/relators/aut> ;
+            #OR
+            #contributor
+            bf:role <http://id.loc.gov/vocabulary/relators/ctb> ;
+            #OR
+            #editor
+            bf:role <http://id.loc.gov/vocabulary/relators/edt> ;
         ] ;
-        #control number identifier e.g. ISIL
-        #MARC 003
-        bf:source [
-            a bf:Source ;
-            bf:code "NN"^^xsd:string ;
-        ] ;
-        #date and time of latest transaction
-        #MARC 005
-        bf:changeDate "0001-01-01T00:00:00"^^xsd:dateTime ;
-        #date of creation
-        #MARC 008, character 0-5
-        bf:creationDate "0001-01-01"^^xsd:date ;
-    ] ;
 
-    ##contribution
-    #MARC 100, 500, 700
-    bf:contribution [
-        a bf:Contribution, bflc:PrimaryContribution ;
-        #Main Entry-Personal Name
-        #MARC 100
-        #OR
-        #General Note - Personenname (DNB)
-        #MARC 500
-        #ATTENTION: Record Control Number (GND) in 500 is not converted by LoC
-        #OR
-        #Added Entry-Personal Name
-        #MARC 700
-
-        #Authority record control number or standard number
-        #MARC $0
-        bf:agent <https://d-nb.info/gnd/000000> ;
-        #or
-        bf:agent <http://example.org/000000#Agent100-00> ;
-        #Relator term
-        #MARC $e
-        bf:role [
-            a bf:Role ;
+        ##title
+        #uniform title
+        #MARC 240
+        bf:title [
+            a bf:Title ;
+            #MARC summary of $afgknps
             rdfs:label "NN"^^xsd:string ;
-            bflc:relatorMatchKey "NN"^^xsd:string
+            #string for sorting
+            bflc:titleSortKey "NN"^^xsd:string ;
+            #MARC $a
+            bf:mainTitle "NN"^^xsd:string ;
+            #MARC $b
+            bf:subtitle "NN"^^xsd:string ;
+            #MARC $n
+            bf:partNumber "NN"^^xsd:string ;
+            #MARC $p
+            bf:partName "NN"^^xsd:string ;
         ] ;
-        #author
-        bf:role <http://id.loc.gov/vocabulary/relators/aut> ;
-        #contributor
-        bf:role <http://id.loc.gov/vocabulary/relators/ctb> ;
-        #editor
-        bf:role <http://id.loc.gov/vocabulary/relators/edt> ;
-    ] ;
+        #OR
+        #title statement
+        #MARC 245
+        bf:title [
+            a bf:Title ;
+            #MARC summary of $afgknps
+            rdfs:label "NN"^^xsd:string ;
+            #string for sorting
+            bflc:titleSortKey "NN"^^xsd:string ;
+            #MARC $a
+            bf:mainTitle "NN"^^xsd:string ;
+            #MARC $b
+            bf:subtitle "NN"^^xsd:string ;
+            #MARC $n
+            bf:partNumber "NN"^^xsd:string ;
+            #MARC $p
+            bf:partName "NN"^^xsd:string ;
+        ] ;
 
-    ##title
-    #uniform title
-    #MARC 240
-    bf:title [
-        a bf:Title ;
-        #MARC summary of $afgknps
-        rdfs:label "NN"^^xsd:string ;
-        #string for sorting
-        bflc:titleSortKey "NN"^^xsd:string ;
-        #MARC $a
-        bf:mainTitle "NN"^^xsd:string ;
-        #MARC $b
-        bf:subtitle "NN"^^xsd:string ;
-        #MARC $n
-        bf:partNumber "NN"^^xsd:string ;
-        #MARC $p
-        bf:partName "NN"^^xsd:string ;
-    ] ;
-    #OR
-    #title statement
-    #MARC 245
-    bf:title [
-        a bf:Title ;
-        #MARC summary of $afgknps
-        rdfs:label "NN"^^xsd:string ;
-        #string for sorting
-        bflc:titleSortKey "NN"^^xsd:string ;
-        #MARC $a
-        bf:mainTitle "NN"^^xsd:string ;
-        #MARC $b
-        bf:subtitle "NN"^^xsd:string ;
-        #MARC $n
-        bf:partNumber "NN"^^xsd:string ;
-        #MARC $p
-        bf:partName "NN"^^xsd:string ;
-    ] ;
+        ##anguage code
+        #MARC 041
+        #language code of text
+        #$a
+        bf:language <http://id.loc.gov/vocabulary/languages/nnn> ;
 
-    ##anguage code
-    #MARC 041
-    #language code of text
-    #$a
-    bf:language <http://id.loc.gov/vocabulary/languages/nnn> ;
+        #index term-genre/form
+        #MARC 655
+        #Genre/form data
+        #$a
+        bf:genreForm [
+            a  bf:GenreForm ;
+            rdfs:label                  "Prosa" ;
+        ] ;
 
+        ##Constituent Unit e.g. series -> monography
+        #MARC 774
+        #ATTENTION: 774 is not used by DNB or OBVSG
+        bf:hasPart <http://example.org/455751595#Work774> ;
 
-    #index term-genre/form
-    #MARC 655
-    #Genre/form data
-    #$a
-    bf:genreForm [
-        a  bf:GenreForm ;
-        rdfs:label                  "Prosa" ;
-    ] ;
-    ##Constituent Unit e.g. series -> monography
-    #MARC 774
-    #ATTENTION: 774 is not used by DNB or OBVSG
-    bf:hasPart <http://example.org/455751595#Work774> ;
+        ##host item entry e.g. monography -> series
+        #MARC 773
+        bf:partOf <http://example.org/455751595#Work773-25> ;
 
-    ##host item entry e.g. monography -> series
-    #MARC 773
-    bf:partOf <http://example.org/455751595#Work773-25> ;
-
-    <http://id.loc.gov/ontologies/bibframe/hasInstance> <http://example.org/000000#Instance> ;
-
+        <http://id.loc.gov/ontologies/bibframe/hasInstance> <http://example.org/000000#Instance> ;
 
     ]
 
@@ -626,7 +639,7 @@
         ] ;
     ] ;
 
-    #title
+    #title statement
     #MARC 245
     bf:title [
          a bf:Title ;
@@ -746,7 +759,6 @@
 
     <http://id.loc.gov/ontologies/bibframe/itemOf> <http://example.org/990023914800203341#Instance> ;
 .
-
 
 ##contributor
 #MARC 100, 500, 700

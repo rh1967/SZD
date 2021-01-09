@@ -1,0 +1,191 @@
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bflc:  <http://id.loc.gov/ontologies/bflc/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://example.org/990143859160203331#Item541-25>
+        a                        bf:Item ;
+        bf:custodialHistory      "Archiv Atrium Press" ;
+        bf:immediateAcquisition  [ a           bf:ImmediateAcquisition ;
+                                   rdfs:label  "Ankauf Christie´s London 2014"
+                                 ] ;
+        bf:itemOf                <http://example.org/990143859160203331#Instance> ;
+        bf:note                  [ a            bf:Note ;
+                                   rdfs:label   "Ringbindung" ;
+                                   bf:noteType  "binding"
+                                 ] .
+
+<http://id.loc.gov/vocabulary/languages/ger>
+        a       bf:Language .
+
+<http://example.org/990143859160203331#Instance>
+        a                              bf:Instance ;
+        rdfs:label                     "Notizbuch Die Welt von Gestern" ;
+        bf:dimensions                  "30 x 20 cm" ;
+        bf:extent                      [ a           bf:Extent ;
+                                         rdfs:label  "Notizbuch, 92 Bl."
+                                       ] ;
+        bf:hasItem                     <http://example.org/990143859160203331#Item541-25> ;
+        bf:hasSeries                   [ a                   bf:Instance ;
+                                         rdfs:label          "Stefan Zweig - Archiv Atrium Press" ;
+                                         bf:instanceOf       <http://example.org/990143859160203331#Work830-29> ;
+                                         bf:seriesStatement  "Stefan Zweig - Archiv Atrium Press"
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "OBVAC14446540" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "DE-599"
+                                                    ]
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "AC14446540"
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "014385916ACC01" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "Aleph"
+                                                    ]
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "AC14446540" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "AT-OBV"
+                                                    ]
+                                       ] ;
+        bf:instanceOf                  <http://example.org/990143859160203331#Work> ;
+        bf:issuance                    <http://id.loc.gov/vocabulary/issuance/mono> ;
+        bf:note                        [ a           bf:Note ;
+                                         rdfs:label  "Titel: fingiert; Art: 18 Blatt beschrieben; Schreiberhände: Stefan Zweig; [Inhalt: Entwürfe zu \"Die Welt von Gestern\"]; Label: LA RELIURE SPIRALE FABRICATION FRANCAISE PARIS 1233; Schreibstoff: violette und rote Tinte, Bleistift;"
+                                       ] ;
+        bf:place                       [ a          bf:Place ;
+                                         bf:code    "XA-AT" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "ISO 3166"
+                                                    ]
+                                       ] ;
+        bf:provisionActivity           [ a        bf:Production , bf:ProvisionActivity ;
+                                         bf:date  "Mai 1940"
+                                       ] ;
+        bf:provisionActivity           [ a         bf:Publication , bf:ProvisionActivity ;
+                                         bf:date   "1940/####"^^<http://id.loc.gov/datatypes/edtf> ;
+                                         bf:place  <http://id.loc.gov/vocabulary/countries/au%23>
+                                       ] ;
+        bf:provisionActivity           [ a         bf:Publication , bf:ProvisionActivity ;
+                                         bf:date   "1940" ;
+                                         bf:place  [ a           bf:Place ;
+                                                     rdfs:label  "Lyncombe Hill Bath"
+                                                   ]
+                                       ] ;
+        bf:provisionActivityStatement  "Mai 1940" , "Lyncombe Hill Bath; 1940" ;
+        bf:title                       [ a                  bf:Title ;
+                                         rdfs:label         "Notizbuch Die Welt von Gestern" ;
+                                         bflc:titleSortKey  "Notizbuch Die Welt von Gestern" ;
+                                         bf:mainTitle       "Notizbuch Die Welt von Gestern"
+                                       ] ;
+        bf:usageAndAccessPolicy        [ a           bf:UsageAndAccessPolicy ;
+                                         rdfs:label  "Nur im LAS benutzbar"
+                                       ] .
+
+<http://id.loc.gov/vocabulary/languages>
+        a       bf:Source .
+
+<http://id.loc.gov/vocabulary/relators/aut>
+        a       bf:Role .
+
+<http://example.org/990143859160203331#GenreForm655-28>
+        a                           madsrdf:GenreForm , bf:GenreForm ;
+        rdfs:label                  "Prosa" ;
+        madsrdf:authoritativeLabel  "Prosa" .
+
+<http://id.loc.gov/vocabulary/descriptionConventions/rna>
+        a       bf:DescriptionConventions .
+
+<http://example.org/990143859160203331#Agent100-16>
+        a                    bf:Person , bf:Agent ;
+        rdfs:label           "Zweig, Stefan 1881-1942" ;
+        bflc:name00MarcKey   "1001 $aZweig, Stefan$d1881-1942$0(DE-588)118637479$4aut" ;
+        bflc:name00MatchKey  "Zweig, Stefan 1881-1942" ;
+        bflc:primaryContributorName00MatchKey
+                "Zweig, Stefan 1881-1942" ;
+        bf:identifiedBy      [ a          bf:Identifier ;
+                               rdf:value  "118637479" ;
+                               bf:source  [ a           bf:Source ;
+                                            rdfs:label  "DE-588"
+                                          ]
+                             ] .
+
+<http://example.org/990143859160203331#Work830-29>
+        a                bf:Work ;
+        bf:identifiedBy  [ a          bf:Identifier ;
+                           rdf:value  "AC14446383" ;
+                           bf:source  [ a           bf:Source ;
+                                        rdfs:label  "AT-OBV"
+                                      ]
+                         ] ;
+        bf:title         [ a                    bf:Title ;
+                           bflc:title30MarcKey  "830 0$w(AT-OBV)AC14446383$9O:1"
+                         ] .
+
+<http://id.loc.gov/vocabulary/countries/au%23>
+        a       bf:Place .
+
+<http://id.loc.gov/vocabulary/issuance/mono>
+        a       bf:Issuance .
+
+<http://example.org/990143859160203331#Work>
+        a                 bf:Work , bf:Text ;
+        rdfs:label        "Die Welt von Gestern" ;
+        bf:adminMetadata  [ a                          bf:AdminMetadata ;
+                            bflc:encodingLevel         [ a        bflc:EncodingLevel ;
+                                                         bf:code  "f"
+                                                       ] ;
+                            bf:changeDate              "2018-01-31T19:19:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                            bf:creationDate            "2017-10-13"^^<http://www.w3.org/2001/XMLSchema#date> ;
+                            bf:descriptionConventions  <http://id.loc.gov/vocabulary/descriptionConventions/rna> ;
+                            bf:descriptionConventions  [ a        bf:DescriptionConventions ;
+                                                         bf:code  "isbd"
+                                                       ] ;
+                            bf:descriptionLanguage     <http://id.loc.gov/vocabulary/languages/ger> ;
+                            bf:descriptionModifier     [ a           bf:Agent ;
+                                                         rdfs:label  "UBS"
+                                                       ] ;
+                            bf:generationProcess       [ a           bf:GenerationProcess ;
+                                                         rdfs:label  "DLC marc2bibframe2 v1.4.0-SNAPSHOT: 2021-01-08T15:35:27.054+01:00"
+                                                       ] ;
+                            bf:identifiedBy            [ a          bf:Local ;
+                                                         rdf:value  "990143859160203331"
+                                                       ] ;
+                            bf:source                  [ a        bf:Source ;
+                                                         bf:code  "AT-OBV"
+                                                       ] ;
+                            bf:source                  [ a           bf:Agent , bf:Source ;
+                                                         rdfs:label  "UBS"
+                                                       ] ;
+                            bf:source                  [ a           bf:Agent , bf:Source ;
+                                                         rdfs:label  "LAS"
+                                                       ] ;
+                            bf:status                  [ a        bf:Status ;
+                                                         bf:code  "n"
+                                                       ]
+                          ] ;
+        bf:contribution   [ a         bflc:PrimaryContribution , bf:Contribution ;
+                            bf:agent  <http://example.org/990143859160203331#Agent100-16> ;
+                            bf:role   <http://id.loc.gov/vocabulary/relators/aut>
+                          ] ;
+        bf:genreForm      <http://example.org/990143859160203331#GenreForm655-28> ;
+        bf:hasInstance    <http://example.org/990143859160203331#Instance> ;
+        bf:language       <http://id.loc.gov/vocabulary/languages/ger> ;
+        bf:language       [ a                bf:Language ;
+                            bf:identifiedBy  [ a          bf:Identifier ;
+                                               rdf:value  <http://id.loc.gov/vocabulary/languages/ger> ;
+                                               bf:source  <http://id.loc.gov/vocabulary/languages>
+                                             ]
+                          ] ;
+        bf:title          [ a                     bf:Title ;
+                            rdfs:label            "Die Welt von Gestern" ;
+                            bflc:title40MarcKey   "24010$aDie Welt von Gestern" ;
+                            bflc:title40MatchKey  "Die Welt von Gestern" ;
+                            bflc:titleSortKey     "Die Welt von Gestern" ;
+                            bf:mainTitle          "Die Welt von Gestern"
+                          ] .
