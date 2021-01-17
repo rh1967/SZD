@@ -1,0 +1,145 @@
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+@prefix wikibase: <http://wikiba.se/ontology#> .
+@prefix gndo: <https://d-nb.info/standards/elementset/gnd#> .
+@prefix ecrm: <http://erlangen-crm.org/current/> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix bfo: <http://id.loc.gov/ontologies/bibframe.rdf> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix wdrs: <http://www.w3.org/2007/05/powder-s#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dhpluso: <https://dhplus.sbg.ac.at/ontology#> .
+@prefix szd: <https://gams.uni-graz.at/o:szd.ontology#> .
+@base <https://dhplus.sbg.ac.at/ontology/person> .
+
+dhpluso:work
+    a owl:Ontology ;
+    dc:title "dhPLUS Ontologie"@de ;
+    dc:title "dhPLUS Ontology"@en ;
+    dct:creator "Richard Hörmann" ;
+    owl:comment "This is an ontology of the dhPLUS repository for Digital Humanities Projects of the University of Salzburg."@en ;
+    owl:versionInfo "0.1"^^xsd:string, "2019-12-27"^^xsd:date ;
+    owl:versionIRI <https://dhplus.sbg.ac.at/ontology#/0.1> ;
+    owl:imports
+        <https://d-nb.info/standards/elementset/gnd> ,
+        ecrm: ,
+        bfo: ,
+        <http://www.lexinfo.net/ontology/3.0/lexinfo> ,
+        <http://www.w3.org/ns/lemon/ontolex> ;
+
+#################################################################
+#    Prefixes
+#################################################################
+
+    sh:declare [
+        sh:prefix "cc" ;
+        sh:namespace "http://creativecommons.org/ns#"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+        sh:prefix "dc" ;
+        sh:namespace "http://purl.org/dc/elements/1.1/"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+        sh:prefix "dcterms" ;
+        sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+    ] ;    
+    sh:declare [
+        sh:prefix "dhpluso" ;
+        sh:namespace "https://dhplus.sbg.ac.at/ontology#"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+        sh:prefix "dhplusv" ;
+        sh:namespace "https://dhplus.sbg.ac.at/vocabulary#"^^xsd:anyURI ;
+               ] ;
+    sh:declare [
+        sh:prefix "gndo" ;
+        sh:namespace "https://d-nb.info/standards/elementset/gnd#"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+            sh:prefix "owl" ;
+            sh:namespace "http://www.w3.org/2002/07/owl#"^^xsd:anyURI ;
+    ] ; 
+    sh:declare [
+        sh:prefix "rdf" ;
+        sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+        sh:prefix "rdfs" ;
+        sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+        sh:prefix "schema" ;
+        sh:namespace "http://schema.org/"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+        sh:prefix "wdrs" ;
+        sh:namespace "http://www.w3.org/2007/05/powder-s#"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+        sh:prefix "wdt" ;
+        sh:namespace "http://www.wikidata.org/prop/direct/"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+        sh:prefix "wikibase" ;
+        sh:namespace "http://wikiba.se/ontology#"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+       sh:prefix "szd" ;
+       sh:namespace "https://gams.uni-graz.at/o:szd.ontology#"^^xsd:anyURI ;
+   ] ;
+.
+
+#################################################################
+#    Classes
+#################################################################
+
+#dhplus
+szd:Work
+    a owl:Class;
+
+#owl classification
+.
+_:WorkShape
+    a sh:NodeShape ;
+
+#shacl validation
+.
+_:PersonRule
+    a sh:NodeShape ;
+
+#shacl validation
+    sh:targetClass szd:Work ;
+#sparql generation
+    sh:rule [
+                a sh:SPARQLRule ;
+                sh:prefixes dhpluso:work ;
+                sh:construct """            
+            CONSTRUCT {
+                dhpluso:test    ?p  "result"
+            }
+            WHERE
+            {
+                {
+                    SELECT DISTINCT ?p
+                    WHERE
+                    {
+                        $this   a szd:Work ;
+                                ?p  ?o .
+                    }
+                } .
+                {
+
+                }
+            }
+            LIMIT 1
+        """ ;
+            ] ;
+.

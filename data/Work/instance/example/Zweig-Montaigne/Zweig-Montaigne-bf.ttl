@@ -1,0 +1,189 @@
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bflc:  <http://id.loc.gov/ontologies/bflc/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://id.loc.gov/vocabulary/languages/ger>
+        a       bf:Language .
+
+<http://id.loc.gov/vocabulary/languages>
+        a       bf:Source .
+
+<http://id.loc.gov/vocabulary/relators/aut>
+        a       bf:Role .
+
+<http://example.org/990143859040203331#GenreForm655-26>
+        a                           madsrdf:GenreForm , bf:GenreForm ;
+        rdfs:label                  "Prosa" ;
+        madsrdf:authoritativeLabel  "Prosa" .
+
+<http://example.org/990143859040203331#Work830-27>
+        a                bf:Work ;
+        bf:identifiedBy  [ a          bf:Identifier ;
+                           rdf:value  "AC14446383" ;
+                           bf:source  [ a           bf:Source ;
+                                        rdfs:label  "AT-OBV"
+                                      ]
+                         ] ;
+        bf:title         [ a                    bf:Title ;
+                           bflc:title30MarcKey  "830 0$w(AT-OBV)AC14446383$9O:1"
+                         ] .
+
+<http://id.loc.gov/vocabulary/descriptionConventions/rna>
+        a       bf:DescriptionConventions .
+
+<http://example.org/990143859040203331#Agent100-15>
+        a                    bf:Person , bf:Agent ;
+        rdfs:label           "Zweig, Stefan 1881-1942" ;
+        bflc:name00MarcKey   "1001 $aZweig, Stefan$d1881-1942$0(DE-588)118637479$4aut" ;
+        bflc:name00MatchKey  "Zweig, Stefan 1881-1942" ;
+        bflc:primaryContributorName00MatchKey
+                "Zweig, Stefan 1881-1942" ;
+        bf:identifiedBy      [ a          bf:Identifier ;
+                               rdf:value  "118637479" ;
+                               bf:source  [ a           bf:Source ;
+                                            rdfs:label  "DE-588"
+                                          ]
+                             ] .
+
+<http://example.org/990143859040203331#Item541-23>
+        a                        bf:Item ;
+        bf:custodialHistory      "Archiv Atrium Press" ;
+        bf:immediateAcquisition  [ a           bf:ImmediateAcquisition ;
+                                   rdfs:label  "Ankauf Christie´s London 2014"
+                                 ] ;
+        bf:itemOf                <http://example.org/990143859040203331#Instance> ;
+        bf:note                  [ a            bf:Note ;
+                                   rdfs:label   "Ringbindung" ;
+                                   bf:noteType  "binding"
+                                 ] .
+
+<http://example.org/990143859040203331#Instance>
+        a                              bf:Instance ;
+        rdfs:label                     "Notizbuch Montaigne" ;
+        bf:dimensions                  "23 x 17 cm" ;
+        bf:extent                      [ a           bf:Extent ;
+                                         rdfs:label  "1 Notizbuch, 82 Bl."
+                                       ] ;
+        bf:hasItem                     <http://example.org/990143859040203331#Item541-23> ;
+        bf:hasSeries                   [ a                   bf:Instance ;
+                                         rdfs:label          "Stefan Zweig - Archiv Atrium Press" ;
+                                         bf:instanceOf       <http://example.org/990143859040203331#Work830-27> ;
+                                         bf:seriesStatement  "Stefan Zweig - Archiv Atrium Press"
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "OBVAC14446528" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "DE-599"
+                                                    ]
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "AC14446528"
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "014385904ACC01" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "Aleph"
+                                                    ]
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "AC14446528" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "AT-OBV"
+                                                    ]
+                                       ] ;
+        bf:instanceOf                  <http://example.org/990143859040203331#Work> ;
+        bf:issuance                    <http://id.loc.gov/vocabulary/issuance/mono> ;
+        bf:note                        [ a           bf:Note ;
+                                         rdfs:label  "Titel: laut Vorlage; Art: 32 Blatt beschrieben; Schreiberhände: Stefan Zweig; Label: N.°4-PAUTADO [...] Industria Brasileira, Stempel: PAPELARIA ESTEVES PETROPOLIS; Schreibstoff: blaue und rote Tinte, Bleistift; Weiteres: Deckblattlabel mit nachträglicher Aufschrift \"Stephan Zweig Montaigne\" von Richard Friedenthals Hand"
+                                       ] ;
+        bf:note                        [ a            bf:Note ;
+                                         rdfs:label   "1 Einlageblatt mit Aufschrift von Richard Friedenthal und fremder Hand" ;
+                                         bf:noteType  "Accompanying materials"
+                                       ] ;
+        bf:place                       [ a          bf:Place ;
+                                         bf:code    "XA-AT" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "ISO 3166"
+                                                    ]
+                                       ] ;
+        bf:provisionActivity           [ a        bf:Publication , bf:ProvisionActivity ;
+                                         bf:date  "ohne Jahresangabe"
+                                       ] ;
+        bf:provisionActivity           [ a         bf:Publication , bf:ProvisionActivity ;
+                                         bf:date   "9999/####"^^<http://id.loc.gov/datatypes/edtf> ;
+                                         bf:place  <http://id.loc.gov/vocabulary/countries/au%23>
+                                       ] ;
+        bf:provisionActivityStatement  "[ohne Jahresangabe]" ;
+        bf:title                       [ a                  bf:Title ;
+                                         rdfs:label         "Notizbuch Montaigne" ;
+                                         bflc:titleSortKey  "Notizbuch Montaigne" ;
+                                         bf:mainTitle       "Notizbuch Montaigne"
+                                       ] ;
+        bf:usageAndAccessPolicy        [ a           bf:UsageAndAccessPolicy ;
+                                         rdfs:label  "Nur im LAS benutzbar"
+                                       ] .
+
+<http://example.org/990143859040203331#Work>
+        a                 bf:Text , bf:Work ;
+        rdfs:label        "Montaigne" ;
+        bf:adminMetadata  [ a                          bf:AdminMetadata ;
+                            bflc:encodingLevel         [ a        bflc:EncodingLevel ;
+                                                         bf:code  "f"
+                                                       ] ;
+                            bf:changeDate              "2018-01-31T19:19:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                            bf:creationDate            "2017-10-12"^^<http://www.w3.org/2001/XMLSchema#date> ;
+                            bf:descriptionConventions  <http://id.loc.gov/vocabulary/descriptionConventions/rna> ;
+                            bf:descriptionConventions  [ a        bf:DescriptionConventions ;
+                                                         bf:code  "isbd"
+                                                       ] ;
+                            bf:descriptionLanguage     <http://id.loc.gov/vocabulary/languages/ger> ;
+                            bf:descriptionModifier     [ a           bf:Agent ;
+                                                         rdfs:label  "UBS"
+                                                       ] ;
+                            bf:generationProcess       [ a           bf:GenerationProcess ;
+                                                         rdfs:label  "DLC marc2bibframe2 v1.4.0-SNAPSHOT: 2021-01-14T16:20:37.254+01:00"
+                                                       ] ;
+                            bf:identifiedBy            [ a          bf:Local ;
+                                                         rdf:value  "990143859040203331"
+                                                       ] ;
+                            bf:source                  [ a        bf:Source ;
+                                                         bf:code  "AT-OBV"
+                                                       ] ;
+                            bf:source                  [ a           bf:Agent , bf:Source ;
+                                                         rdfs:label  "LAS"
+                                                       ] ;
+                            bf:source                  [ a           bf:Agent , bf:Source ;
+                                                         rdfs:label  "UBS"
+                                                       ] ;
+                            bf:status                  [ a        bf:Status ;
+                                                         bf:code  "n"
+                                                       ]
+                          ] ;
+        bf:contribution   [ a         bflc:PrimaryContribution , bf:Contribution ;
+                            bf:agent  <http://example.org/990143859040203331#Agent100-15> ;
+                            bf:role   <http://id.loc.gov/vocabulary/relators/aut>
+                          ] ;
+        bf:genreForm      <http://example.org/990143859040203331#GenreForm655-26> ;
+        bf:hasInstance    <http://example.org/990143859040203331#Instance> ;
+        bf:language       <http://id.loc.gov/vocabulary/languages/ger> ;
+        bf:language       [ a                bf:Language ;
+                            bf:identifiedBy  [ a          bf:Identifier ;
+                                               rdf:value  <http://id.loc.gov/vocabulary/languages/ger> ;
+                                               bf:source  <http://id.loc.gov/vocabulary/languages>
+                                             ]
+                          ] ;
+        bf:title          [ a                     bf:Title ;
+                            rdfs:label            "Montaigne" ;
+                            bflc:title40MarcKey   "24010$aMontaigne" ;
+                            bflc:title40MatchKey  "Montaigne" ;
+                            bflc:titleSortKey     "Montaigne" ;
+                            bf:mainTitle          "Montaigne"
+                          ] .
+
+<http://id.loc.gov/vocabulary/countries/au%23>
+        a       bf:Place .
+
+<http://id.loc.gov/vocabulary/issuance/mono>
+        a       bf:Issuance .

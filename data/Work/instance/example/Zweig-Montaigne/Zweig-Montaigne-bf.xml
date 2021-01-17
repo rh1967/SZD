@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/990143859040203331#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:generationProcess>
+               <bf:GenerationProcess>
+                  <rdfs:label>DLC marc2bibframe2 v1.4.0-SNAPSHOT: 2021-01-14T16:20:37.254+01:00</rdfs:label>
+               </bf:GenerationProcess>
+            </bf:generationProcess>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>n</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>990143859040203331</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>AT-OBV</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-31T19:19:00</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-12</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>UBS</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>LAS</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/ger"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>UBS</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rna"/>
+            </bf:descriptionConventions>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/ger"/>
+      </bf:language>
+      <bf:language>
+         <bf:Language>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value rdf:resource="http://id.loc.gov/vocabulary/languages/ger"/>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/languages"/>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+         </bf:Language>
+      </bf:language>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/990143859040203331#Agent100-15">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Zweig, Stefan 1881-1942</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Zweig, Stefan 1881-1942</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aZweig, Stefan$d1881-1942$0(DE-588)118637479$4aut</bflc:name00MarcKey>
+                  <rdfs:label>Zweig, Stefan 1881-1942</rdfs:label>
+                  <bf:identifiedBy>
+                     <bf:Identifier>
+                        <rdf:value>118637479</rdf:value>
+                        <bf:source>
+                           <bf:Source>
+                              <rdfs:label>DE-588</rdfs:label>
+                           </bf:Source>
+                        </bf:source>
+                     </bf:Identifier>
+                  </bf:identifiedBy>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/aut"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Montaigne</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Montaigne</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24010$aMontaigne</bflc:title40MarcKey>
+            <rdfs:label>Montaigne</rdfs:label>
+            <bflc:titleSortKey>Montaigne</bflc:titleSortKey>
+            <bf:mainTitle>Montaigne</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:genreForm>
+         <bf:GenreForm rdf:about="http://example.org/990143859040203331#GenreForm655-26">
+            <rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#GenreForm"/>
+            <rdfs:label>Prosa</rdfs:label>
+            <madsrdf:authoritativeLabel>Prosa</madsrdf:authoritativeLabel>
+         </bf:GenreForm>
+      </bf:genreForm>
+      <bf:hasInstance rdf:resource="http://example.org/990143859040203331#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/990143859040203331#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">9999/####</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/au%23"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>AC14446528</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>AC14446528</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>AT-OBV</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>014385904ACC01</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>Aleph</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>OBVAC14446528</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>DE-599</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:place>
+         <bf:Place>
+            <bf:code>XA-AT</bf:code>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>ISO 3166</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:place>
+      <rdfs:label>Notizbuch Montaigne</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Notizbuch Montaigne</rdfs:label>
+            <bflc:titleSortKey>Notizbuch Montaigne</bflc:titleSortKey>
+            <bf:mainTitle>Notizbuch Montaigne</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date>ohne Jahresangabe</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>[ohne Jahresangabe]</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>1 Notizbuch, 82 Bl.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Accompanying materials</bf:noteType>
+            <rdfs:label>1 Einlageblatt mit Aufschrift von Richard Friedenthal und fremder Hand</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:dimensions>23 x 17 cm</bf:dimensions>
+      <bf:note>
+         <bf:Note>
+            <rdfs:label>Titel: laut Vorlage; Art: 32 Blatt beschrieben; Schreiberhände: Stefan Zweig; Label: N.°4-PAUTADO [...] Industria Brasileira, Stempel: PAPELARIA ESTEVES PETROPOLIS; Schreibstoff: blaue und rote Tinte, Bleistift; Weiteres: Deckblattlabel mit nachträglicher Aufschrift "Stephan Zweig Montaigne" von Richard Friedenthals Hand</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:usageAndAccessPolicy>
+         <bf:UsageAndAccessPolicy>
+            <rdfs:label>Nur im LAS benutzbar</rdfs:label>
+         </bf:UsageAndAccessPolicy>
+      </bf:usageAndAccessPolicy>
+      <bf:hasSeries>
+         <bf:Instance>
+            <rdfs:label>Stefan Zweig - Archiv Atrium Press</rdfs:label>
+            <bf:seriesStatement>Stefan Zweig - Archiv Atrium Press</bf:seriesStatement>
+            <bf:instanceOf>
+               <bf:Work rdf:about="http://example.org/990143859040203331#Work830-27">
+                  <bf:title>
+                     <bf:Title>
+                        <bflc:title30MarcKey>830 0$w(AT-OBV)AC14446383$9O:1</bflc:title30MarcKey>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:identifiedBy>
+                     <bf:Identifier>
+                        <rdf:value>AC14446383</rdf:value>
+                        <bf:source>
+                           <bf:Source>
+                              <rdfs:label>AT-OBV</rdfs:label>
+                           </bf:Source>
+                        </bf:source>
+                     </bf:Identifier>
+                  </bf:identifiedBy>
+               </bf:Work>
+            </bf:instanceOf>
+         </bf:Instance>
+      </bf:hasSeries>
+      <bf:instanceOf rdf:resource="http://example.org/990143859040203331#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/990143859040203331#Item541-23">
+            <bf:immediateAcquisition>
+               <bf:ImmediateAcquisition>
+                  <rdfs:label>Ankauf Christie´s London 2014</rdfs:label>
+               </bf:ImmediateAcquisition>
+            </bf:immediateAcquisition>
+            <bf:custodialHistory>Archiv Atrium Press</bf:custodialHistory>
+            <bf:note>
+               <bf:Note>
+                  <bf:noteType>binding</bf:noteType>
+                  <rdfs:label>Ringbindung</rdfs:label>
+               </bf:Note>
+            </bf:note>
+            <bf:itemOf rdf:resource="http://example.org/990143859040203331#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

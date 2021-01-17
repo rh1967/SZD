@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- //biblFull//attribute()[contains(.,"szdg")] -->
+<result>
+    szdg:WritingMaterial 
+    szdg:WritingInstrument 
+    szdg:Enclosures 
+    szdg:IdentifyingInscription 
+    szdg:AdditionalMaterial
+</result>

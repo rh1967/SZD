@@ -1,3 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- //biblFull//element()[child::note] -->
-<result>notesStmt note</result>
+<!-- //biblFull//element()[child::text() and not( child::element() )] -->
+<result>
+    title 
+    surname 
+    forename 
+    ab 
+    country 
+    settlement 
+    repository 
+    idno 
+    lang 
+    material 
+    term 
+    measure 
+    desc 
+    orig
+    Place 
+    orig
+    Date 
+    incipit 
+    note 
+    docEdition 
+    ref
+</result>

@@ -113,7 +113,6 @@
         <https://dhplus.sbg.ac.at/ontology#role> [
             a <https://dhplus.sbg.ac.at/ontology#Role> ;
             rdfs:label "NN"^^xsd:string ;
-            bflc:relatorMatchKey "NN"^^xsd:string
         ] ;
         #OR
         #author
@@ -126,11 +125,12 @@
         <https://dhplus.sbg.ac.at/ontology#role> <http://id.loc.gov/vocabulary/relators/edt> ;
 
         dhpluso:P_szd_relationToPerson <URI> ;  #link to person object
+                                                #//profileDesc/keywords/term@type="person"  #szd:relationToPerson
 
     ] ;
 
     ##language
-    #MARC 041
+    #MARC 041 $a
     <https://dhplus.sbg.ac.at/ontology#language> <http://id.loc.gov/vocabulary/languages/nnnn> ;
 
     ##title
@@ -221,6 +221,10 @@
     a   <https://dhplus.sbg.ac.at/ontology#Instance> ;
 
     #adminMetadata
+    #MARC $7
+    #issuance e.g. mono
+    <https://dhplus.sbg.ac.at/ontology#issuance> <http://id.loc.gov/vocabulary/issuance/nnnn> ;
+
     #Marc 035 used in ALMA
     <https://dhplus.sbg.ac.at/ontology#identifiedBy> [
         #number
@@ -256,48 +260,93 @@
      ] ;
 
     #Production, Publication, Distribution, Manufacture, and Copyright Notice
-    #MARC 264
-    <https://dhplus.sbg.ac.at/ontology#provisionActivity> [
-        a <https://dhplus.sbg.ac.at/ontology#ProvisionActivity>, <https://dhplus.sbg.ac.at/ontology#Publication> ;
+    #MARC 264 ind2=1
+    dhpluso:provisionActivity [
+        a dhpluso:ProvisionActivity, dhpluso:Publication ;
         #MARC $a
-        <https://dhplus.sbg.ac.at/ontology#place> [
-            #place of production
-            a <https://dhplus.sbg.ac.at/ontology#Place> ;
-            rdfs:label "NN"^^xsd:string ;
+        dhpluso:place [
+            #place of production, publication, distribution, manufacture
+            a dhpluso:Place ;
+            #ATTENTION: rdf:value instead of rdfs:label in bibframe
+            rdf:value "NN"^^xsd:string ;   #SDZMSK: history/origin/origPlace
         ] ;
         #MARC $b
-        <https://dhplus.sbg.ac.at/ontology#agent> [
+        #Name of producer, publisher, distributor, manufacturer
+        dhpluso:agent [
             #publisher
-            a <https://dhplus.sbg.ac.at/ontology#Agent> ;
-            rdfs:label "NN"^^xsd:string ;
+            a dhpluso:Agent ;
+            #ATTENTION: rdf:value instead of rdfs:label in bibframe
+            rdf:value "NN"^^xsd:string ;
         ] ;
         #MARC $c
-        #date of production
-        <https://dhplus.sbg.ac.at/ontology#date> "0001"^^xsd:date ;
+        #date of production, publication, distribution, manufacture, or copyright notice
+        dhpluso:date "NN" ;
+
+    ] ;
+    #MARC 264 ind2=0
+    dhpluso:provisionActivity [
+        a dhpluso:Production , dhpluso:ProvisionActivity ;
+        #MARC $c
+        #date of production, publication, distribution, manufacture, or copyright notice
+        dhpluso:date  "NN" ;    #/SDMSK: /history/origin/origDate
+        dhpluso:P_szd_dateOfPublication "NN" ;  #/SDMSK: /history/origin/origDate@when  #szd:dateOfPublication
     ] ;
     #MARC 264 summary of $abc
-    <https://dhplus.sbg.ac.at/ontology#provisionActivityStatement> "NN"^^xsd:string ;
+    <https://dhplus.sbg.ac.at/ontology#provisionActivityStatement> "NN"^^xsd:string ;   #only SDZBIB
     #statement of responsibility
     #MARC 245 $c
     <https://dhplus.sbg.ac.at/ontology#responsibilityStatement> "NN"^^xsd:string ;
     #edition
     #MARC 250 $a
     <https://dhplus.sbg.ac.at/ontology#editionStatement> "NN"^^xsd:string ;
-    #extent
-    #MARC 300 $a
+    #incipit
+    #MARC 290 $a
+    #no Bibframe prop.
+    dhpluso:P_szd_incipit [ #//msContents/msItem/incipit    #szd:incipit
+        rdfs:label  "Incipit"@de, "Incipit"@en ;
+        rdf:value "NN"@de, "NN"@en ;
+    ] ;
+    #physical description
+    #MARC 300
+    #extent $a
     <https://dhplus.sbg.ac.at/ontology#extent> [
         a dhpluso:Extent ;
-        #page
         #ATTENTION: rdf:value instead of rdfs:label in bibframe
-        rdf:value "NN"^^xsd:string ;
-        #SZD: Umfang/Einband - Physical Description
-        dhpluso:P_szd_binding "NN"@de, "NN"@en ;    #bindingDesc/binding/ab
-        dhpluso:P_szd_format "NN" ; #extent/measure@type="format"
-        dhpluso:P_szd_extentadd "NN"@de, "NN"@en;   #list@type="extent"/item/span
-        dhpluso:P_szd_text "NN"@de, "NN"@en ;   # = label (page) + extentadd + format + binding
+        rdf:value "NN"@de, "NN"@en ;    #SZDBIB: #//extent/measure@type="page"    #szd:page
+                                        #SZDMSK: #//extent/span/*   #szd:txt (part of)
     ] ;
-    #issuance e.g. mono
-    <https://dhplus.sbg.ac.at/ontology#issuance> <http://id.loc.gov/vocabulary/issuance/nnnn> ;
+    #dimensions $c
+    dhpluso:dimensions "NN" ;   #extent/measure@type="format"   #szd:format
+    #accompanying material $e
+    dhpluso:note [  #//accMat//item@ana="szdg:AdditionalMaterial"/desc   #szd:additionalMaterial
+        a dhpluso:Note ;
+        dhpluso:noteType  "Accompanying materials" ;
+        #ATTENTION: rdf:value instead of rdfs:label in bibframe
+        rdf:value "NN"@de, "NN"@en;
+    ] ,
+    #accompanying material $e
+    #ATTENTION: difference "additionalMaterial" - "enclosure" is not modelled in MARC 21
+    [   #//accMat//item@ana="szdg:Enclosures"/desc   #szd:enclosures
+        a dhpluso:Note ;
+        dhpluso:noteType  "Enclosure" ;
+        #ATTENTION: rdf:value instead of rdfs:label in bibframe
+        rdf:value "NN"@de, "NN"@en;
+    ] ;
+    #SZD: Umfang/Einband - Physical Description
+    dhpluso:P_szd_extentadd [
+        rdfs:label  "Umfang/Einband"@de, "Physical Description"@en ;
+        rdf:value "NN"@de, "NN"@en;   #e.g. illustriert   #//list@type="extent"/item/span
+    ] ;
+    #SZDMSK: szd:objecttyp is part of szd:extent
+    dhpluso:P_szd_objecttyp "NN"@de, "NN"@en ;  #//extent/span/term@type="objecttyp"    #szd:objecttyp
+    dhpluso:P_szd_text [
+        rdfs:label  "Umfang/Einband"@de, "Physical Description"@en ;
+        rdf:value "NN"@de, "NN"@en; #SZDBIB: #//extent/* + //list@type="extent"//*   #szd:text #= extent + extentadd + dimensions + binding (see item)
+                                    #SZDMSK: ##//extent//*  #szd:txt
+    ] ;
+    #glossar
+    dhpluso:P_szd_glossar szdv:nnnn ;
+
     #in series
     #MARC 8xx
     <https://dhplus.sbg.ac.at/ontology#hasSeries> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Instance8xx> ;
@@ -363,7 +412,39 @@
 <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Item>
     a   <https://dhplus.sbg.ac.at/ontology#Item> ;
 
-    dhpluso:P_szd_note [    # //msContents/msItem/note
+    #ownership and custodial history
+    #MARC 561 history $a
+    #provenance SZDMSK
+    dhpluso:custodialHistory [
+        rdfs:label "Provenienz"@de, "Provenance"@en ;
+        rdf:value "NN" ;    # //provenance/ab   #szd:provenance
+    ] ,
+    #provenance SZDBIB
+    [   # //provenance/orgName  # szd:provenance
+        dhpluso:P_szd_glossar szdv:LaterOwner ;
+        rdfs:label "Nachbesitzer/in"@de, "Later Owner"@en ;
+        rdf:value "NN" ;
+    ] ;
+
+    #immediate source of acquisition note MARC 541 source of acquisition $a
+    dhpluso:immediateAcquisition [   # //acquisition/ab # szd:acquired
+        a dhpluso:ImmediateAcquisition ;
+        rdfs:label  "Erwerbung"@de, "Acquisition"@en ;
+        rdf:value "NN" ;
+    ] ;
+
+    #binding information MARC 563 binding note $a
+    #ATTENTION 2 types of binding description one as instance one as item
+    #SZD Work: only binding as item
+    dhpluso:note [  #   //bindingDesc/binding/ab    # szd:binding
+        a dhpluso:Note ;
+        dhpluso:noteType  "binding" ;
+        rdfs:label  "Umfang/Einband"@de, "Physical Description"@en ;
+        #ATTENTION: rdf:value instead of rdfs:label in bibframe
+        rdf:value "NN" ;
+    ] ;
+
+    dhpluso:P_szd_note [    #SZDBIB://msContents/msItem/note   #SZDMSK://notesStmt/note
         rdfs:label "Hinweis"@de, "Comment"@en ;
         rdf:value "NN"@de, "NN"@en ;
     ] ;
@@ -371,15 +452,27 @@
     dhpluso:P_szd_location [
         a dhpluso:E_szd_Location ;
         rdfs:label "Heutiger Standort"@de, "Current Location"@en ;
-        dhpluso:P_szd_repository "NN" ;
-        dhpluso:P_szd_settlement <URI> ;  #link to place object
-        dhpluso:P_szd_idno "NN" ;
+        dhpluso:P_szd_repository "NN" ; #//msDesc/msIdentifier/repository
+        dhpluso:P_szd_settlement <URI> ;  #link to place object #//msDesc/msIdentifier/settlement
+        dhpluso:P_szd_signature "NN" ;  #//msDesc/msIdentifier/idno   #szd:signature
     ] ;
 
-    dhpluso:P_szd_provenance [
-        dhpluso:P_szd_glossar szdv:LaterOwner ;
-        rdfs:label "Nachbesitzer/in"@de, "Later Owner"@en ; # //provenance/orgName
-        rdf:value "NN" ;
+    dhpluso:P_szd_identifyingInscription [
+        rdfs:label  "Aufschrift"@de, "Identifying Inscription"@en ;
+        rdf:value "NN"@de, "NN"@en ;    #SZDMSK: //msContents/textLang/msItem/docEdition    #szd:identifyingInscription
+    ] ;
+
+    dhpluso:P_szd_secretarialHand [
+        rdfs:label  "Schreiberhand"@de, "Secretarial Hand"@en ;
+        rdf:value "NN"@de, "NN"@en ;    #SZDMSK: //handDesc/ab  #szd:secretarialHand
+    ] ;
+    dhpluso:P_szd_writingInstrument [
+        rdfs:label  "Schreibstoff"@de, "Writing Instrument"@en ;
+        rdf:value "NN"@de, "NN"@en ;    #SZDMSK: //support/material@ana="szdg:WritingInstrument"  #szd:writingInstrument
+    ] ;
+    dhpluso:P_szd_writingMaterial [
+        rdfs:label  "Beschreibstoff"@de, "Writing Material"@en ;
+        rdf:value "NN"@de, "NN"@en ;    #SZDMSK: //support/material@ana="szdg:WritingMaterial"  #szd:writingMaterial
     ] ;
 
     dhpluso:P_szd_provenanceCharacteristic [
@@ -657,24 +750,34 @@
      ] ;
 
     #Production, Publication, Distribution, Manufacture, and Copyright Notice
-    #MARC 264
+    #MARC 264 ind2=1
     bf:provisionActivity [
         a bf:ProvisionActivity, bf:Publication ;
         #MARC $a
         bf:place [
-            #place of production
+            #place of production, publication, distribution, manufacture
             a bf:Place ;
             rdfs:label "NN"^^xsd:string ;
         ] ;
         #MARC $b
+        #Name of producer, publisher, distributor, manufacturer
         bf:agent [
             #publisher
             a bf:Agent ;
             rdfs:label "NN"^^xsd:string ;
         ] ;
         #MARC $c
-        #date of production
+        #date of production, publication, distribution, manufacture, or copyright notice
         bf:date "0001"^^xsd:date ;
+        #OR
+        bf:date "NN" ;
+    ] ;
+    #MARC 264 ind2=0
+    bf:provisionActivity [
+        a bf:Production , bf:ProvisionActivity ;
+        #MARC $c
+        #date of production, publication, distribution, manufacture, or copyright notice
+        bf:date  "NN" ;
     ] ;
     #MARC 264 summary of $abc
     bf:provisionActivityStatement "NN"^^xsd:string ;
@@ -695,6 +798,13 @@
     #dimensions
     #$c
     bf:dimensions "NN" ;
+    #accompanying material
+    #$e
+    bf:note [
+        a bf:Note ;
+        rdfs:label   "NN" ;
+        bf:noteType  "Accompanying materials"
+    ] ;
     #issuance e.g. mono
     bf:issuance <http://id.loc.gov/vocabulary/issuance/nnnn> ;
     #General Note
@@ -754,7 +864,7 @@
     bf:note [
         a bf:Note ;
         rdfs:label   "NN" ;
-        bf:noteType  "NN"
+        bf:noteType  "binding"
     ] ;
 
     <http://id.loc.gov/ontologies/bibframe/itemOf> <http://example.org/990023914800203341#Instance> ;
@@ -878,21 +988,32 @@
     a       <https://dhplus.sbg.ac.at/ontology#ProjectSpecific> ;
     dhpluso:hasPart [
         a szd:Book ;
-        dhpluso:source <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.nnnn> ;
+        dhpluso:source <https://gams.uni-graz.at/o:szd.werke#SZDMSK.nnnn> ;
 
-        gams:isMemberOfCollection     <https://gams.uni-graz.at/o:szd.bibliothek> ;
+        gams:isMemberOfCollection     <https://gams.uni-graz.at/o:szd.werke> ;
         gams:textualContent           "NN" ;
+        szd:acquired                  "NN"@de, "NN"@en ;
+        szd:additionalMaterial        "NN"@de, "NN"@en ;
         szd:author                    <https://gams.uni-graz.at/o:szd.personen#SZDPER.nnnn> ;
-        szd:extent                    <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.nnnnEX> ;
+        szd:binding                   "NN"@en , "NN"@de ;
+        szd:category                  <https://gams.uni-graz.at/o:szd.nachlass#nnnn> ;
+        szd:dateOfPublication         "NN" ;
+        szd:enclosures                "NN"@de, "NN"@en ;
+        szd:extent                    <https://gams.uni-graz.at/o:szd.werke#SZDMSK.nnnnEX> ;
+        szd:identifyingInscription    "NN"@de, "NN"@en ;
+        szd:incipit                   "NN" ;
         szd:language                  <http://id.loc.gov/vocabulary/iso639-2/nnn> ;
         szd:location                  <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.nnnn> ;
-        szd:provenance                ""@de ;
-        szd:provenanceCharacteristic  <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.nnnnPS> ;
-        szd:publicationStmt           <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.nnnnPUS> ;
+        szd:note                      "NN"@de , "NN"@en ;
+        szd:objecttyp                 "NN"@en , "NN"@de ;
+        szd:provenance                "NN"@de, "NN"@en ;
         szd:relationToPerson          <https://gams.uni-graz.at/o:szd.personen#SZDPER.nnnn> ;
-        szd:series                    "NN" ;
+        szd:secretarialHand           "NN"@de, "NN"@en ;
         szd:signature                 "NN" ;
-        szd:title                     "NN"@en , "NN"@de
+        szd:term                      szdg:nnnn ;
+        szd:title                     "NN"@en , "NN"@de ;
+        szd:writingInstrument         "NN"@de , "NN"@en ;
+        szd:writingMaterial           "NN"@en , "NN"@de ;
     ]
 .
 <https://gams.uni-graz.at/o:szd.personen#SZDPER.nnnn>
@@ -907,7 +1028,7 @@
     szd:surname                "NN" ;
     szd:wikidata               <http://www.wikidata.org/entity/Qnnnn>
 .
-<https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.nnnnEX>
+<https://gams.uni-graz.at/o:szd.werke#SZDMSK.nnnnEX>
     a            szd:Extent ;
     szd:binding  "NN"@en ;
     szd:format   "n°" ;
@@ -923,19 +1044,4 @@
     szd:name                   "NN"@en ;
     szd:settlement             "NN"
 .
-<https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.nnnnPS>
-    a                            szd:ProvenanceCharacteristic ;
-    szd:glossar                  szdg:NN ;
-    szd:marginalia               "NN" ;
-    szd:marker                   "NN" ;
-    szd:originalShelfmark        <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.nnnnOS> ;
-    szd:presentationinscription  "NN" ;
-    szd:text                     "NN"@en , "NN"@de
-.
-<https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.nnnnPUS>
-    a              szd:PublicationStmt ;
-    szd:pubDate    "NN" ;
-    szd:pubPlace   "NN" ;
-    szd:publisher  "NN" ;
-    szd:text       "NN"
-.
+

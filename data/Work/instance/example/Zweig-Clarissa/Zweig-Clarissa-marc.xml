@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+                <record xmlns="http://www.loc.gov/MARC21/slim">
+                    <leader>00000nam a2200000 cb4500</leader>
+                    <controlfield tag="001">990143859000203331</controlfield>
+                    <controlfield tag="003">AT-OBV</controlfield>
+                    <controlfield tag="005">20180131191900.0</controlfield>
+                    <controlfield tag="008">171012|1941####au############|||#|#ger#u</controlfield>
+                    <controlfield tag="009">AC14446524</controlfield>
+                    <datafield tag="035" ind1=" " ind2=" ">
+                        <subfield code="a">AC14446524</subfield>
+                    </datafield>
+                    <datafield tag="035" ind1=" " ind2=" ">
+                        <subfield code="a">(AT-OBV)AC14446524</subfield>
+                    </datafield>
+                    <datafield tag="035" ind1=" " ind2=" ">
+                        <subfield code="a">(Aleph)014385900ACC01</subfield>
+                    </datafield>
+                    <datafield tag="035" ind1=" " ind2=" ">
+                        <subfield code="a">(DE-599)OBVAC14446524</subfield>
+                    </datafield>
+                    <datafield tag="040" ind1=" " ind2=" ">
+                        <subfield code="a">UBS</subfield>
+                        <subfield code="b">ger</subfield>
+                        <subfield code="c">LAS</subfield>
+                        <subfield code="d">UBS</subfield>
+                        <subfield code="e">rna</subfield>
+                    </datafield>
+                    <datafield tag="041" ind1=" " ind2=" ">
+                        <subfield code="a">ger</subfield>
+                    </datafield>
+                    <datafield tag="044" ind1=" " ind2=" ">
+                        <subfield code="c">XA-AT</subfield>
+                    </datafield>
+                    <datafield tag="046" ind1=" " ind2=" ">
+                        <subfield code="k">1941.11.01</subfield>
+                    </datafield>
+                    <datafield tag="090" ind1=" " ind2=" ">
+                        <subfield code="v">3</subfield>
+                    </datafield>
+                    <datafield tag="100" ind1="1" ind2=" ">
+                        <subfield code="a">Zweig, Stefan</subfield>
+                        <subfield code="d">1881-1942</subfield>
+                        <subfield code="0">(DE-588)118637479</subfield>
+                        <subfield code="4">aut</subfield>
+                    </datafield>
+                    <datafield tag="240" ind1="1" ind2="0">
+                        <subfield code="a">Clarissa</subfield>
+                    </datafield>
+                    <datafield tag="245" ind1="0" ind2="0">
+                        <subfield code="a">Notizbuch Clarissa</subfield>
+                    </datafield>
+                    <datafield tag="264" ind1=" " ind2="0">
+                        <subfield code="c">1. Nov. 1941</subfield>
+                    </datafield>
+                    <datafield tag="264" ind1=" " ind2="1">
+                        <subfield code="a">Petropolis</subfield>
+                        <subfield code="c">1941</subfield>
+                    </datafield>
+                    <datafield tag="300" ind1=" " ind2=" ">
+                        <subfield code="a">1 Notizbuch, 154 Bl., 1 Kuvert</subfield>
+                        <subfield code="c">33 x 22 cm</subfield>
+                        <subfield code="e">Beilage 1: eingelegt ein Kuvert mit Aufschrift "Propriedade Stefan Zweig dezasete contos" eigenhändig in schwarzer Tinte und "Last unfinishes novel 1st sketch" auf der Rückseite von Richard Friedenthals Hand;</subfield>
+                    </datafield>
+                    <datafield tag="490" ind1="1" ind2=" ">
+                        <subfield code="a">Stefan Zweig - Archiv Atrium Press</subfield>
+                    </datafield>
+                    <datafield tag="500" ind1=" " ind2=" ">
+                        <subfield code="a">Titel: fingiert; Art: 99 Blatt beschrieben, [korrigiert]; Schreibhänder: Stefan Zweig; Schreibstoff: dunkelblaue, rote und schwarze Tinte, Bleistift; Label: PAPELARIA DO POVO [...] A.M. GEOFFROY Petropolis; Format Beilage: 23 x 15 cm</subfield>
+                    </datafield>
+                    <datafield tag="506" ind1=" " ind2=" ">
+                        <subfield code="a">Nur im LAS benutzbar</subfield>
+                    </datafield>
+                    <datafield tag="541" ind1=" " ind2=" ">
+                        <subfield code="a">Ankauf Christie´s London 2014</subfield>
+                    </datafield>
+                    <datafield tag="561" ind1=" " ind2=" ">
+                        <subfield code="a">Archiv Atrium Press</subfield>
+                    </datafield>
+                    <datafield tag="563" ind1=" " ind2=" ">
+                        <subfield code="a">Lederimitat mit schwarzem Leinenrücken</subfield>
+                    </datafield>
+                    <datafield tag="655" ind1=" " ind2="4">
+                        <subfield code="a">Prosa</subfield>
+                    </datafield>
+                    <datafield tag="830" ind1=" " ind2="0">
+                        <subfield code="w">(AT-OBV)AC14446383</subfield>
+                        <subfield code="9">O:1</subfield>
+                    </datafield>
+                    <datafield tag="970" ind1="2" ind2=" ">
+                        <subfield code="d">NAK</subfield>
+                    </datafield>
+                    <datafield tag="970" ind1="5" ind2=" ">
+                        <subfield code="a">SZ-AAP/W1</subfield>
+                    </datafield>
+                    <datafield tag="972" ind1="0" ind2=" ">
+                        <subfield code="a">N-LASA</subfield>
+                    </datafield>
+                    <datafield tag="974" ind1="0" ind2="s">
+                        <subfield code="V">029</subfield>
+                        <subfield code="a">AL00665846</subfield>
+                    </datafield>
+                    <datafield tag="974" ind1="0" ind2="s">
+                        <subfield code="F">030</subfield>
+                        <subfield code="A">a|1ugr|||||1|</subfield>
+                    </datafield>
+                    <datafield tag="974" ind1="0" ind2="s">
+                        <subfield code="F">051</subfield>
+                        <subfield code="A">||||||||</subfield>
+                    </datafield>
+                    <datafield tag="974" ind1="0" ind2="s">
+                        <subfield code="F">053</subfield>
+                        <subfield code="A">3|</subfield>
+                    </datafield>
+                </record>

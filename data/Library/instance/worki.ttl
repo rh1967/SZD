@@ -113,7 +113,6 @@
         <https://dhplus.sbg.ac.at/ontology#role> [
             a <https://dhplus.sbg.ac.at/ontology#Role> ;
             rdfs:label "NN"^^xsd:string ;
-            bflc:relatorMatchKey "NN"^^xsd:string
         ] ;
         #OR
         #author
@@ -221,6 +220,10 @@
     a   <https://dhplus.sbg.ac.at/ontology#Instance> ;
 
     #adminMetadata
+    #MARC $7
+    #issuance e.g. mono
+    <https://dhplus.sbg.ac.at/ontology#issuance> <http://id.loc.gov/vocabulary/issuance/nnnn> ;
+
     #Marc 035 used in ALMA
     <https://dhplus.sbg.ac.at/ontology#identifiedBy> [
         #number
@@ -296,8 +299,7 @@
         dhpluso:P_szd_extentadd "NN"@de, "NN"@en;   #list@type="extent"/item/span
         dhpluso:P_szd_text "NN"@de, "NN"@en ;   # = label (page) + extentadd + format + binding
     ] ;
-    #issuance
-    <https://dhplus.sbg.ac.at/ontology#issuance> <http://id.loc.gov/vocabulary/issuance/nnnn> ;
+
     #in series
     #MARC 8xx
     <https://dhplus.sbg.ac.at/ontology#hasSeries> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Instance8xx> ;
@@ -373,7 +375,7 @@
         rdfs:label "Heutiger Standort"@de, "Current Location"@en ;
         dhpluso:P_szd_repository "NN" ;
         dhpluso:P_szd_settlement <URI> ;  #link to place object
-        dhpluso:P_szd_idno "NN" ;
+        dhpluso:P_szd_signature "NN" ;  #//msDesc/msIdentifier/idno   #szd:signature
     ] ;
 
     dhpluso:P_szd_provenance [
@@ -735,6 +737,7 @@
         rdfs:label  "NN"
     ] ;
     #binding information
+    #ATTENTION 2 types of binding description one as instance one as item
     #MARC 563
     #binding note
     #$a
@@ -898,7 +901,7 @@
 <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.nnnnEX>
     a            szd:Extent ;
     szd:binding  "NN"@en ;
-    szd:format   "n°" ;
+    szd:format   "NN" ;
     szd:page     "nnnn" ;
     szd:text     "NN"@de , "NN°"@en
 .
