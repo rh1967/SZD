@@ -125,7 +125,7 @@
         <https://dhplus.sbg.ac.at/ontology#role> <http://id.loc.gov/vocabulary/relators/edt> ;
 
         dhpluso:P_szd_relationToPerson <URI> ;  #link to person object
-                                                #//profileDesc/keywords/term@type="person"  #szd:relationToPerson
+                                                #//profileDesc//keywords/term@type="person"  #szd:relationToPerson
 
     ] ;
 
