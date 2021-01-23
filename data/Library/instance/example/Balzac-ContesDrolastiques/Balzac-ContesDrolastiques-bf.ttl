@@ -1,0 +1,220 @@
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bflc:  <http://id.loc.gov/ontologies/bflc/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://id.loc.gov/vocabulary/languages/ger>
+        a       bf:Language .
+
+<http://example.org/BV011732744#Instance773-21>
+        a              bf:Instance ;
+        bf:instanceOf  <http://example.org/BV011732744#Work773-21> ;
+        bf:part        "37" .
+
+<http://id.loc.gov/vocabulary/countries/>
+        a       bf:Place .
+
+<http://id.loc.gov/vocabulary/languages>
+        a       bf:Source .
+
+<http://example.org/BV011732744#Work773-21>
+        a                bf:Work ;
+        bf:hasInstance   <http://example.org/BV011732744#Instance773-21> ;
+        bf:identifiedBy  [ a          bf:Identifier ;
+                           rdf:value  "BV011732553" ;
+                           bf:source  [ a           bf:Source ;
+                                        rdfs:label  "DE-604"
+                                      ]
+                         ] .
+
+<http://id.loc.gov/vocabulary/millus/ill>
+        a           bf:Illustration ;
+        rdfs:label  "illustrations" .
+
+<http://example.org/BV011732744#Work>
+        a                 bf:Text , bf:Work ;
+        rdfs:label        "Oeuvres complètes de Honoré de Balzac [37] Contes drolatiques ; 2" ;
+        bf:adminMetadata  [ a                          bf:AdminMetadata ;
+                            bflc:encodingLevel         [ a        bflc:EncodingLevel ;
+                                                         bf:code  "f"
+                                                       ] ;
+                            bf:changeDate              "2009-01-09T  :  :  "^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                            bf:creationDate            "1998-01-23"^^<http://www.w3.org/2001/XMLSchema#date> ;
+                            bf:descriptionConventions  <http://id.loc.gov/vocabulary/descriptionConventions/rakddb> ;
+                            bf:descriptionConventions  [ a        bf:DescriptionConventions ;
+                                                         bf:code  "isbd"
+                                                       ] ;
+                            bf:descriptionLanguage     <http://id.loc.gov/vocabulary/languages/ger> ;
+                            bf:generationProcess       [ a           bf:GenerationProcess ;
+                                                         rdfs:label  "DLC marc2bibframe2 v1.4.0-SNAPSHOT: 2021-01-21T20:23:16.418+01:00"
+                                                       ] ;
+                            bf:identifiedBy            [ a          bf:Local ;
+                                                         rdf:value  "BV011732744"
+                                                       ] ;
+                            bf:source                  [ a        bf:Source ;
+                                                         bf:code  "DE-604"
+                                                       ] ;
+                            bf:source                  [ a           bf:Agent , bf:Source ;
+                                                         rdfs:label  "DE-604"
+                                                       ] ;
+                            bf:status                  [ a        bf:Status ;
+                                                         bf:code  "n"
+                                                       ]
+                          ] ;
+        bf:content        <http://id.loc.gov/vocabulary/contentTypes/txt> ;
+        bf:contribution   [ a         bf:Contribution ;
+                            bf:agent  <http://example.org/BV011732744#Agent700-12> ;
+                            bf:role   <http://id.loc.gov/vocabulary/relators/oth> ;
+                            bf:role   [ a                     bf:Role ;
+                                        rdfs:label            "Sonstige" ;
+                                        bflc:relatorMatchKey  "Sonstige"
+                                      ]
+                          ] ;
+        bf:contribution   [ a         bf:Contribution ;
+                            bf:agent  <http://example.org/BV011732744#Agent700-13> ;
+                            bf:role   <http://id.loc.gov/vocabulary/relators/oth> ;
+                            bf:role   [ a                     bf:Role ;
+                                        rdfs:label            "Sonstige" ;
+                                        bflc:relatorMatchKey  "Sonstige"
+                                      ]
+                          ] ;
+        bf:contribution   [ a         bflc:PrimaryContribution , bf:Contribution ;
+                            bf:agent  <http://example.org/BV011732744#Agent100-8> ;
+                            bf:role   <http://id.loc.gov/vocabulary/relators/aut> ;
+                            bf:role   [ a                     bf:Role ;
+                                        rdfs:label            "Verfasser" ;
+                                        bflc:relatorMatchKey  "Verfasser"
+                                      ]
+                          ] ;
+        bf:hasInstance    <http://example.org/BV011732744#Instance> ;
+        bf:language       <http://id.loc.gov/vocabulary/languages/fre> ;
+        bf:language       [ a                bf:Language ;
+                            bf:identifiedBy  [ a          bf:Identifier ;
+                                               rdf:value  <http://id.loc.gov/vocabulary/languages/fre> ;
+                                               bf:source  <http://id.loc.gov/vocabulary/languages>
+                                             ]
+                          ] ;
+        bf:partOf         <http://example.org/BV011732744#Work773-21> ;
+        bf:title          [ a                  bf:Title ;
+                            rdfs:label         "Oeuvres complètes de Honoré de Balzac [37] Contes drolatiques ; 2" ;
+                            bflc:titleSortKey  "Oeuvres complètes de Honoré de Balzac [37] Contes drolatiques ; 2" ;
+                            bf:mainTitle       "Oeuvres complètes de Honoré de Balzac" ;
+                            bf:partName        "Contes drolatiques ; 2" ;
+                            bf:partNumber      "[37]"
+                          ] .
+
+<http://id.loc.gov/vocabulary/relators/aut>
+        a       bf:Role .
+
+<http://id.loc.gov/vocabulary/relators/oth>
+        a       bf:Role .
+
+<http://example.org/BV011732744#Agent700-13>
+        a                    bf:Person , bf:Agent ;
+        rdfs:label           "Huard, Charles" ;
+        bflc:name00MarcKey   "7001 $aHuard, Charles$eSonstige$4oth" ;
+        bflc:name00MatchKey  "Huard, Charles" .
+
+<http://id.loc.gov/vocabulary/descriptionConventions/rakddb>
+        a       bf:DescriptionConventions .
+
+<http://example.org/BV011732744#Instance>
+        a                              bf:Instance ;
+        rdfs:label                     "Oeuvres complètes de Honoré de Balzac [37] Contes drolatiques ; 2" ;
+        bf:carrier                     <http://id.loc.gov/vocabulary/carriers/nc> ;
+        bf:extent                      [ a           bf:Extent ;
+                                         rdfs:label  "338 S."
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "633790752" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "OCoLC"
+                                                    ]
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "BVBBV011732744" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "DE-599"
+                                                    ]
+                                       ] ;
+        bf:illustrativeContent         <http://id.loc.gov/vocabulary/millus/ill> ;
+        bf:instanceOf                  <http://example.org/BV011732744#Work> ;
+        bf:issuance                    <http://id.loc.gov/vocabulary/issuance/mono> ;
+        bf:media                       <http://id.loc.gov/vocabulary/mediaTypes/n> ;
+        bf:note                        [ a            bf:Note ;
+                                         rdfs:label   "Ill." ;
+                                         bf:noteType  "Physical details"
+                                       ] ;
+        bf:provisionActivity           [ a         bf:Publication , bf:ProvisionActivity ;
+                                         bf:date   "1932"^^<http://id.loc.gov/datatypes/edtf> ;
+                                         bf:place  <http://id.loc.gov/vocabulary/countries/>
+                                       ] ;
+        bf:provisionActivity           [ a         bf:Publication , bf:ProvisionActivity ;
+                                         bf:agent  [ a           bf:Agent ;
+                                                     rdfs:label  "Conard"
+                                                   ] ;
+                                         bf:date   "1932" ;
+                                         bf:place  [ a           bf:Place ;
+                                                     rdfs:label  "Paris"
+                                                   ]
+                                       ] ;
+        bf:provisionActivityStatement  "Paris; Conard; 1932" ;
+        bf:responsibilityStatement     "texte rev. et annoté par Marcel Bouteron ... Ill. de Charles Huard" ;
+        bf:title                       [ a                  bf:Title ;
+                                         rdfs:label         "Oeuvres complètes de Honoré de Balzac [37] Contes drolatiques ; 2" ;
+                                         bflc:titleSortKey  "Oeuvres complètes de Honoré de Balzac [37] Contes drolatiques ; 2" ;
+                                         bf:mainTitle       "Oeuvres complètes de Honoré de Balzac" ;
+                                         bf:partName        "Contes drolatiques ; 2" ;
+                                         bf:partNumber      "[37]"
+                                       ] .
+
+<http://id.loc.gov/vocabulary/languages/fre>
+        a       bf:Language .
+
+<http://example.org/BV011732744#Agent700-12>
+        a                    bf:Person , bf:Agent ;
+        rdfs:label           "Bouteron, Marcel 1877-1962" ;
+        bflc:name00MarcKey   "7001 $aBouteron, Marcel$d1877-1962$eSonstige$0(DE-588)1028492286$4oth" ;
+        bflc:name00MatchKey  "Bouteron, Marcel 1877-1962" ;
+        bf:identifiedBy      [ a          bf:Identifier ;
+                               rdf:value  "1028492286" ;
+                               bf:source  [ a           bf:Source ;
+                                            rdfs:label  "DE-588"
+                                          ]
+                             ] .
+
+<http://id.loc.gov/vocabulary/carriers/nc>
+        a          bf:Carrier ;
+        bf:source  [ a           bf:Source ;
+                     rdfs:label  "rdacarrier"
+                   ] .
+
+<http://id.loc.gov/vocabulary/mediaTypes/n>
+        a          bf:Media ;
+        bf:source  [ a           bf:Source ;
+                     rdfs:label  "rdamedia"
+                   ] .
+
+<http://id.loc.gov/vocabulary/contentTypes/txt>
+        a          bf:Content ;
+        bf:source  [ a           bf:Source ;
+                     rdfs:label  "rdacontent"
+                   ] .
+
+<http://example.org/BV011732744#Agent100-8>
+        a                    bf:Person , bf:Agent ;
+        rdfs:label           "Balzac, Honoré de 1799-1850" ;
+        bflc:name00MarcKey   "1001 $aBalzac, Honoré de$d1799-1850$eVerfasser$0(DE-588)118506358$4aut" ;
+        bflc:name00MatchKey  "Balzac, Honoré de 1799-1850" ;
+        bflc:primaryContributorName00MatchKey
+                "Balzac, Honoré de 1799-1850" ;
+        bf:identifiedBy      [ a          bf:Identifier ;
+                               rdf:value  "118506358" ;
+                               bf:source  [ a           bf:Source ;
+                                            rdfs:label  "DE-588"
+                                          ]
+                             ] .
+
+<http://id.loc.gov/vocabulary/issuance/mono>
+        a       bf:Issuance .

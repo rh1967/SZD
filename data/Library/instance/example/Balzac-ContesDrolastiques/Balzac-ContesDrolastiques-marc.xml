@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+                <record xmlns="http://www.loc.gov/MARC21/slim">
+                    <leader>00914nam a2200265 cc4500</leader>
+                    <controlfield tag="001">BV011732744</controlfield>
+                    <controlfield tag="003">DE-604</controlfield>
+                    <controlfield tag="005">20090109        </controlfield>
+                    <controlfield tag="007">t</controlfield>
+                    <controlfield tag="008">980123s1932       a|||  |||| 00||| fre d</controlfield>
+                    <datafield tag="040" ind1=" " ind2=" ">
+                        <subfield code="a">DE-604</subfield>
+                        <subfield code="b">ger</subfield>
+                        <subfield code="e">rakddb</subfield>
+                    </datafield>
+                    <datafield tag="100" ind1="1" ind2=" ">
+                        <subfield code="a">Balzac, Honor&#xE9; de</subfield>
+                        <subfield code="d">1799-1850</subfield>
+                        <subfield code="e">Verfasser</subfield>
+                        <subfield code="0">(DE-588)118506358</subfield>
+                        <subfield code="4">aut</subfield>
+                    </datafield>
+                    <datafield tag="245" ind1="1" ind2="0">
+                        <subfield code="a">Oeuvres compl&#xE8;tes de Honor&#xE9; de Balzac</subfield>
+                        <subfield code="n">[37]</subfield>
+                        <subfield code="p">Contes drolatiques ; 2</subfield>
+                        <subfield code="c">texte rev. et annot&#xE9; par Marcel Bouteron ... Ill. de Charles Huard ...</subfield>
+                    </datafield>
+                    <datafield tag="264" ind1=" " ind2="1">
+                        <subfield code="a">Paris</subfield>
+                        <subfield code="b">Conard</subfield>
+                        <subfield code="c">1932</subfield>
+                    </datafield>
+                    <datafield tag="300" ind1=" " ind2=" ">
+                        <subfield code="a">338 S.</subfield>
+                        <subfield code="b">Ill.</subfield>
+                    </datafield>
+                    <datafield tag="700" ind1="1" ind2=" ">
+                        <subfield code="a">Bouteron, Marcel</subfield>
+                        <subfield code="d">1877-1962</subfield>
+                        <subfield code="e">Sonstige</subfield>
+                        <subfield code="0">(DE-588)1028492286</subfield>
+                        <subfield code="4">oth</subfield>
+                    </datafield>
+                    <datafield tag="700" ind1="1" ind2=" ">
+                        <subfield code="a">Huard, Charles</subfield>
+                        <subfield code="e">Sonstige</subfield>
+                        <subfield code="4">oth</subfield>
+                    </datafield>
+                    <datafield tag="035" ind1=" " ind2=" ">
+                        <subfield code="a">(OCoLC)633790752</subfield>
+                    </datafield>
+                    <datafield tag="035" ind1=" " ind2=" ">
+                        <subfield code="a">(DE-599)BVBBV011732744</subfield>
+                    </datafield>
+                    <datafield tag="041" ind1="0" ind2=" ">
+                        <subfield code="a">fre</subfield>
+                    </datafield>
+                    <datafield tag="049" ind1=" " ind2=" ">
+                        <subfield code="a">DE-824</subfield>
+                        <subfield code="a">DE-384</subfield>
+                        <subfield code="a">DE-37</subfield>
+                        <subfield code="a">DE-29</subfield>
+                        <subfield code="a">DE-19</subfield>
+                        <subfield code="a">DE-188</subfield>
+                    </datafield>
+                    <datafield tag="336" ind1=" " ind2=" ">
+                        <subfield code="b">txt</subfield>
+                        <subfield code="2">rdacontent</subfield>
+                    </datafield>
+                    <datafield tag="337" ind1=" " ind2=" ">
+                        <subfield code="b">n</subfield>
+                        <subfield code="2">rdamedia</subfield>
+                    </datafield>
+                    <datafield tag="338" ind1=" " ind2=" ">
+                        <subfield code="b">nc</subfield>
+                        <subfield code="2">rdacarrier</subfield>
+                    </datafield>
+                    <datafield tag="773" ind1="0" ind2="8">
+                        <subfield code="w">(DE-604)BV011732553</subfield>
+                        <subfield code="g">37</subfield>
+                    </datafield>
+                </record>

@@ -1,0 +1,47 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://dhplus.sbg.ac.at/ontology#test>
+        a       "result" ;
+        <https://gams.uni-graz.at/o:gams-ontology#isMemberOfCollection>
+                "result" ;
+        <https://gams.uni-graz.at/o:gams-ontology#textualContent>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#author>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#composer>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#editor>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#extent>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#illustrator>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#language>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#location>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#originaltitle>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#provenance>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#provenanceCharacteristic>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#publicationStmt>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#relationToPerson>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#series>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#signature>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#title>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#translator>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#writerAfterword>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#writerForeword>
+                "result" .

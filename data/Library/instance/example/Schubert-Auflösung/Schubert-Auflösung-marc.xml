@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+                <record xmlns="http://www.loc.gov/MARC21/slim">
+                    <leader>00000ncm a2200000   4500</leader>
+                    <controlfield tag="001">990092745340203331</controlfield>
+                    <controlfield tag="003">AT-OBV</controlfield>
+                    <controlfield tag="005">20180124072400.0</controlfield>
+                    <controlfield tag="007">qu</controlfield>
+                    <controlfield tag="008">120607|1842####xx#uu|##################u</controlfield>
+                    <controlfield tag="009">AC09231596</controlfield>
+                    <datafield tag="028" ind1="2" ind2="2">
+                        <subfield code="a">D.et C.N°7412</subfield>
+                    </datafield>
+                    <datafield tag="035" ind1=" " ind2=" ">
+                        <subfield code="a">AC09231596</subfield>
+                    </datafield>
+                    <datafield tag="035" ind1=" " ind2=" ">
+                        <subfield code="a">(AT-OBV)AC09231596</subfield>
+                    </datafield>
+                    <datafield tag="035" ind1=" " ind2=" ">
+                        <subfield code="a">(Aleph)009274534ACC01</subfield>
+                    </datafield>
+                    <datafield tag="035" ind1=" " ind2=" ">
+                        <subfield code="a">(DE-599)OBVAC09231596</subfield>
+                    </datafield>
+                    <datafield tag="040" ind1=" " ind2=" ">
+                        <subfield code="a">ONB</subfield>
+                        <subfield code="b">ger</subfield>
+                        <subfield code="c">ONB-MUS-Retro</subfield>
+                        <subfield code="d">ONB</subfield>
+                        <subfield code="e">pi</subfield>
+                    </datafield>
+                    <datafield tag="100" ind1="1" ind2=" ">
+                        <subfield code="a">Schubert, Franz</subfield>
+                        <subfield code="d">1797-1828</subfield>
+                        <subfield code="0">(DE-588)118610961</subfield>
+                        <subfield code="4">cmp</subfield>
+                    </datafield>
+                    <datafield tag="245" ind1="0" ind2="0">
+                        <subfield code="a">[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)</subfield>
+                    </datafield>
+                    <datafield tag="264" ind1=" " ind2="1">
+                        <subfield code="a">Wien</subfield>
+                        <subfield code="b">Anton Diabelli</subfield>
+                        <subfield code="c">(1842)</subfield>
+                    </datafield>
+                    <datafield tag="300" ind1=" " ind2=" ">
+                        <subfield code="a">11 S.</subfield>
+                    </datafield>
+                    <datafield tag="490" ind1="0" ind2=" ">
+                        <subfield code="a">Franz Schubert's nachgelassene musikalische Dichtungen für Gesang und Pianoforte. 34. Lieferung.</subfield>
+                    </datafield>
+                    <datafield tag="689" ind1="0" ind2="0">
+                        <subfield code="a">Vokalmusik</subfield>
+                        <subfield code="D">s</subfield>
+                        <subfield code="0">(DE-588)4063783-9</subfield>
+                    </datafield>
+                    <datafield tag="689" ind1="0" ind2="1">
+                        <subfield code="a">Solo</subfield>
+                        <subfield code="g">Musik</subfield>
+                        <subfield code="D">s</subfield>
+                        <subfield code="0">(DE-588)4313218-2</subfield>
+                    </datafield>
+                    <datafield tag="689" ind1="0" ind2=" ">
+                        <subfield code="5">AT-OBV</subfield>
+                        <subfield code="5">ONB-MUS-Retro</subfield>
+                    </datafield>
+                    <datafield tag="856" ind1="4" ind2=" ">
+                        <subfield code="u">http://katzoom.onb.ac.at/cgi-bin/katadmin/mus/mdaview.pl?katalog=3&amp;kz=1&amp;start=0211925</subfield>
+                        <subfield code="z">Zettel</subfield>
+                        <subfield code="o">Katalogkarte</subfield>
+                    </datafield>
+                    <datafield tag="852" ind1="0" ind2="1">
+                        <subfield code="a">43ACC_ONB</subfield>
+                        <subfield code="6">990041015450603338</subfield>
+                        <subfield code="9">P</subfield>
+                    </datafield>
+                    <datafield tag="970" ind1="1" ind2=" ">
+                        <subfield code="c">57</subfield>
+                    </datafield>
+                    <datafield tag="974" ind1="0" ind2="s">
+                        <subfield code="V">029</subfield>
+                        <subfield code="a">MZ00043540</subfield>
+                    </datafield>
+                    <datafield tag="974" ind1="0" ind2="s">
+                        <subfield code="F">030</subfield>
+                        <subfield code="A">e|1uf||||||37</subfield>
+                    </datafield>
+                    <datafield tag="974" ind1="0" ind2="s">
+                        <subfield code="F">050</subfield>
+                        <subfield code="A">a|a|||||||||||</subfield>
+                    </datafield>
+                    <datafield tag="974" ind1="0" ind2="s">
+                        <subfield code="F">051</subfield>
+                        <subfield code="A">|m||||||</subfield>
+                    </datafield>
+                </record>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/BV011732744#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:generationProcess>
+               <bf:GenerationProcess>
+                  <rdfs:label>DLC marc2bibframe2 v1.4.0-SNAPSHOT: 2021-01-21T20:23:16.418+01:00</rdfs:label>
+               </bf:GenerationProcess>
+            </bf:generationProcess>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>n</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>BV011732744</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>DE-604</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-01-09T  :  :  </bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1998-01-23</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DE-604</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/ger"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rakddb"/>
+            </bf:descriptionConventions>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/fre"/>
+      </bf:language>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/BV011732744#Agent100-8">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Balzac, Honoré de 1799-1850</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Balzac, Honoré de 1799-1850</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aBalzac, Honoré de$d1799-1850$eVerfasser$0(DE-588)118506358$4aut</bflc:name00MarcKey>
+                  <rdfs:label>Balzac, Honoré de 1799-1850</rdfs:label>
+                  <bf:identifiedBy>
+                     <bf:Identifier>
+                        <rdf:value>118506358</rdf:value>
+                        <bf:source>
+                           <bf:Source>
+                              <rdfs:label>DE-588</rdfs:label>
+                           </bf:Source>
+                        </bf:source>
+                     </bf:Identifier>
+                  </bf:identifiedBy>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>Verfasser</rdfs:label>
+                  <bflc:relatorMatchKey>Verfasser</bflc:relatorMatchKey>
+               </bf:Role>
+            </bf:role>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/aut"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Oeuvres complètes de Honoré de Balzac [37] Contes drolatiques ; 2</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Oeuvres complètes de Honoré de Balzac [37] Contes drolatiques ; 2</rdfs:label>
+            <bflc:titleSortKey>Oeuvres complètes de Honoré de Balzac [37] Contes drolatiques ; 2</bflc:titleSortKey>
+            <bf:mainTitle>Oeuvres complètes de Honoré de Balzac</bf:mainTitle>
+            <bf:partNumber>[37]</bf:partNumber>
+            <bf:partName>Contes drolatiques ; 2</bf:partName>
+         </bf:Title>
+      </bf:title>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/BV011732744#Agent700-12">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Bouteron, Marcel 1877-1962</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aBouteron, Marcel$d1877-1962$eSonstige$0(DE-588)1028492286$4oth</bflc:name00MarcKey>
+                  <rdfs:label>Bouteron, Marcel 1877-1962</rdfs:label>
+                  <bf:identifiedBy>
+                     <bf:Identifier>
+                        <rdf:value>1028492286</rdf:value>
+                        <bf:source>
+                           <bf:Source>
+                              <rdfs:label>DE-588</rdfs:label>
+                           </bf:Source>
+                        </bf:source>
+                     </bf:Identifier>
+                  </bf:identifiedBy>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>Sonstige</rdfs:label>
+                  <bflc:relatorMatchKey>Sonstige</bflc:relatorMatchKey>
+               </bf:Role>
+            </bf:role>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/oth"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/BV011732744#Agent700-13">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Huard, Charles</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aHuard, Charles$eSonstige$4oth</bflc:name00MarcKey>
+                  <rdfs:label>Huard, Charles</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>Sonstige</rdfs:label>
+                  <bflc:relatorMatchKey>Sonstige</bflc:relatorMatchKey>
+               </bf:Role>
+            </bf:role>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/oth"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:language>
+         <bf:Language>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value rdf:resource="http://id.loc.gov/vocabulary/languages/fre"/>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/languages"/>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+         </bf:Language>
+      </bf:language>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentTypes/txt">
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:partOf>
+         <bf:Work rdf:about="http://example.org/BV011732744#Work773-21">
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value>BV011732553</rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>DE-604</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+            <bf:hasInstance>
+               <bf:Instance rdf:about="http://example.org/BV011732744#Instance773-21">
+                  <bf:part>37</bf:part>
+                  <bf:instanceOf rdf:resource="http://example.org/BV011732744#Work773-21"/>
+               </bf:Instance>
+            </bf:hasInstance>
+         </bf:Work>
+      </bf:partOf>
+      <bf:hasInstance rdf:resource="http://example.org/BV011732744#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/BV011732744#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1932</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:illustrativeContent>
+         <bf:Illustration rdf:about="http://id.loc.gov/vocabulary/millus/ill">
+            <rdfs:label>illustrations</rdfs:label>
+         </bf:Illustration>
+      </bf:illustrativeContent>
+      <rdfs:label>Oeuvres complètes de Honoré de Balzac [37] Contes drolatiques ; 2</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Oeuvres complètes de Honoré de Balzac [37] Contes drolatiques ; 2</rdfs:label>
+            <bflc:titleSortKey>Oeuvres complètes de Honoré de Balzac [37] Contes drolatiques ; 2</bflc:titleSortKey>
+            <bf:mainTitle>Oeuvres complètes de Honoré de Balzac</bf:mainTitle>
+            <bf:partNumber>[37]</bf:partNumber>
+            <bf:partName>Contes drolatiques ; 2</bf:partName>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>texte rev. et annoté par Marcel Bouteron ... Ill. de Charles Huard</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Paris</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Conard</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1932</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Paris; Conard; 1932</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>338 S.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:note>
+         <bf:Note>
+            <bf:noteType>Physical details</bf:noteType>
+            <rdfs:label>Ill.</rdfs:label>
+         </bf:Note>
+      </bf:note>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>633790752</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>OCoLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>BVBBV011732744</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>DE-599</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaTypes/n">
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:instanceOf rdf:resource="http://example.org/BV011732744#Work"/>
+   </bf:Instance>
+</rdf:RDF>

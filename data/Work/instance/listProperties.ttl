@@ -1,0 +1,55 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://dhplus.sbg.ac.at/ontology#test>
+        a       "result" ;
+        <https://gams.uni-graz.at/o:gams-ontology#isMemberOfCollection>
+                "result" ;
+        <https://gams.uni-graz.at/o:gams-ontology#textualContent>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#acquired>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#additionalMaterial>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#author>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#binding>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#category>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#dateOfPublication>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#enclosures>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#extent>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#identifyingInscription>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#incipit>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#language>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#location>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#note>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#objecttyp>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#provenance>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#relationToPerson>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#secretarialHand>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#signature>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#term>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#title>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#writingInstrument>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#writingMaterial>
+                "result" .

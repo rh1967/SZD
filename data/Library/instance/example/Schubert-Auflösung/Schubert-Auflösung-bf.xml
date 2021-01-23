@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/990092745340203331#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:generationProcess>
+               <bf:GenerationProcess>
+                  <rdfs:label>DLC marc2bibframe2 v1.4.0-SNAPSHOT: 2021-01-21T18:43:48.972+01:00</rdfs:label>
+               </bf:GenerationProcess>
+            </bf:generationProcess>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>n</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>unknown</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>990092745340203331</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>AT-OBV</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-24T07:24:00</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-07</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>ONB</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>ONB-MUS-Retro</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/ger"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>ONB</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/pi"/>
+            </bf:descriptionConventions>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/NotatedMusic"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/%23%23%23"/>
+      </bf:language>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/990092745340203331#Agent100-14">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Schubert, Franz 1797-1828</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Schubert, Franz 1797-1828</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aSchubert, Franz$d1797-1828$0(DE-588)118610961$4cmp</bflc:name00MarcKey>
+                  <rdfs:label>Schubert, Franz 1797-1828</rdfs:label>
+                  <bf:identifiedBy>
+                     <bf:Identifier>
+                        <rdf:value>118610961</rdf:value>
+                        <bf:source>
+                           <bf:Source>
+                              <rdfs:label>DE-588</rdfs:label>
+                           </bf:Source>
+                        </bf:source>
+                     </bf:Identifier>
+                  </bf:identifiedBy>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/cmp"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)</rdfs:label>
+            <bflc:titleSortKey>[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)</bflc:titleSortKey>
+            <bf:mainTitle>[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/990092745340203331#Instance856-22">
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)</rdfs:label>
+                  <bflc:titleSortKey>[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)</bflc:titleSortKey>
+                  <bf:mainTitle>[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+            <bf:hasItem>
+               <bf:Item rdf:about="http://example.org/990092745340203331#Item856-22">
+                  <bf:electronicLocator>
+                     <rdfs:Resource>
+                        <bflc:locator rdf:resource="http://katzoom.onb.ac.at/cgi-bin/katadmin/mus/mdaview.pl?katalog=3&amp;kz=1&amp;start=0211925"/>
+                        <bf:note>
+                           <bf:Note>
+                              <rdfs:label>Zettel</rdfs:label>
+                           </bf:Note>
+                        </bf:note>
+                     </rdfs:Resource>
+                  </bf:electronicLocator>
+                  <bf:itemOf rdf:resource="http://example.org/990092745340203331#Instance856-22"/>
+               </bf:Item>
+            </bf:hasItem>
+            <bf:instanceOf rdf:resource="http://example.org/990092745340203331#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance rdf:resource="http://example.org/990092745340203331#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/990092745340203331#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1842/####</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/xx%23"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:MusicPlate>
+            <rdf:value>D.et C.N°7412</rdf:value>
+         </bf:MusicPlate>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>AC09231596</rdf:value>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>AC09231596</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>AT-OBV</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>009274534ACC01</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>Aleph</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>OBVAC09231596</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>DE-599</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <rdfs:label>[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)</rdfs:label>
+            <bflc:titleSortKey>[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)</bflc:titleSortKey>
+            <bf:mainTitle>[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Wien</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Anton Diabelli</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>(1842)</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Wien; Anton Diabelli; (1842)</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>11 S.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:hasSeries>
+         <bf:Instance>
+            <rdfs:label>Franz Schubert's nachgelassene musikalische Dichtungen für Gesang und Pianoforte. 34. Lieferung.</rdfs:label>
+            <bf:seriesStatement>Franz Schubert's nachgelassene musikalische Dichtungen für Gesang und Pianoforte. 34. Lieferung.</bf:seriesStatement>
+         </bf:Instance>
+      </bf:hasSeries>
+      <bf:instanceOf rdf:resource="http://example.org/990092745340203331#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/990092745340203331#Item852-23">
+            <bf:heldBy>
+               <bf:Agent rdf:about="http://id.loc.gov/vocabulary/organizations/43ACC_ONB"/>
+            </bf:heldBy>
+            <bf:itemOf rdf:resource="http://example.org/990092745340203331#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

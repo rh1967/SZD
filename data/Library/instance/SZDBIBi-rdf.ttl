@@ -5264,7 +5264,7 @@
     gams:textualContent           "  Adoratie    Stefan  Zweig      F.  Aderca      Adeverul  s.d.  Bucuresti    Lectura 43      London  Erben Stefan Zweigs  C.VI.right(13)     Hausexemplar ungekennzeichnet  Unmarked Hausexemplar              31  8°       Broschur  wrappers       SZDBIB.1174" ;
     szd:author                    <https://gams.uni-graz.at/o:szd.personen#SZDPER.1560> ;
     szd:extent                    <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.1174EX> ;
-    szd:language                  <http://id.loc.gov/vocabulary/iso639-2/rum > ;
+    szd:language                  <http://id.loc.gov/vocabulary/iso639-2/rum> ;
     szd:location                  <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.18> ;
     szd:provenance                ""@de ;
     szd:provenanceCharacteristic  <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.1174PS> ;

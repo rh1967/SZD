@@ -1,0 +1,235 @@
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bflc:  <http://id.loc.gov/ontologies/bflc/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://id.loc.gov/vocabulary/languages/ger>
+        a       bf:Language .
+
+<http://id.loc.gov/vocabulary/countries/gw>
+        a       bf:Place .
+
+<https://d-nb.info/gnd/118637479>
+        a                    bf:Person , bf:Agent ;
+        rdfs:label           "Zweig, Stefan 1881-1942" ;
+        bflc:name00MarcKey   "1001 $0(DE-588)118637479$0https://d-nb.info/gnd/118637479$0(DE-101)118637479$aZweig, Stefan$d1881-1942$eVerfasser$4aut$2gnd" ;
+        bflc:name00MatchKey  "Zweig, Stefan 1881-1942" ;
+        bflc:primaryContributorName00MatchKey
+                "Zweig, Stefan 1881-1942" ;
+        bf:identifiedBy      [ a          bf:Identifier ;
+                               rdf:value  "118637479" ;
+                               bf:source  [ a           bf:Source ;
+                                            rdfs:label  "DE-101"
+                                          ]
+                             ] ;
+        bf:identifiedBy      [ a          bf:Identifier ;
+                               rdf:value  "118637479" ;
+                               bf:source  [ a           bf:Source ;
+                                            rdfs:label  "DE-588"
+                                          ]
+                             ] .
+
+<http://example.org/578529963#Work700-24>
+        a                bf:Work ;
+        rdfs:label       "Kaleidoskop portug." ;
+        bf:contribution  [ a         bf:Contribution ;
+                           bf:agent  <http://example.org/578529963#Agent700-24> ;
+                           bf:role   <http://id.loc.gov/vocabulary/relators/ctb>
+                         ] ;
+        bf:genreForm     [ a           bf:GenreForm ;
+                           rdfs:label  "portug"
+                         ] ;
+        bf:title         [ a                     bf:Title ;
+                           rdfs:label            "Kaleidoskop portug." ;
+                           bflc:title00MarcKey   "70012$aZweig, Stefan$d1881-1942$2gnd$tKaleidoskop$gportug." ;
+                           bflc:title00MatchKey  "Kaleidoskop portug." ;
+                           bflc:titleSortKey     "Kaleidoskop portug." ;
+                           bf:mainTitle          "Kaleidoskop"
+                         ] .
+
+<http://id.loc.gov/vocabulary/languages>
+        a       bf:Source .
+
+<http://id.loc.gov/vocabulary/relators/aut>
+        a       bf:Role .
+
+<http://id.loc.gov/vocabulary/organizations/DE-101a>
+        a       bf:Agent .
+
+<http://id.loc.gov/vocabulary/carriers/nc>
+        a           bf:Carrier ;
+        rdfs:label  "Band" ;
+        bf:source   [ a           bf:Source ;
+                      rdfs:label  "rdacarrier"
+                    ] .
+
+<http://example.org/578529963#Item850-25-1>
+        a          bf:Item ;
+        bf:heldBy  <http://id.loc.gov/vocabulary/organizations/DE-101a> ;
+        bf:itemOf  <http://example.org/578529963#Instance> .
+
+<http://id.loc.gov/vocabulary/mediaTypes/n>
+        a           bf:Media ;
+        rdfs:label  "ohne Hilfsmittel zu benutzen" ;
+        bf:source   [ a           bf:Source ;
+                      rdfs:label  "rdamedia"
+                    ] .
+
+<http://example.org/578529963#Agent700-24>
+        a                    bf:Person , bf:Agent ;
+        rdfs:label           "Zweig, Stefan 1881-1942" ;
+        bflc:name00MarcKey   "70012$aZweig, Stefan$d1881-1942$2gnd$tKaleidoskop$gportug." ;
+        bflc:name00MatchKey  "Zweig, Stefan 1881-1942" .
+
+<http://id.loc.gov/vocabulary/contentTypes/txt>
+        a           bf:Content ;
+        rdfs:label  "Text" ;
+        bf:source   [ a           bf:Source ;
+                      rdfs:label  "rdacontent"
+                    ] .
+
+<http://example.org/578529963#Work>
+        a                 bf:Text , bf:Work ;
+        rdfs:label        "Caleidoscópio (Lendas)" ;
+        bf:adminMetadata  [ a                          bf:AdminMetadata ;
+                            bflc:encodingLevel         [ a        bflc:EncodingLevel ;
+                                                         bf:code  "f"
+                                                       ] ;
+                            bf:changeDate              "2017-12-03T09:04:47"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                            bf:creationDate            "2002-08-20"^^<http://www.w3.org/2001/XMLSchema#date> ;
+                            bf:descriptionConventions  [ a        bf:DescriptionConventions ;
+                                                         bf:code  "isbd"
+                                                       ] ;
+                            bf:descriptionLanguage     <http://id.loc.gov/vocabulary/languages/ger> ;
+                            bf:descriptionModifier     [ a           bf:Agent ;
+                                                         rdfs:label  "9999"
+                                                       ] ;
+                            bf:generationProcess       [ a           bf:GenerationProcess ;
+                                                         rdfs:label  "DLC marc2bibframe2 v1.4.0-SNAPSHOT: 2021-01-22T09:52:21.25+01:00"
+                                                       ] ;
+                            bf:identifiedBy            [ a          bf:Local ;
+                                                         rdf:value  "578529963" ;
+                                                         bf:source  [ a           bf:Source ;
+                                                                      rdfs:label  "DE-101"
+                                                                    ]
+                                                       ] ;
+                            bf:identifiedBy            [ a          bf:Local ;
+                                                         rdf:value  "578529963"
+                                                       ] ;
+                            bf:source                  [ a        bf:Source ;
+                                                         bf:code  "DE-101"
+                                                       ] ;
+                            bf:source                  [ a           bf:Agent , bf:Source ;
+                                                         rdfs:label  "DE-101"
+                                                       ] ;
+                            bf:source                  [ a           bf:Agent , bf:Source ;
+                                                         rdfs:label  "9999"
+                                                       ] ;
+                            bf:status                  [ a        bf:Status ;
+                                                         bf:code  "n"
+                                                       ]
+                          ] ;
+        bf:content        <http://id.loc.gov/vocabulary/contentTypes/txt> ;
+        bf:contribution   [ a         bf:Contribution ;
+                            bf:agent  <http://example.org/578529963#Agent700-23> ;
+                            bf:role   <http://id.loc.gov/vocabulary/relators/ctb> ;
+                            bf:role   [ a                     bf:Role ;
+                                        rdfs:label            "Mitwirkender" ;
+                                        bflc:relatorMatchKey  "Mitwirkender"
+                                      ]
+                          ] ;
+        bf:contribution   [ a         bflc:PrimaryContribution , bf:Contribution ;
+                            bf:agent  <https://d-nb.info/gnd/118637479> ;
+                            bf:role   <http://id.loc.gov/vocabulary/relators/aut> ;
+                            bf:role   [ a                     bf:Role ;
+                                        rdfs:label            "Verfasser" ;
+                                        bflc:relatorMatchKey  "Verfasser"
+                                      ]
+                          ] ;
+        bf:hasInstance    <http://example.org/578529963#Instance> ;
+        bf:hasPart        <http://example.org/578529963#Work700-24> ;
+        bf:language       <http://id.loc.gov/vocabulary/languages/ger> ;
+        bf:language       [ a                bf:Language ;
+                            bf:identifiedBy  [ a          bf:Identifier ;
+                                               rdf:value  <http://id.loc.gov/vocabulary/languages/ger> ;
+                                               bf:source  <http://id.loc.gov/vocabulary/languages>
+                                             ]
+                          ] ;
+        bf:title          [ a                  bf:Title ;
+                            rdfs:label         "Caleidoscópio (Lendas)" ;
+                            bflc:titleSortKey  "Caleidoscópio (Lendas)" ;
+                            bf:mainTitle       "Caleidoscópio" ;
+                            bf:subtitle        "(Lendas)"
+                          ] .
+
+<http://example.org/578529963#Agent700-23>
+        a                    bf:Person , bf:Agent ;
+        rdfs:label           "Ogando, Alice" ;
+        bflc:name00MarcKey   "7001 $81\\p$aOgando, Alice$eMitwirkender$4ctb" ;
+        bflc:name00MatchKey  "Ogando, Alice" .
+
+<http://id.loc.gov/vocabulary/relators/ctb>
+        a       bf:Role .
+
+<http://example.org/578529963#Instance>
+        a                              bf:Instance ;
+        rdfs:label                     "Caleidoscópio (Lendas)" ;
+        bf:carrier                     <http://id.loc.gov/vocabulary/carriers/nc> ;
+        bf:dimensions                  "8" ;
+        bf:editionStatement            "4. ed" ;
+        bf:extent                      [ a           bf:Extent ;
+                                         rdfs:label  "190 S."
+                                       ] ;
+        bf:hasItem                     <http://example.org/578529963#Item850-25-1> ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "72402508" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "OCoLC"
+                                                    ]
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Nbn ;
+                                         rdf:value  "00,L01" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "dnb"
+                                                    ]
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "DNB578529963" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "DE-599"
+                                                    ]
+                                       ] ;
+        bf:instanceOf                  <http://example.org/578529963#Work> ;
+        bf:issuance                    <http://id.loc.gov/vocabulary/issuance/mono> ;
+        bf:media                       <http://id.loc.gov/vocabulary/mediaTypes/n> ;
+        bf:place                       [ a          bf:Place ;
+                                         bf:code    "XA-DE" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "ISO 3166"
+                                                    ]
+                                       ] ;
+        bf:provisionActivity           [ a         bf:Publication , bf:ProvisionActivity ;
+                                         bf:date   "1957"^^<http://id.loc.gov/datatypes/edtf> ;
+                                         bf:place  <http://id.loc.gov/vocabulary/countries/gw>
+                                       ] ;
+        bf:provisionActivity           [ a         bf:Publication , bf:ProvisionActivity ;
+                                         bf:agent  [ a           bf:Agent ;
+                                                     rdfs:label  "Livraria Civilizaçāo"
+                                                   ] ;
+                                         bf:date   "1957" ;
+                                         bf:place  [ a           bf:Place ;
+                                                     rdfs:label  "Porto"
+                                                   ]
+                                       ] ;
+        bf:provisionActivityStatement  "Porto; Livraria Civilizaçāo; 1957" ;
+        bf:responsibilityStatement     "Stefan Zweig. Trad. de Alice Ogando" ;
+        bf:title                       [ a                  bf:Title ;
+                                         rdfs:label         "Caleidoscópio (Lendas)" ;
+                                         bflc:titleSortKey  "Caleidoscópio (Lendas)" ;
+                                         bf:mainTitle       "Caleidoscópio" ;
+                                         bf:subtitle        "(Lendas)"
+                                       ] .
+
+<http://id.loc.gov/vocabulary/issuance/mono>
+        a       bf:Issuance .

@@ -1,0 +1,35 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://dhplus.sbg.ac.at/ontology#test>
+        a       "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#autograph>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#binding>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#bookplate>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#glossar>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#insertion>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#marginalia>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#marker>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#note>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#originalShelfmark>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#overpasting>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#presentationinscription>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#removedpage>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#stamp>
+                "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#text>
+                "result" .

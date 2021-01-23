@@ -1,0 +1,170 @@
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bflc:  <http://id.loc.gov/ontologies/bflc/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://id.loc.gov/vocabulary/languages/ger>
+        a       bf:Language .
+
+<http://id.loc.gov/vocabulary/descriptionConventions/pi>
+        a       bf:DescriptionConventions .
+
+<http://example.org/990092745340203331#Item856-22>
+        a                     bf:Item ;
+        bf:electronicLocator  [ a             rdfs:Resource ;
+                                bflc:locator  <http://katzoom.onb.ac.at/cgi-bin/katadmin/mus/mdaview.pl?katalog=3&kz=1&start=0211925> ;
+                                bf:note       [ a           bf:Note ;
+                                                rdfs:label  "Zettel"
+                                              ]
+                              ] ;
+        bf:itemOf             <http://example.org/990092745340203331#Instance856-22> .
+
+<http://example.org/990092745340203331#Work>
+        a                 bf:NotatedMusic , bf:Work ;
+        rdfs:label        "[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)" ;
+        bf:adminMetadata  [ a                          bf:AdminMetadata ;
+                            bflc:encodingLevel         [ a        bflc:EncodingLevel ;
+                                                         bf:code  "f"
+                                                       ] ;
+                            bf:changeDate              "2018-01-24T07:24:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                            bf:creationDate            "2012-06-07"^^<http://www.w3.org/2001/XMLSchema#date> ;
+                            bf:descriptionConventions  <http://id.loc.gov/vocabulary/descriptionConventions/pi> ;
+                            bf:descriptionConventions  [ a        bf:DescriptionConventions ;
+                                                         bf:code  "unknown"
+                                                       ] ;
+                            bf:descriptionLanguage     <http://id.loc.gov/vocabulary/languages/ger> ;
+                            bf:descriptionModifier     [ a           bf:Agent ;
+                                                         rdfs:label  "ONB"
+                                                       ] ;
+                            bf:generationProcess       [ a           bf:GenerationProcess ;
+                                                         rdfs:label  "DLC marc2bibframe2 v1.4.0-SNAPSHOT: 2021-01-21T18:43:48.972+01:00"
+                                                       ] ;
+                            bf:identifiedBy            [ a          bf:Local ;
+                                                         rdf:value  "990092745340203331"
+                                                       ] ;
+                            bf:source                  [ a           bf:Agent , bf:Source ;
+                                                         rdfs:label  "ONB"
+                                                       ] ;
+                            bf:source                  [ a           bf:Agent , bf:Source ;
+                                                         rdfs:label  "ONB-MUS-Retro"
+                                                       ] ;
+                            bf:source                  [ a        bf:Source ;
+                                                         bf:code  "AT-OBV"
+                                                       ] ;
+                            bf:status                  [ a        bf:Status ;
+                                                         bf:code  "n"
+                                                       ]
+                          ] ;
+        bf:contribution   [ a         bflc:PrimaryContribution , bf:Contribution ;
+                            bf:agent  <http://example.org/990092745340203331#Agent100-14> ;
+                            bf:role   <http://id.loc.gov/vocabulary/relators/cmp>
+                          ] ;
+        bf:hasInstance    <http://example.org/990092745340203331#Instance> , <http://example.org/990092745340203331#Instance856-22> ;
+        bf:language       <http://id.loc.gov/vocabulary/languages/%23%23%23> ;
+        bf:title          [ a                  bf:Title ;
+                            rdfs:label         "[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)" ;
+                            bflc:titleSortKey  "[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)" ;
+                            bf:mainTitle       "[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)"
+                          ] .
+
+<http://example.org/990092745340203331#Agent100-14>
+        a                    bf:Person , bf:Agent ;
+        rdfs:label           "Schubert, Franz 1797-1828" ;
+        bflc:name00MarcKey   "1001 $aSchubert, Franz$d1797-1828$0(DE-588)118610961$4cmp" ;
+        bflc:name00MatchKey  "Schubert, Franz 1797-1828" ;
+        bflc:primaryContributorName00MatchKey
+                "Schubert, Franz 1797-1828" ;
+        bf:identifiedBy      [ a          bf:Identifier ;
+                               rdf:value  "118610961" ;
+                               bf:source  [ a           bf:Source ;
+                                            rdfs:label  "DE-588"
+                                          ]
+                             ] .
+
+<http://example.org/990092745340203331#Instance856-22>
+        a              bf:Electronic , bf:Instance ;
+        bf:hasItem     <http://example.org/990092745340203331#Item856-22> ;
+        bf:instanceOf  <http://example.org/990092745340203331#Work> ;
+        bf:title       [ a                  bf:Title ;
+                         rdfs:label         "[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)" ;
+                         bflc:titleSortKey  "[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)" ;
+                         bf:mainTitle       "[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)"
+                       ] .
+
+<http://example.org/990092745340203331#Item852-23>
+        a          bf:Item ;
+        bf:heldBy  <http://id.loc.gov/vocabulary/organizations/43ACC_ONB> ;
+        bf:itemOf  <http://example.org/990092745340203331#Instance> .
+
+<http://id.loc.gov/vocabulary/languages/%23%23%23>
+        a       bf:Language .
+
+<http://id.loc.gov/vocabulary/relators/cmp>
+        a       bf:Role .
+
+<http://id.loc.gov/vocabulary/countries/xx%23>
+        a       bf:Place .
+
+<http://id.loc.gov/vocabulary/organizations/43ACC_ONB>
+        a       bf:Agent .
+
+<http://example.org/990092745340203331#Instance>
+        a                              bf:Instance ;
+        rdfs:label                     "[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)" ;
+        bf:extent                      [ a           bf:Extent ;
+                                         rdfs:label  "11 S."
+                                       ] ;
+        bf:hasItem                     <http://example.org/990092745340203331#Item852-23> ;
+        bf:hasSeries                   [ a                   bf:Instance ;
+                                         rdfs:label          "Franz Schubert's nachgelassene musikalische Dichtungen für Gesang und Pianoforte. 34. Lieferung." ;
+                                         bf:seriesStatement  "Franz Schubert's nachgelassene musikalische Dichtungen für Gesang und Pianoforte. 34. Lieferung."
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "009274534ACC01" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "Aleph"
+                                                    ]
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "OBVAC09231596" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "DE-599"
+                                                    ]
+                                       ] ;
+        bf:identifiedBy                [ a          bf:MusicPlate ;
+                                         rdf:value  "D.et C.N°7412"
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "AC09231596"
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "AC09231596" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "AT-OBV"
+                                                    ]
+                                       ] ;
+        bf:instanceOf                  <http://example.org/990092745340203331#Work> ;
+        bf:issuance                    <http://id.loc.gov/vocabulary/issuance/mono> ;
+        bf:provisionActivity           [ a         bf:Publication , bf:ProvisionActivity ;
+                                         bf:agent  [ a           bf:Agent ;
+                                                     rdfs:label  "Anton Diabelli"
+                                                   ] ;
+                                         bf:date   "(1842)" ;
+                                         bf:place  [ a           bf:Place ;
+                                                     rdfs:label  "Wien"
+                                                   ]
+                                       ] ;
+        bf:provisionActivity           [ a         bf:Publication , bf:ProvisionActivity ;
+                                         bf:date   "1842/####"^^<http://id.loc.gov/datatypes/edtf> ;
+                                         bf:place  <http://id.loc.gov/vocabulary/countries/xx%23>
+                                       ] ;
+        bf:provisionActivityStatement  "Wien; Anton Diabelli; (1842)" ;
+        bf:title                       [ a                  bf:Title ;
+                                         rdfs:label         "[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)" ;
+                                         bflc:titleSortKey  "[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)" ;
+                                         bf:mainTitle       "[D 807.] Auflösung. Gedicht von J. Mayrhofer. [D 626.] Blondel zu Marien. (Gesang, Klavier.)"
+                                       ] .
+
+<http://id.loc.gov/vocabulary/issuance/mono>
+        a       bf:Issuance .

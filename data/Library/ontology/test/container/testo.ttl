@@ -20,7 +20,7 @@
 @prefix szd: <https://gams.uni-graz.at/o:szd.ontology#> .
 @base <https://dhplus.sbg.ac.at/ontology/person> .
 
-dhpluso:work
+dhpluso:book
     a owl:Ontology ;
     dc:title "dhPLUS Ontologie"@de ;
     dc:title "dhPLUS Ontology"@en ;
@@ -102,28 +102,28 @@ dhpluso:work
 #################################################################
 
 #dhplus
-szd:Work
+szd:Book
     a owl:Class;
 
 #owl classification
 .
-_:WorkShape
+_:BookShape
     a sh:NodeShape ;
 
 #shacl validation
 .
-_:WorkRule
+_:BookRule
     a sh:NodeShape ;
 
 #shacl validation
-    sh:targetClass szd:Work ;
+    sh:targetClass szd:PublicationStmt ;
 #sparql generation
     sh:rule [
                 a sh:SPARQLRule ;
-                sh:prefixes dhpluso:work ;
+                sh:prefixes dhpluso:book ;
                 sh:construct """            
             CONSTRUCT {
-                dhpluso:test    ?p  "result"
+                dhpluso:test ?p "result"
             }
             WHERE
             {
@@ -131,7 +131,7 @@ _:WorkRule
                     SELECT DISTINCT ?p
                     WHERE
                     {
-                        $this   a szd:Work ;
+                        $this   a szd:PublicationStmt ;
                                 ?p  ?o .
                     }
                 } .
@@ -139,7 +139,7 @@ _:WorkRule
 
                 }
             }
-            # LIMIT 1
+            #LIMIT 1
         """ ;
             ] ;
 .
