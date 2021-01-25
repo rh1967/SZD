@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+                <record xmlns="http://www.loc.gov/MARC21/slim">
+                    <leader>     cam a22     2  4500</leader>
+                    <controlfield tag="001">410770167</controlfield>
+                    <controlfield tag="003">DE-627</controlfield>
+                    <controlfield tag="005">20190112074811.0</controlfield>
+                    <controlfield tag="007">tu</controlfield>
+                    <controlfield tag="008">990101s1929    fr |||||      00| ||fre c</controlfield>
+                    <datafield tag="035" ind1=" " ind2=" ">
+                        <subfield code="a">(DE-627)410770167</subfield>
+                    </datafield>
+                    <datafield tag="035" ind1=" " ind2=" ">
+                        <subfield code="a">(DE-599)GBV410770167</subfield>
+                    </datafield>
+                    <datafield tag="035" ind1=" " ind2=" ">
+                        <subfield code="a">(OCoLC)603439359</subfield>
+                    </datafield>
+                    <datafield tag="040" ind1=" " ind2=" ">
+                        <subfield code="a">DE-627</subfield>
+                        <subfield code="b">ger</subfield>
+                        <subfield code="c">DE-627</subfield>
+                        <subfield code="e">rakwb</subfield>
+                    </datafield>
+                    <datafield tag="041" ind1=" " ind2=" ">
+                        <subfield code="a">fre</subfield>
+                    </datafield>
+                    <datafield tag="044" ind1=" " ind2=" ">
+                        <subfield code="c">XA-FR</subfield>
+                    </datafield>
+                    <datafield tag="084" ind1=" " ind2=" ">
+                        <subfield code="a">17.97</subfield>
+                        <subfield code="2">bkl</subfield>
+                    </datafield>
+                    <datafield tag="084" ind1=" " ind2=" ">
+                        <subfield code="a">18.10</subfield>
+                        <subfield code="2">bkl</subfield>
+                    </datafield>
+                    <datafield tag="100" ind1="1" ind2=" ">
+                        <subfield code="a">Zweig, Stefan</subfield>
+                        <subfield code="d">1881-1942</subfield>
+                        <subfield code="0">(DE-588)118637479</subfield>
+                        <subfield code="0">(DE-627)133453227</subfield>
+                        <subfield code="0">(DE-576)163687803</subfield>
+                        <subfield code="4">aut</subfield>
+                    </datafield>
+                    <datafield tag="240" ind1="1" ind2="0">
+                        <subfield code="a">Jeremias &lt;franz.&gt;</subfield>
+                    </datafield>
+                    <datafield tag="245" ind1="1" ind2="0">
+                        <subfield code="a">Jérémie</subfield>
+                        <subfield code="c">Stefan Zweig. Trad. de l'allemand par Louis Charles Baudouin</subfield>
+                    </datafield>
+                    <datafield tag="264" ind1=" " ind2="1">
+                        <subfield code="a">Paris</subfield>
+                        <subfield code="b">Rieder</subfield>
+                        <subfield code="c">1929</subfield>
+                    </datafield>
+                    <datafield tag="300" ind1=" " ind2=" ">
+                        <subfield code="a">361 S.</subfield>
+                        <subfield code="c">8"</subfield>
+                    </datafield>
+                    <datafield tag="336" ind1=" " ind2=" ">
+                        <subfield code="a">Text</subfield>
+                        <subfield code="b">txt</subfield>
+                        <subfield code="2">rdacontent</subfield>
+                    </datafield>
+                    <datafield tag="337" ind1=" " ind2=" ">
+                        <subfield code="a">ohne Hilfsmittel zu benutzen</subfield>
+                        <subfield code="b">n</subfield>
+                        <subfield code="2">rdamedia</subfield>
+                    </datafield>
+                    <datafield tag="338" ind1=" " ind2=" ">
+                        <subfield code="a">Band</subfield>
+                        <subfield code="b">nc</subfield>
+                        <subfield code="2">rdacarrier</subfield>
+                    </datafield>
+                    <datafield tag="490" ind1="1" ind2=" ">
+                        <subfield code="a">Judaïsme</subfield>
+                        <subfield code="a">Oeuvres</subfield>
+                        <subfield code="v">10</subfield>
+                    </datafield>
+                    <datafield tag="591" ind1=" " ind2=" ">
+                        <subfield code="a">SBB Retrokonversion (GBV)</subfield>
+                    </datafield>
+                    <datafield tag="689" ind1="0" ind2="0">
+                        <subfield code="D">s</subfield>
+                        <subfield code="0">(DE-588)4035964-5</subfield>
+                        <subfield code="0">(DE-627)106245015</subfield>
+                        <subfield code="0">(DE-576)209015608</subfield>
+                        <subfield code="a">Literatur</subfield>
+                        <subfield code="2">gnd</subfield>
+                    </datafield>
+                    <datafield tag="689" ind1="0" ind2="1">
+                        <subfield code="D">s</subfield>
+                        <subfield code="0">(DE-588)4113292-0</subfield>
+                        <subfield code="0">(DE-627)105830437</subfield>
+                        <subfield code="0">(DE-576)209475285</subfield>
+                        <subfield code="a">Deutsch</subfield>
+                        <subfield code="2">gnd</subfield>
+                    </datafield>
+                    <datafield tag="689" ind1="0" ind2=" ">
+                        <subfield code="5">(DE-627)</subfield>
+                    </datafield>
+                    <datafield tag="700" ind1="1" ind2=" ">
+                        <subfield code="a">Baudouin, Louis Charles</subfield>
+                        <subfield code="4">oth</subfield>
+                    </datafield>
+                    <datafield tag="700" ind1="1" ind2="2">
+                        <subfield code="a">Zweig, Stefan</subfield>
+                        <subfield code="d">1881-1942</subfield>
+                        <subfield code="t">Jeremias &lt;franz.&gt;</subfield>
+                    </datafield>
+                    <datafield tag="830" ind1=" " ind2="0">
+                        <subfield code="a">Judaisme / Oeuvres</subfield>
+                        <subfield code="v">10</subfield>
+                        <subfield code="9">1000</subfield>
+                        <subfield code="w">(DE-627)182529894</subfield>
+                        <subfield code="w">(DE-576)515211583</subfield>
+                        <subfield code="w">(DE-600)918740-6</subfield>
+                    </datafield>
+                    <datafield tag="924" ind1="0" ind2=" ">
+                        <subfield code="a">448506726</subfield>
+                        <subfield code="b">DE-1a</subfield>
+                        <subfield code="9">1a</subfield>
+                        <subfield code="c">GBV</subfield>
+                        <subfield code="d">d</subfield>
+                        <subfield code="g">Ey 5376/100-10</subfield>
+                        <subfield code="h">4</subfield>
+                    </datafield>
+                    <datafield tag="936" ind1="b" ind2="k">
+                        <subfield code="a">17.97</subfield>
+                        <subfield code="j">Texte eines einzelnen Autors</subfield>
+                        <subfield code="q">ARK</subfield>
+                        <subfield code="0">(DE-627)181571714</subfield>
+                    </datafield>
+                    <datafield tag="936" ind1="b" ind2="k">
+                        <subfield code="a">18.10</subfield>
+                        <subfield code="j">Deutsche Literatur</subfield>
+                        <subfield code="q">ARK</subfield>
+                        <subfield code="0">(DE-627)106405047</subfield>
+                    </datafield>
+                    <datafield tag="951" ind1=" " ind2=" ">
+                        <subfield code="a">BO</subfield>
+                    </datafield>
+                </record>

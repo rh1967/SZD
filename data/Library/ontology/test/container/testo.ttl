@@ -116,7 +116,7 @@ _:BookRule
     a sh:NodeShape ;
 
 #shacl validation
-    sh:targetClass szd:PublicationStmt ;
+    sh:targetClass szd:OriginalShelfmark ;
 #sparql generation
     sh:rule [
                 a sh:SPARQLRule ;
@@ -131,7 +131,7 @@ _:BookRule
                     SELECT DISTINCT ?p
                     WHERE
                     {
-                        $this   a szd:PublicationStmt ;
+                        $this   a szd:OriginalShelfmark ;
                                 ?p  ?o .
                     }
                 } .

@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/1032706457#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:generationProcess>
+               <bf:GenerationProcess>
+                  <rdfs:label>DLC marc2bibframe2 v1.4.0-SNAPSHOT: 2021-01-25T09:20:50.186+01:00</rdfs:label>
+               </bf:GenerationProcess>
+            </bf:generationProcess>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>n</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>f</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>isbd</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1032706457</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>DE-101</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-03T08:58:10</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-03-21</bf:creationDate>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>1032706457</rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>DE-101</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>1120</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DE-101</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/ger"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionModifier>
+               <bf:Agent>
+                  <rdfs:label>9999</rdfs:label>
+               </bf:Agent>
+            </bf:descriptionModifier>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/eng"/>
+      </bf:language>
+      <bf:language>
+         <bf:Language>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value rdf:resource="http://id.loc.gov/vocabulary/languages/eng"/>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/languages"/>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+         </bf:Language>
+      </bf:language>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="https://d-nb.info/gnd/118553739">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Horváth, Ödön &#x98;von&#x9c; 1901-1938</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Horváth, Ödön &#x98;von&#x9c; 1901-1938</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $0(DE-588)118553739$0https://d-nb.info/gnd/118553739$0(DE-101)118553739$aHorváth, Ödön &#x98;von&#x9c;$d1901-1938$eVerfasser$4aut$2gnd</bflc:name00MarcKey>
+                  <rdfs:label>Horváth, Ödön &#x98;von&#x9c; 1901-1938</rdfs:label>
+                  <bf:identifiedBy>
+                     <bf:Identifier>
+                        <rdf:value>118553739</rdf:value>
+                        <bf:source>
+                           <bf:Source>
+                              <rdfs:label>DE-588</rdfs:label>
+                           </bf:Source>
+                        </bf:source>
+                     </bf:Identifier>
+                  </bf:identifiedBy>
+                  <bf:identifiedBy>
+                     <bf:Identifier>
+                        <rdf:value>118553739</rdf:value>
+                        <bf:source>
+                           <bf:Source>
+                              <rdfs:label>DE-101</rdfs:label>
+                           </bf:Source>
+                        </bf:source>
+                     </bf:Identifier>
+                  </bf:identifiedBy>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>Verfasser</rdfs:label>
+                  <bflc:relatorMatchKey>Verfasser</bflc:relatorMatchKey>
+               </bf:Role>
+            </bf:role>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/aut"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>&#x98;A&#x9c; child of our time being Youth without God and A child of our time</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>&#x98;A&#x9c; child of our time being Youth without God and A child of our time</rdfs:label>
+            <bflc:titleSortKey>&#x98;A&#x9c; child of our time being Youth without God and A child of our time</bflc:titleSortKey>
+            <bf:mainTitle>&#x98;A&#x9c; child of our time</bf:mainTitle>
+            <bf:subtitle>being Youth without God and A child of our time</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentTypes/txt">
+            <rdfs:label>Text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/1032706457#Instance530-21">
+            <bf:instanceOf rdf:resource="http://example.org/1032706457#Work"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>&#x98;A&#x9c; child of our time being Youth without God and A child of our time</rdfs:label>
+                  <bflc:titleSortKey>&#x98;A&#x9c; child of our time being Youth without God and A child of our time</bflc:titleSortKey>
+                  <bf:mainTitle>&#x98;A&#x9c; child of our time</bf:mainTitle>
+                  <bf:subtitle>being Youth without God and A child of our time</bf:subtitle>
+               </bf:Title>
+            </bf:title>
+            <bf:otherPhysicalFormat rdf:resource="http://example.org/1032706457#Instance"/>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>Online-Ausg</rdfs:label>
+               </bf:Note>
+            </bf:note>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/1032706457#Instance533-22">
+            <bf:instanceOf rdf:resource="http://example.org/1032706457#Work"/>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>&#x98;A&#x9c; child of our time being Youth without God and A child of our time</rdfs:label>
+                  <bflc:titleSortKey>&#x98;A&#x9c; child of our time being Youth without God and A child of our time</bflc:titleSortKey>
+                  <bf:mainTitle>&#x98;A&#x9c; child of our time</bf:mainTitle>
+                  <bf:subtitle>being Youth without God and A child of our time</bf:subtitle>
+               </bf:Title>
+            </bf:title>
+            <bf:reproductionOf rdf:resource="http://example.org/1032706457#Instance"/>
+            <bf:carrier>
+               <bf:Carrier>
+                  <rdfs:label>Online-Ausg</rdfs:label>
+               </bf:Carrier>
+            </bf:carrier>
+            <bf:provisionActivity>
+               <bf:ProvisionActivity>
+                  <bf:place>
+                     <bf:Place>
+                        <rdfs:label>Leipzig ; Frankfurt, M</rdfs:label>
+                     </bf:Place>
+                  </bf:place>
+                  <bf:agent>
+                     <bf:Agent>
+                        <rdfs:label>Dt. Nationalbibliothek</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:date>2013</bf:date>
+               </bf:ProvisionActivity>
+            </bf:provisionActivity>
+            <bf:extent>
+               <bf:Extent>
+                  <rdfs:label>Online-Ressource</rdfs:label>
+               </bf:Extent>
+            </bf:extent>
+            <bf:note>
+               <bf:Note>
+                  <rdfs:label>[Online-Ausg.]</rdfs:label>
+               </bf:Note>
+            </bf:note>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/1032706457#Agent700-24">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Thomas, R. Wills</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $81\p$aThomas, R. Wills$eÜbersetzer$4trl</bflc:name00MarcKey>
+                  <rdfs:label>Thomas, R. Wills</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>Übersetzer</rdfs:label>
+                  <bflc:relatorMatchKey>Übersetzer</bflc:relatorMatchKey>
+               </bf:Role>
+            </bf:role>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/trl"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="https://d-nb.info/gnd/118631373">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Werfel, Franz 1890-1945</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $0(DE-588)118631373$0https://d-nb.info/gnd/118631373$0(DE-101)118631373$aWerfel, Franz$d1890-1945$eVerfasser eines Vorworts$4wpr$2gnd</bflc:name00MarcKey>
+                  <rdfs:label>Werfel, Franz 1890-1945</rdfs:label>
+                  <bf:identifiedBy>
+                     <bf:Identifier>
+                        <rdf:value>118631373</rdf:value>
+                        <bf:source>
+                           <bf:Source>
+                              <rdfs:label>DE-588</rdfs:label>
+                           </bf:Source>
+                        </bf:source>
+                     </bf:Identifier>
+                  </bf:identifiedBy>
+                  <bf:identifiedBy>
+                     <bf:Identifier>
+                        <rdf:value>118631373</rdf:value>
+                        <bf:source>
+                           <bf:Source>
+                              <rdfs:label>DE-101</rdfs:label>
+                           </bf:Source>
+                        </bf:source>
+                     </bf:Identifier>
+                  </bf:identifiedBy>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>Verfasser eines Vorworts</rdfs:label>
+                  <bflc:relatorMatchKey>Verfasser eines Vorworts</bflc:relatorMatchKey>
+               </bf:Role>
+            </bf:role>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/wpr"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="https://d-nb.info/gnd/118637479">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Zweig, Stefan 1881-1942</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $0(DE-588)118637479$0https://d-nb.info/gnd/118637479$0(DE-101)118637479$aZweig, Stefan$d1881-1942$eMitwirkender$4ctb$2gnd</bflc:name00MarcKey>
+                  <rdfs:label>Zweig, Stefan 1881-1942</rdfs:label>
+                  <bf:identifiedBy>
+                     <bf:Identifier>
+                        <rdf:value>118637479</rdf:value>
+                        <bf:source>
+                           <bf:Source>
+                              <rdfs:label>DE-588</rdfs:label>
+                           </bf:Source>
+                        </bf:source>
+                     </bf:Identifier>
+                  </bf:identifiedBy>
+                  <bf:identifiedBy>
+                     <bf:Identifier>
+                        <rdf:value>118637479</rdf:value>
+                        <bf:source>
+                           <bf:Source>
+                              <rdfs:label>DE-101</rdfs:label>
+                           </bf:Source>
+                        </bf:source>
+                     </bf:Identifier>
+                  </bf:identifiedBy>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role>
+                  <rdfs:label>Mitwirkender</rdfs:label>
+                  <bflc:relatorMatchKey>Mitwirkender</bflc:relatorMatchKey>
+               </bf:Role>
+            </bf:role>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasInstance>
+         <bf:Instance rdf:about="http://example.org/1032706457#Instance776-27">
+            <bf:contribution>
+               <bflc:PrimaryContribution>
+                  <bf:agent>
+                     <bf:Agent>
+                        <rdfs:label>Horváth, Ödön &#x98;von &#x9c;, 1901-1938</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+               </bflc:PrimaryContribution>
+            </bf:contribution>
+            <bflc:relationship>
+               <bflc:Relationship>
+                  <bflc:relation>
+                     <bflc:Relation>
+                        <rdfs:label>Druckausg</rdfs:label>
+                     </bflc:Relation>
+                  </bflc:relation>
+                  <bf:relatedTo rdf:resource="http://example.org/1032706457#Instance"/>
+               </bflc:Relationship>
+            </bflc:relationship>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value>992474094</rdf:value>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>DE-101</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+            <bf:provisionActivityStatement>London ; Methuen, 1938</bf:provisionActivityStatement>
+            <bf:extent>
+               <bf:Extent>
+                  <rdfs:label>XII, 263 S.</rdfs:label>
+               </bf:Extent>
+            </bf:extent>
+            <bf:title>
+               <bf:Title>
+                  <rdfs:label>&#x98;A&#x9c; child of our time</rdfs:label>
+               </bf:Title>
+            </bf:title>
+            <bf:instanceOf rdf:resource="http://example.org/1032706457#Work"/>
+         </bf:Instance>
+      </bf:hasInstance>
+      <bf:hasInstance rdf:resource="http://example.org/1032706457#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/1032706457#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1938</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/gw"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>online resource</rdfs:label>
+         </bf:Carrier>
+      </bf:carrier>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Electronic"/>
+      <bf:identifiedBy>
+         <bf:Identifier>
+            <rdf:value>urn:nbn:de:101:1-201402039767</rdf:value>
+            <rdfs:label>urn</rdfs:label>
+         </bf:Identifier>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>DNB1032706457</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>DE-599</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>1185338356</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>OCoLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:place>
+         <bf:Place>
+            <bf:code>XA-DE</bf:code>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>ISO 3166</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:place>
+      <rdfs:label>&#x98;A&#x9c; child of our time being Youth without God and A child of our time</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>&#x98;A&#x9c; child of our time being Youth without God and A child of our time</rdfs:label>
+            <bflc:titleSortKey>&#x98;A&#x9c; child of our time being Youth without God and A child of our time</bflc:titleSortKey>
+            <bf:mainTitle>&#x98;A&#x9c; child of our time</bf:mainTitle>
+            <bf:subtitle>being Youth without God and A child of our time</bf:subtitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>by Odon von Horváth. Transl. by R. Wills Thomas. With a forew. by Franz Werfel and an appreciation by Stefan Zweig</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>London</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Methuen</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1938</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>London; Methuen; 1938</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>XII, 263 S.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaTypes/c">
+            <rdfs:label>Computermedien</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+            <rdfs:label>Online-Ressource</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:otherPhysicalFormat rdf:resource="http://example.org/1032706457#Instance530-21"/>
+      <bf:hasReproduction rdf:resource="http://example.org/1032706457#Instance533-22"/>
+      <bf:otherPhysicalFormat rdf:resource="http://example.org/1032706457#Instance776-27"/>
+      <bf:instanceOf rdf:resource="http://example.org/1032706457#Work"/>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/1032706457#Item583-23">
+            <bf:note>
+               <bf:Note>
+                  <bf:noteType>action</bf:noteType>
+                  <rdfs:label>Archivierung/Langzeitarchivierung gewährleistet</rdfs:label>
+                  <bf:source>
+                     <bf:Source>
+                        <rdfs:label>pdager</rdfs:label>
+                     </bf:Source>
+                  </bf:source>
+               </bf:Note>
+            </bf:note>
+            <bf:itemOf rdf:resource="http://example.org/1032706457#Instance"/>
+            <bflc:applicableInstitution>
+               <bf:Agent>
+                  <bf:code>DE-101</bf:code>
+               </bf:Agent>
+            </bflc:applicableInstitution>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/1032706457#Item850-28-1">
+            <bf:heldBy>
+               <bf:Agent rdf:about="http://id.loc.gov/vocabulary/organizations/DE-101a"/>
+            </bf:heldBy>
+            <bf:itemOf rdf:resource="http://example.org/1032706457#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/1032706457#Item850-28-2">
+            <bf:heldBy>
+               <bf:Agent rdf:about="http://id.loc.gov/vocabulary/organizations/DE-101b"/>
+            </bf:heldBy>
+            <bf:itemOf rdf:resource="http://example.org/1032706457#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/1032706457#Item856-29">
+            <bf:electronicLocator rdf:resource="https://nbn-resolving.org/urn:nbn:de:101:1-201402039767"/>
+            <bf:itemOf rdf:resource="http://example.org/1032706457#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+      <bf:hasItem>
+         <bf:Item rdf:about="http://example.org/1032706457#Item856-30">
+            <bf:electronicLocator rdf:resource="https://d-nb.info/1032706457/34"/>
+            <bf:itemOf rdf:resource="http://example.org/1032706457#Instance"/>
+         </bf:Item>
+      </bf:hasItem>
+   </bf:Instance>
+</rdf:RDF>

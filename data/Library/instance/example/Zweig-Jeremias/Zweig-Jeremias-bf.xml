@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+         xmlns:bflc="http://id.loc.gov/ontologies/bflc/"
+         xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+   <bf:Work rdf:about="http://example.org/410770167#Work">
+      <bf:adminMetadata>
+         <bf:AdminMetadata>
+            <bf:generationProcess>
+               <bf:GenerationProcess>
+                  <rdfs:label>DLC marc2bibframe2 v1.4.0-SNAPSHOT: 2021-01-23T16:10:58.333+01:00</rdfs:label>
+               </bf:GenerationProcess>
+            </bf:generationProcess>
+            <bf:status>
+               <bf:Status>
+                  <bf:code>c</bf:code>
+               </bf:Status>
+            </bf:status>
+            <bflc:encodingLevel>
+               <bflc:EncodingLevel>
+                  <bf:code>7</bf:code>
+               </bflc:EncodingLevel>
+            </bflc:encodingLevel>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions>
+                  <bf:code>unknown</bf:code>
+               </bf:DescriptionConventions>
+            </bf:descriptionConventions>
+            <bf:identifiedBy>
+               <bf:Local>
+                  <rdf:value>410770167</rdf:value>
+               </bf:Local>
+            </bf:identifiedBy>
+            <bf:source>
+               <bf:Source>
+                  <bf:code>DE-627</bf:code>
+               </bf:Source>
+            </bf:source>
+            <bf:changeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-12T07:48:11</bf:changeDate>
+            <bf:creationDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1999-01-01</bf:creationDate>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DE-627</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:source>
+               <bf:Source>
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Agent"/>
+                  <rdfs:label>DE-627</rdfs:label>
+               </bf:Source>
+            </bf:source>
+            <bf:descriptionLanguage>
+               <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/ger"/>
+            </bf:descriptionLanguage>
+            <bf:descriptionConventions>
+               <bf:DescriptionConventions rdf:about="http://id.loc.gov/vocabulary/descriptionConventions/rakwb"/>
+            </bf:descriptionConventions>
+         </bf:AdminMetadata>
+      </bf:adminMetadata>
+      <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Text"/>
+      <bf:language>
+         <bf:Language rdf:about="http://id.loc.gov/vocabulary/languages/fre"/>
+      </bf:language>
+      <bf:language>
+         <bf:Language>
+            <bf:identifiedBy>
+               <bf:Identifier>
+                  <rdf:value rdf:resource="http://id.loc.gov/vocabulary/languages/fre"/>
+                  <bf:source>
+                     <bf:Source rdf:about="http://id.loc.gov/vocabulary/languages"/>
+                  </bf:source>
+               </bf:Identifier>
+            </bf:identifiedBy>
+         </bf:Language>
+      </bf:language>
+      <bf:classification>
+         <bf:Classification>
+            <bf:classificationPortion>17.97</bf:classificationPortion>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>bkl</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Classification>
+      </bf:classification>
+      <bf:classification>
+         <bf:Classification>
+            <bf:classificationPortion>18.10</bf:classificationPortion>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>bkl</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Classification>
+      </bf:classification>
+      <bf:contribution>
+         <bf:Contribution>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bflc/PrimaryContribution"/>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/410770167#Agent100-15">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Zweig, Stefan 1881-1942</bflc:name00MatchKey>
+                  <bflc:primaryContributorName00MatchKey>Zweig, Stefan 1881-1942</bflc:primaryContributorName00MatchKey>
+                  <bflc:name00MarcKey>1001 $aZweig, Stefan$d1881-1942$0(DE-588)118637479$0(DE-627)133453227$0(DE-576)163687803$4aut</bflc:name00MarcKey>
+                  <rdfs:label>Zweig, Stefan 1881-1942</rdfs:label>
+                  <bf:identifiedBy>
+                     <bf:Identifier>
+                        <rdf:value>118637479</rdf:value>
+                        <bf:source>
+                           <bf:Source>
+                              <rdfs:label>DE-588</rdfs:label>
+                           </bf:Source>
+                        </bf:source>
+                     </bf:Identifier>
+                  </bf:identifiedBy>
+                  <bf:identifiedBy>
+                     <bf:Identifier>
+                        <rdf:value>133453227</rdf:value>
+                        <bf:source>
+                           <bf:Source>
+                              <rdfs:label>DE-627</rdfs:label>
+                           </bf:Source>
+                        </bf:source>
+                     </bf:Identifier>
+                  </bf:identifiedBy>
+                  <bf:identifiedBy>
+                     <bf:Identifier>
+                        <rdf:value>163687803</rdf:value>
+                        <bf:source>
+                           <bf:Source>
+                              <rdfs:label>DE-576</rdfs:label>
+                           </bf:Source>
+                        </bf:source>
+                     </bf:Identifier>
+                  </bf:identifiedBy>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/aut"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <rdfs:label>Jeremias &lt;franz.&gt;</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <bflc:title40MatchKey>Jeremias &lt;franz.&gt;</bflc:title40MatchKey>
+            <bflc:title40MarcKey>24010$aJeremias &lt;franz.&gt;</bflc:title40MarcKey>
+            <rdfs:label>Jeremias &lt;franz.&gt;</rdfs:label>
+            <bflc:titleSortKey>Jeremias &lt;franz.&gt;</bflc:titleSortKey>
+            <bf:mainTitle>Jeremias &lt;franz.&gt;</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:content>
+         <bf:Content rdf:about="http://id.loc.gov/vocabulary/contentTypes/txt">
+            <rdfs:label>Text</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacontent</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Content>
+      </bf:content>
+      <bf:contribution>
+         <bf:Contribution>
+            <bf:agent>
+               <bf:Agent rdf:about="http://example.org/410770167#Agent700-28">
+                  <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                  <bflc:name00MatchKey>Baudouin, Louis Charles</bflc:name00MatchKey>
+                  <bflc:name00MarcKey>7001 $aBaudouin, Louis Charles$4oth</bflc:name00MarcKey>
+                  <rdfs:label>Baudouin, Louis Charles</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:role>
+               <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/oth"/>
+            </bf:role>
+         </bf:Contribution>
+      </bf:contribution>
+      <bf:hasPart>
+         <bf:Work rdf:about="http://example.org/410770167#Work700-29">
+            <bf:contribution>
+               <bf:Contribution>
+                  <bf:agent>
+                     <bf:Agent rdf:about="http://example.org/410770167#Agent700-29">
+                        <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Person"/>
+                        <bflc:name00MatchKey>Zweig, Stefan 1881-1942</bflc:name00MatchKey>
+                        <bflc:name00MarcKey>70012$aZweig, Stefan$d1881-1942$tJeremias &lt;franz.&gt;</bflc:name00MarcKey>
+                        <rdfs:label>Zweig, Stefan 1881-1942</rdfs:label>
+                     </bf:Agent>
+                  </bf:agent>
+                  <bf:role>
+                     <bf:Role rdf:about="http://id.loc.gov/vocabulary/relators/ctb"/>
+                  </bf:role>
+               </bf:Contribution>
+            </bf:contribution>
+            <rdfs:label>Jeremias &lt;franz.&gt;</rdfs:label>
+            <bf:title>
+               <bf:Title>
+                  <bflc:title00MatchKey>Jeremias &lt;franz.&gt;</bflc:title00MatchKey>
+                  <bflc:title00MarcKey>70012$aZweig, Stefan$d1881-1942$tJeremias &lt;franz.&gt;</bflc:title00MarcKey>
+                  <rdfs:label>Jeremias &lt;franz.&gt;</rdfs:label>
+                  <bflc:titleSortKey>Jeremias &lt;franz.&gt;</bflc:titleSortKey>
+                  <bf:mainTitle>Jeremias &lt;franz.&gt;</bf:mainTitle>
+               </bf:Title>
+            </bf:title>
+         </bf:Work>
+      </bf:hasPart>
+      <bf:hasInstance rdf:resource="http://example.org/410770167#Instance"/>
+   </bf:Work>
+   <bf:Instance rdf:about="http://example.org/410770167#Instance">
+      <bf:issuance>
+         <bf:Issuance rdf:about="http://id.loc.gov/vocabulary/issuance/mono"/>
+      </bf:issuance>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:date rdf:datatype="http://id.loc.gov/datatypes/edtf">1929</bf:date>
+            <bf:place>
+               <bf:Place rdf:about="http://id.loc.gov/vocabulary/countries/fr"/>
+            </bf:place>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>410770167</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>DE-627</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>GBV410770167</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>DE-599</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:identifiedBy>
+         <bf:Local>
+            <rdf:value>603439359</rdf:value>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>OCoLC</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Local>
+      </bf:identifiedBy>
+      <bf:place>
+         <bf:Place>
+            <bf:code>XA-FR</bf:code>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>ISO 3166</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Place>
+      </bf:place>
+      <rdfs:label>Jérémie</rdfs:label>
+      <bf:title>
+         <bf:Title>
+            <rdfs:label>Jérémie</rdfs:label>
+            <bflc:titleSortKey>Jérémie</bflc:titleSortKey>
+            <bf:mainTitle>Jérémie</bf:mainTitle>
+         </bf:Title>
+      </bf:title>
+      <bf:responsibilityStatement>Stefan Zweig. Trad. de l'allemand par Louis Charles Baudouin</bf:responsibilityStatement>
+      <bf:provisionActivity>
+         <bf:ProvisionActivity>
+            <rdf:type rdf:resource="http://id.loc.gov/ontologies/bibframe/Publication"/>
+            <bf:place>
+               <bf:Place>
+                  <rdfs:label>Paris</rdfs:label>
+               </bf:Place>
+            </bf:place>
+            <bf:agent>
+               <bf:Agent>
+                  <rdfs:label>Rieder</rdfs:label>
+               </bf:Agent>
+            </bf:agent>
+            <bf:date>1929</bf:date>
+         </bf:ProvisionActivity>
+      </bf:provisionActivity>
+      <bf:provisionActivityStatement>Paris; Rieder; 1929</bf:provisionActivityStatement>
+      <bf:extent>
+         <bf:Extent>
+            <rdfs:label>361 S.</rdfs:label>
+         </bf:Extent>
+      </bf:extent>
+      <bf:dimensions>8"</bf:dimensions>
+      <bf:media>
+         <bf:Media rdf:about="http://id.loc.gov/vocabulary/mediaTypes/n">
+            <rdfs:label>ohne Hilfsmittel zu benutzen</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdamedia</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Media>
+      </bf:media>
+      <bf:carrier>
+         <bf:Carrier rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+            <rdfs:label>Band</rdfs:label>
+            <bf:source>
+               <bf:Source>
+                  <rdfs:label>rdacarrier</rdfs:label>
+               </bf:Source>
+            </bf:source>
+         </bf:Carrier>
+      </bf:carrier>
+      <bf:hasSeries>
+         <bf:Instance>
+            <rdfs:label>Judaïsme</rdfs:label>
+            <bf:seriesStatement>Judaïsme 10</bf:seriesStatement>
+            <bf:seriesEnumeration>10</bf:seriesEnumeration>
+            <bf:instanceOf>
+               <bf:Work rdf:about="http://example.org/410770167#Work830-30">
+                  <rdfs:label>Judaisme / Oeuvres</rdfs:label>
+                  <bf:title>
+                     <bf:Title>
+                        <bflc:title30MatchKey>Judaisme / Oeuvres</bflc:title30MatchKey>
+                        <bflc:title30MarcKey>830 0$aJudaisme / Oeuvres$v10$91000$w(DE-627)182529894$w(DE-576)515211583$w(DE-600)918740-6</bflc:title30MarcKey>
+                        <rdfs:label>Judaisme / Oeuvres</rdfs:label>
+                        <bflc:titleSortKey>Judaisme / Oeuvres</bflc:titleSortKey>
+                        <bf:mainTitle>Judaisme / Oeuvres</bf:mainTitle>
+                     </bf:Title>
+                  </bf:title>
+                  <bf:identifiedBy>
+                     <bf:Identifier>
+                        <rdf:value>182529894</rdf:value>
+                        <bf:source>
+                           <bf:Source>
+                              <rdfs:label>DE-627</rdfs:label>
+                           </bf:Source>
+                        </bf:source>
+                     </bf:Identifier>
+                  </bf:identifiedBy>
+                  <bf:identifiedBy>
+                     <bf:Identifier>
+                        <rdf:value>515211583</rdf:value>
+                        <bf:source>
+                           <bf:Source>
+                              <rdfs:label>DE-576</rdfs:label>
+                           </bf:Source>
+                        </bf:source>
+                     </bf:Identifier>
+                  </bf:identifiedBy>
+                  <bf:identifiedBy>
+                     <bf:Identifier>
+                        <rdf:value>918740-6</rdf:value>
+                        <bf:source>
+                           <bf:Source>
+                              <rdfs:label>DE-600</rdfs:label>
+                           </bf:Source>
+                        </bf:source>
+                     </bf:Identifier>
+                  </bf:identifiedBy>
+               </bf:Work>
+            </bf:instanceOf>
+         </bf:Instance>
+      </bf:hasSeries>
+      <bf:hasSeries>
+         <bf:Instance>
+            <rdfs:label>Oeuvres</rdfs:label>
+            <bf:seriesStatement>Oeuvres 10</bf:seriesStatement>
+            <bf:seriesEnumeration>10</bf:seriesEnumeration>
+         </bf:Instance>
+      </bf:hasSeries>
+      <bf:instanceOf rdf:resource="http://example.org/410770167#Work"/>
+   </bf:Instance>
+</rdf:RDF>

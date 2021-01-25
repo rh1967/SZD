@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+                <record xmlns="http://www.loc.gov/MARC21/slim" type="Bibliographic">
+                    <leader>00000nam a2200000 c 4500</leader>
+                    <controlfield tag="001">1032706457</controlfield>
+                    <controlfield tag="003">DE-101</controlfield>
+                    <controlfield tag="005">20171203085810.0</controlfield>
+                    <controlfield tag="007">cr||||||||||||</controlfield>
+                    <controlfield tag="008">130321s1938    gw |||||o|||| 00||||eng  </controlfield>
+                    <datafield tag="016" ind1="7" ind2=" ">
+                        <subfield code="2">DE-101</subfield>
+                        <subfield code="a">1032706457</subfield>
+                    </datafield>
+                    <datafield tag="024" ind1="7" ind2=" ">
+                        <subfield code="2">urn</subfield>
+                        <subfield code="a">urn:nbn:de:101:1-201402039767</subfield>
+                    </datafield>
+                    <datafield tag="035" ind1=" " ind2=" ">
+                        <subfield code="a">(DE-599)DNB1032706457</subfield>
+                    </datafield>
+                    <datafield tag="035" ind1=" " ind2=" ">
+                        <subfield code="a">(OCoLC)1185338356</subfield>
+                    </datafield>
+                    <datafield tag="040" ind1=" " ind2=" ">
+                        <subfield code="a">1120</subfield>
+                        <subfield code="b">ger</subfield>
+                        <subfield code="c">DE-101</subfield>
+                        <subfield code="d">9999</subfield>
+                    </datafield>
+                    <datafield tag="041" ind1=" " ind2=" ">
+                        <subfield code="a">eng</subfield>
+                    </datafield>
+                    <datafield tag="044" ind1=" " ind2=" ">
+                        <subfield code="c">XA-DE</subfield>
+                    </datafield>
+                    <datafield tag="100" ind1="1" ind2=" ">
+                        <subfield code="0">(DE-588)118553739</subfield>
+                        <subfield code="0">https://d-nb.info/gnd/118553739</subfield>
+                        <subfield code="0">(DE-101)118553739</subfield>
+                        <subfield code="a">Horváth, Ödön &#152;von&#156;</subfield>
+                        <subfield code="d">1901-1938</subfield>
+                        <subfield code="e">Verfasser</subfield>
+                        <subfield code="4">aut</subfield>
+                        <subfield code="2">gnd</subfield>
+                    </datafield>
+                    <datafield tag="245" ind1="1" ind2="0">
+                        <subfield code="a">&#152;A&#156; child of our time</subfield>
+                        <subfield code="b">being Youth without God and A child of our time</subfield>
+                        <subfield code="c">by Odon von Horváth. Transl. by R. Wills Thomas. With a forew. by Franz Werfel and an appreciation by Stefan Zweig</subfield>
+                    </datafield>
+                    <datafield tag="264" ind1=" " ind2="1">
+                        <subfield code="a">London</subfield>
+                        <subfield code="b">Methuen</subfield>
+                        <subfield code="c">1938</subfield>
+                    </datafield>
+                    <datafield tag="300" ind1=" " ind2=" ">
+                        <subfield code="a">XII, 263 S.</subfield>
+                    </datafield>
+                    <datafield tag="336" ind1=" " ind2=" ">
+                        <subfield code="a">Text</subfield>
+                        <subfield code="b">txt</subfield>
+                        <subfield code="2">rdacontent</subfield>
+                    </datafield>
+                    <datafield tag="337" ind1=" " ind2=" ">
+                        <subfield code="a">Computermedien</subfield>
+                        <subfield code="b">c</subfield>
+                        <subfield code="2">rdamedia</subfield>
+                    </datafield>
+                    <datafield tag="338" ind1=" " ind2=" ">
+                        <subfield code="a">Online-Ressource</subfield>
+                        <subfield code="b">cr</subfield>
+                        <subfield code="2">rdacarrier</subfield>
+                    </datafield>
+                    <datafield tag="530" ind1=" " ind2=" ">
+                        <subfield code="a">Online-Ausg.:</subfield>
+                    </datafield>
+                    <datafield tag="533" ind1=" " ind2=" ">
+                        <subfield code="7">s2013uuuu</subfield>
+                        <subfield code="a">Online-Ausg.:</subfield>
+                        <subfield code="b">Leipzig ; Frankfurt, M.</subfield>
+                        <subfield code="c">Dt. Nationalbibliothek</subfield>
+                        <subfield code="d">2013</subfield>
+                        <subfield code="e">Online-Ressource</subfield>
+                        <subfield code="n">[Online-Ausg.]</subfield>
+                    </datafield>
+                    <datafield tag="583" ind1="1" ind2=" ">
+                        <subfield code="a">Archivierung/Langzeitarchivierung gewährleistet</subfield>
+                        <subfield code="5">DE-101</subfield>
+                        <subfield code="2">pdager</subfield>
+                    </datafield>
+                    <datafield tag="700" ind1="1" ind2=" ">
+                        <subfield code="8">1\p</subfield>
+                        <subfield code="a">Thomas, R. Wills</subfield>
+                        <subfield code="e">Übersetzer</subfield>
+                        <subfield code="4">trl</subfield>
+                    </datafield>
+                    <datafield tag="700" ind1="1" ind2=" ">
+                        <subfield code="0">(DE-588)118631373</subfield>
+                        <subfield code="0">https://d-nb.info/gnd/118631373</subfield>
+                        <subfield code="0">(DE-101)118631373</subfield>
+                        <subfield code="a">Werfel, Franz</subfield>
+                        <subfield code="d">1890-1945</subfield>
+                        <subfield code="e">Verfasser eines Vorworts</subfield>
+                        <subfield code="4">wpr</subfield>
+                        <subfield code="2">gnd</subfield>
+                    </datafield>
+                    <datafield tag="700" ind1="1" ind2=" ">
+                        <subfield code="0">(DE-588)118637479</subfield>
+                        <subfield code="0">https://d-nb.info/gnd/118637479</subfield>
+                        <subfield code="0">(DE-101)118637479</subfield>
+                        <subfield code="a">Zweig, Stefan</subfield>
+                        <subfield code="d">1881-1942</subfield>
+                        <subfield code="e">Mitwirkender</subfield>
+                        <subfield code="4">ctb</subfield>
+                        <subfield code="2">gnd</subfield>
+                    </datafield>
+                    <datafield tag="776" ind1="0" ind2="8">
+                        <subfield code="i">Druckausg.</subfield>
+                        <subfield code="a">Horváth, Ödön &#152;von &#156;, 1901-1938</subfield>
+                        <subfield code="t">&#152;A&#156; child of our time</subfield>
+                        <subfield code="d">London ; Methuen, 1938</subfield>
+                        <subfield code="h">XII, 263 S.</subfield>
+                        <subfield code="w">(DE-101)992474094</subfield>
+                    </datafield>
+                    <datafield tag="850" ind1=" " ind2=" ">
+                        <subfield code="a">DE-101a</subfield>
+                        <subfield code="a">DE-101b</subfield>
+                    </datafield>
+                    <datafield tag="856" ind1="4" ind2="0">
+                        <subfield code="u">https://nbn-resolving.org/urn:nbn:de:101:1-201402039767</subfield>
+                        <subfield code="x">Resolving-System</subfield>
+                    </datafield>
+                    <datafield tag="856" ind1=" " ind2="0">
+                        <subfield code="u">https://d-nb.info/1032706457/34</subfield>
+                        <subfield code="x">Langzeitarchivierung Nationalbibliothek</subfield>
+                    </datafield>
+                    <datafield tag="883" ind1="2" ind2=" ">
+                        <subfield code="8">1\p</subfield>
+                        <subfield code="a">dnb</subfield>
+                        <subfield code="d">20200610</subfield>
+                        <subfield code="q">DE-101</subfield>
+                        <subfield code="u">https://d-nb.info/provenance/plan#dnb</subfield>
+                    </datafield>
+                </record>

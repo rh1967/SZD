@@ -9,9 +9,9 @@ declare function functx:distinct-element-names
      distinct-values($nodes)
  } ;
 
-let $in-xml := (doc ("file:/C:/Users/rh/Git-PLUS/SZD/data/Work/tei/SZDMSK.xml")//biblFull//element()[child::note] )
-(:let $in-xml := (doc ("file:/C:/Users/rh/Git-PLUS/SZD/data/Library/SZDBIB.xml")//biblFull//element()[child::text() and not( child::element() )] )
-:)
+let $in-xml := (doc ("file:/C:/Users/rh/Git-PLUS/SZD/data/Work/tei/SZDMSK.xml")//biblFull//titleStmt/title/@* ) 
+(: let $in-xml := (doc ("file:/C:/Users/rh/Git-PLUS/SZD/data/Library/tei/SZDBIB.xml")//biblFull//titleStmt/title/@type ) :)
+
 return
  functx:distinct-element-names($in-xml)
 

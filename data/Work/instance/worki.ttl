@@ -2,6 +2,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix wdrs: <http://www.w3.org/2007/05/powder-s#> .
+@prefix gnd: <http://d-nb.info/standards/elementset/gnd#> .
 @prefix gndo: <http://d-nb.info/standards/elementset/gnd#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dc: <http://purl.org/dc/terms/> .
@@ -116,23 +117,31 @@
         ] ;
         #OR
         #author
-        <https://dhplus.sbg.ac.at/ontology#role> <http://id.loc.gov/vocabulary/relators/aut> ;  #SZDBIB + SZDMSK:   #//titleStmt/author/persName    #szd:author
+        <https://dhplus.sbg.ac.at/ontology#role> <http://id.loc.gov/vocabulary/relators/aut> ;  #SZDBIB + SZDMSK:   #//titleStmt/author/persName    #szd:author     #displayed as "Verfasser/in"
         #OR
         #composer
-        dhpluso:role   <http://id.loc.gov/vocabulary/relators/cmp> ;    #SZDBIB:    #//titleStmt/author@role="composer"/persName    #szd:composer
+        dhpluso:role   <http://id.loc.gov/vocabulary/relators/cmp> ;    #SZDBIB:    #//titleStmt/author@role="composer"/persName    #szd:composer   #displayed as "Komponist/in"
         #OR
         #contributor
-        <https://dhplus.sbg.ac.at/ontology#role> <http://id.loc.gov/vocabulary/relators/ctb> ;  #SZDMSK:        #//titleStmt/editor@role="contributor"/persName
+        <https://dhplus.sbg.ac.at/ontology#role> <http://id.loc.gov/vocabulary/relators/ctb> ;  #SZDMSK:    #//titleStmt/editor@role="contributor"/persName     #displayed as "Beteiligte"
         #OR
         #editor
-        <https://dhplus.sbg.ac.at/ontology#role> <http://id.loc.gov/vocabulary/relators/edt> ;  #SZDBIB:   #//titleStmt/editor/persName    #szd:editor
+        <https://dhplus.sbg.ac.at/ontology#role> <http://id.loc.gov/vocabulary/relators/edt> ;  #SZDBIB:   #//titleStmt/editor/persName    #szd:editor  #displayed as "Herausgeber/in oder Bearbeiter/in"
         #OR
         #illustrator
-        dhpluso:role   <http://id.loc.gov/vocabulary/relators/ill> ;    #SZDBIB:   #//titleStmt/editor@role="illustrator"/persName    #szd:illustrator
+        dhpluso:role   <http://id.loc.gov/vocabulary/relators/ill> ;    #SZDBIB:   #//titleStmt/editor@role="illustrator"/persName    #szd:illustrator  #displayed as "Illustrator/in"
         #OR
         #translator
-        dhpluso:role   <http://id.loc.gov/vocabulary/relators/trl> ;    #SZDBIB:   #//titleStmt/editor@role="translator"/persName    #szd:translator
-
+        dhpluso:role   <http://id.loc.gov/vocabulary/relators/trl> ;    #SZDBIB:   #//titleStmt/editor@role="translator"/persName    #szd:translator    #displayed as "Übersetzer/in"
+        #OR
+        #author afterword
+        dhpluso:role   <http://id.loc.gov/vocabulary/relators/aft> ;    #SZDBIB:   #//titleStmt/editor@role="afterword"/persName    #szd:writerAfterword    #displayed as "Verfasser/in Nachwort"
+        #OR
+        #writer preface
+        dhpluso:role   <http://id.loc.gov/vocabulary/relators/wpr> ;    #SZDBIB:   #//titleStmt/editor@role="preface"/persName    #szd:writerForeword   #displayed as "Verfasser/in Vorwort"
+        #OR
+        #other
+        dhpluso:role   <http://id.loc.gov/vocabulary/relators/oth> ;
 
         dhpluso:P_szd_relationToPerson <URI> ;  #link to person object
                                                 #SZDBIB + SZDMSK: //profileDesc//keywords/term@type="person"  #szd:relationToPerson
@@ -144,20 +153,42 @@
     <https://dhplus.sbg.ac.at/ontology#language> <http://id.loc.gov/vocabulary/languages/nnnn> ;    #SZDBIB + SZDMSK:    #msDesc/msContents/textLang@lang xml:lang="nnn" #szd:language
 
     ##title
-    #MARC 245
+    #uniform title
+    #MARC 240
     <https://dhplus.sbg.ac.at/ontology#title> [
         a <https://dhplus.sbg.ac.at/ontology#Title> ;
         #MARC summary of $afgknps
         rdfs:label "NN"^^xsd:string ;
         #MARC $a
-        <https://dhplus.sbg.ac.at/ontology#mainTitle> "NN"^^xsd:string ;
+        <https://dhplus.sbg.ac.at/ontology#mainTitle> "NN"@de, "NN"@en ;    #SZDBIB:    #//fileDesc/titleStmt/title@type="original"   #szd:originaltitle    #displayed as "Titel (original)"
+                                                    #SZDMSK:    #//fileDesc/titleStmt/title@ana="original"  #szd:title  #displayed as "Titel (original)"
+                                                    #SZDMSK:    #//fileDesc/titleStmt/title@ana="assigned"  #szd:title  #displayed as "Titel (fingiert)"
         #MARC $b
-        <https://dhplus.sbg.ac.at/ontology#subtitle> "NN"^^xsd:string ;
+        <https://dhplus.sbg.ac.at/ontology#subtitle> "NN"@de, "NN"@en ;
         #MARC $n
         <https://dhplus.sbg.ac.at/ontology#partNumber> "NN"^^xsd:string ;
         #MARC $p
-        <https://dhplus.sbg.ac.at/ontology#partName> "NN"^^xsd:string ;
+        <https://dhplus.sbg.ac.at/ontology#partName> "NN"@de, "NN"@en ;
     ] ;
+    #OR
+    #title statement
+    #MARC 245
+    <https://dhplus.sbg.ac.at/ontology#title> [
+        a <https://dhplus.sbg.ac.at/ontology#Title> ;
+        #MARC summary of $afgknps
+        rdfs:label "NN"^^xsd:string ;   #SZDBIB (if bf:partOf): #//fileDesc/titleStmt/title@type="series"   #displayed as "Gesamttitel"
+        #MARC $a
+        <https://dhplus.sbg.ac.at/ontology#mainTitle> "NN"@de, "NN"@en ;   #SZDBIB:    #//fileDesc/titleStmt/title   #szd:title    #displayed as "Titel"
+                                                    #SZDMSK:    #//fileDesc/titleStmt/title@ana="supplied/verified"   #szd:title    #displayed as "Titel (ermittelt)"
+
+        #MARC $b
+        <https://dhplus.sbg.ac.at/ontology#subtitle> "NN"@de, "NN"@en ;
+        #MARC $n
+        <https://dhplus.sbg.ac.at/ontology#partNumber> "NN"^^xsd:string ;
+        #MARC $p
+        <https://dhplus.sbg.ac.at/ontology#partName> "NN"@de, "NN"@en ; #SZDBIB (if bf:partOf): #//fileDesc/titleStmt/title     #szd:title  #displayed as "Titel"
+    ] ;
+
     ##content type
     #MARC 336 $b
     dhpluso:content <http://id.loc.gov/vocabulary/contentTypes/nnnn> ;
@@ -255,16 +286,16 @@
     <https://dhplus.sbg.ac.at/ontology#title> [
          a <https://dhplus.sbg.ac.at/ontology#Title> ;
      #MARC summary of $afgknps
-         rdfs:label "NN"^^xsd:string ;
-         bflc:titleSortKey "NN"^^xsd:string ;
+         rdfs:label "NN"^^xsd:string ;  #SZDBIB (if bf:partOf): #//fileDesc/titleStmt/title@type="series"   #displayed as "Gesamttitel"
      #MARC $a
-         <https://dhplus.sbg.ac.at/ontology#mainTitle> "NN"^^xsd:string ;
+         <https://dhplus.sbg.ac.at/ontology#mainTitle> "NN"@de, "NN"@en ;  #SZDBIB:    #//fileDesc/titleStmt/title   #szd:title    #displayed as "Titel"
+                                                                            #SZDMSK:    #//fileDesc/titleStmt/title@ana="supplied/verified"   #szd:title    #displayed as "Titel (ermittelt)"
      #MARC $b
-         <https://dhplus.sbg.ac.at/ontology#subtitle> "NN"^^xsd:string ;
+         <https://dhplus.sbg.ac.at/ontology#subtitle> "NN"@de, "NN"@en ;
      #MARC $n
          <https://dhplus.sbg.ac.at/ontology#partNumber> "NN"^^xsd:string ;
      #MARC $p
-         <https://dhplus.sbg.ac.at/ontology#partName> "NN"^^xsd:string ;
+         <https://dhplus.sbg.ac.at/ontology#partName> "NN"@de, "NN"@en ;    #SZDBIB (if bf:partOf): #//fileDesc/titleStmt/title     #szd:title  #displayed as "Titel"
      ] ;
 
     #Production, Publication, Distribution, Manufacture, and Copyright Notice
@@ -300,9 +331,9 @@
         dhpluso:date  "NN" ;    #SDMSK: #//fileDesc/sourceDesc/msDesc/history/origin/origDate
     ] ;
     #MARC 264 summary of $abc
-    <https://dhplus.sbg.ac.at/ontology#provisionActivityStatement> "NN"^^xsd:string ;   #SDZBIB:    #szd:publicationStmt/szd:text
+    <https://dhplus.sbg.ac.at/ontology#provisionActivityStatement> "NN"^^xsd:string ;   #SDZBIB:    #//fileDesc/publicationStmt/*    #szd:publicationStmt/szd:text
     #normalized date
-    dhpluso:P_szd_dateOfPublication "NN" ;  #SDMSK: #//fileDesc/sourceDesc/msDesc/history/origin/origDate@when  #szd:dateOfPublication
+    dhpluso:P_szd_dateOfPublication "0001-01-01"^^xsd:date ;  #SDMSK: #//fileDesc/sourceDesc/msDesc/history/origin/origDate@when  #szd:dateOfPublication
 
     #statement of responsibility
     #MARC 245 $c
@@ -315,9 +346,9 @@
     #incipit
     #MARC 290 $a
     #no Bibframe prop.
-    dhpluso:P_szd_incipit [ #//msContents/msItem/incipit    #szd:incipit
+    dhpluso:P_szd_incipit [
         rdfs:label  "Incipit"@de, "Incipit"@en ;
-        rdf:value "NN"@de, "NN"@en ;
+        rdf:value "NN"@de, "NN"@en ;    #SZDMSK:    #//msDesc/msContents/msItem/incipit    #szd:incipit
     ] ;
     #physical description
     #extent
@@ -326,8 +357,8 @@
         a dhpluso:Extent ;
         #page
         #ATTENTION: renamed Property: rdf:value instead of rdfs:label in bibframe and of szd:page
-        rdf:value "NN"@de, "NN"@en ;    #SZDBIB #//physDesc/objectDesc/supportDesc/extent/measure@type="page"    #szd:page
-                                        #SZDMSK: #//physDesc/objectDesc/supportDesc/extent/span/*   #szd:extent/szd:txt (part of)
+        rdf:value "NN"@de, "NN"@en ;    #SZDBIB #//physDesc/objectDesc/supportDesc/extent/measure@type="page"    #szd:extent/szd:page
+                                        #SZDMSK: #//physDesc/objectDesc/supportDesc/extent/span/measure@type="leaf"   #szd:extent/szd:txt (part of)
     ] ;
 
     #dimensions $c
@@ -350,12 +381,6 @@
         rdf:value "NN"@de, "NN"@en; #SZDMSK:    #//physDesc/accMat//item@ana="szdg:Enclosures"/desc   #szd:enclosures
     ] ;
 
-    dhpluso:P_szd_binding [
-        rdfs:label  "Umfang/Einband"@de, "Physical Description"@en ;
-        rdf:value "NN"@de, "NN"@en; #SZDBIB:    #//physDesc/bindingDesc/binding/ab   #szd:extent/szd:binding
-                                    #ATTENTION: only in SZDBIB.650 xxxx:   #bindingDesc/binding/ab/ref@target="szdg:Binding"    #szd:ProvenanceCharacteristic/szd:binding
-    ] ;
-
     dhpluso:P_szd_extentadd [   #e.g. illustriert
         rdfs:label  "Umfang/Einband"@de, "Physical Description"@en ;
         rdf:value "NN"@de, "NN"@en; #SZDBIB:    #//physDesc/additions/list@type="extent"/item/span   #szd:extent/szd:txt (part of)
@@ -373,7 +398,9 @@
     ] ;
 
     #glossar
-    dhpluso:P_szd_glossar szdv:nnnn ;   #SZDBIB:    #@*="szdg:nnnn"    #szd:provenanceCharacteristic/szd:glossar
+    dhpluso:P_szd_glossar szdv:nnnn ;   #SZDBIB:    #@*="szdg:nnnn"     #szd:provenanceCharacteristic/szd:glossar
+                                        #ATTENTION: renamed property for SZDMSK: P_szd_glossar instead of szd:term
+                                        #SZDMSK:    #@*="szdg:nnnn"     #szd:term
 
     #in series
     #MARC 8xx
@@ -417,7 +444,7 @@
     #MARC $v
     <https://dhplus.sbg.ac.at/ontology#seriesEnumeration> "NN"^^xsd:string ;
     #MARC summary of $av
-    <https://dhplus.sbg.ac.at/ontology#seriesStatement> "NN"^^xsd:string ;
+    <https://dhplus.sbg.ac.at/ontology#seriesStatement> "NN"^^xsd:string ;  #SZDBIB:    #//fileDesc/seriesStmt/title   #szd:series
 
     <https://dhplus.sbg.ac.at/ontology#instanceOf> <http://dhplus.sbg.ac.at/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work8xx> ;
 .
@@ -451,22 +478,37 @@
         rdf:value "NN" ;    #SZDBIB:    #//fileDesc/sourceDesc/msDesc/history/provenance/orgName@ref="szdg:LaterOwner"    #szd:provenance
     ] ;
 
-    #immediate source of acquisition note MARC 541 source of acquisition $a
-    dhpluso:immediateAcquisition [   # //acquisition/ab # szd:acquired
+    #immediate source of acquisition note
+    #MARC 541 source of acquisition $a
+    dhpluso:immediateAcquisition [
         a dhpluso:ImmediateAcquisition ;
         rdfs:label  "Erwerbung"@de, "Acquisition"@en ;
-        rdf:value "NN" ;
+        rdf:value "NN" ;    #SZDMSK:    #//fileDesc/sourceDesc/msDesc/history/acquisition/ab   #szd:acquired
     ] ;
 
     #binding information
     #MARC 563 binding note $a
-    #ATTENTION 2 types of binding description one as instance one as item
     dhpluso:note [
         a dhpluso:Note ;
         rdfs:label  "Umfang/Einband"@de, "Physical Description"@en ;
         dhpluso:noteType  "binding" ;
         #ATTENTION: renamed property: rdf:value instead of rdfs:label in bibframe
-        rdf:value "NN" ;    #SZDMSK:    #//physDesc/bindingDesc/binding/ab   #szd:binding
+        rdf:value "NN" ;    #SZDBIB:    #//physDesc/bindingDesc/binding/ab   #szd:extent/szd:binding
+                            #ATTENTION: only in SZDBIB.650 xxxx:   #bindingDesc/binding/ab/ref@target="szdg:Binding"    #szd:provenanceCharacteristic/szd:binding
+                            #SZDMSK:    #//physDesc/bindingDesc/binding/ab   #szd:binding
+    ] ;
+
+    dhpluso:identifyingInscription [
+        rdfs:label "Aufschrift"@de, "Identifying Inscription"@en ;
+        rdf:value "NN"@de, "NN"@en ;    #SZDMSK: #//fileDesc/sourceDesc/msDesc/msContents/msItem/docEdition@ana="szdg:IdentifyingInscription"   #szd:identifyingInscription
+    ] ;
+
+    dhpluso:P_szd_location [
+        a dhpluso:E_szd_Location ;
+        rdfs:label "Heutiger Standort"@de, "Current Location"@en ;
+        #ATTENTION: renamed Property: P_szd_repository instead of szd:name
+        dhpluso:P_szd_repository "NN" ; #e.g."Erben Stefan Zweigs"  #SZDBIB + SZDMSK:   #msDesc/msIdentifier/repository     #szd:location/szd:name
+        dhpluso:P_szd_settlement <URI> ;  #link to place object #SZDBIB + SZDMSK:   #msDesc/msIdentifier/settlement    #szd:location/szd:settlement
     ] ;
 
     dhpluso:P_szd_note [
@@ -475,90 +517,99 @@
                                         #SZDMSK:    #//notesStmt/note   #szd:note
     ] ;
 
-    dhpluso:P_szd_location [
-        a dhpluso:E_szd_Location ;
-        rdfs:label "Heutiger Standort"@de, "Current Location"@en ;
-        #ATTENTION: renamed Property: P_szd_repository instead of szd:name
-        dhpluso:P_szd_repository "NN" ; #e.g."Erben Stefan Zweigs"  #SZDBIB + SZDMSK:   #msDesc/msIdentifier/repository     #szd:location/szd:name
-        dhpluso:P_szd_settlement <URI> ;  #link to place object ##SZDBIB + SZDMSK:   #msDesc/msIdentifier/settlement    #szd:location/szd:settlement
-    ] ;
-
-    dhpluso:P_szd_secretarialHand [
-        rdfs:label  "Schreiberhand"@de, "Secretarial Hand"@en ;
-        rdf:value "NN"@de, "NN"@en ;    #SZDMSK: #//fileDesc/sourceDesc/msDesc/physDesc/handDesc/ab  #szd:secretarialHand
-    ] ;
-    dhpluso:P_szd_writingInstrument [
-        rdfs:label  "Schreibstoff"@de, "Writing Instrument"@en ;
-        rdf:value "NN"@de, "NN"@en ;    #SZDMSK: #//fileDesc/sourceDesc/msDesc/physDesc/objectDesc/supportDesc/support/material@ana="szdg:WritingInstrument"  #szd:writingInstrument
-    ] ;
-    dhpluso:P_szd_writingMaterial [
-        rdfs:label  "Beschreibstoff"@de, "Writing Material"@en ;
-        rdf:value "NN"@de, "NN"@en ;    #SZDMSK: #//fileDesc/sourceDesc/msDesc/physDesc/objectDesc/supportDesc/support/material@ana="szdg:WritingMaterial"  #szd:writingMaterial
-    ] ;
-
     dhpluso:P_szd_provenanceCharacteristic [
         a dhpluso:E_szd_ProvenanceCharacteristic ;
         dhpluso:P_szd_glossar szdv:RemovedPage, szdv:InventoryNumberNew, szdv:InventoryNumberOld,szdv:SingleLetter, szdv:Hausexemplar, szdv:Stamp, szdv:Note, szdv:Bookplate, szdv:Autograph, szdv:Marginalia, szdv:Marker, szdv:Insertion, szdv:FurnitureLocation, szdv:Binding, szdv:RoomLocation, szdv:NumberCollection ;
-        dhpluso:P_szd_presentationInscription [
-            rdfs:label "Widmung"@de, "Presentation Inscription"@en ;
-            rdf:value "NN"@de, "NN"@en ;
+
+        dhpluso:P_szd_autograph [
+            rdfs:label "Autogramm"@de, "Autograph"@en ;
+            rdf:value "NN"@de, "NN"@en ;    #SZDBIB:    #//fileDesc/sourceDesc/msDesc/physDesc/additions/list@type="provenance"/item/desc   #szd:provenanceCharacteristic/szd:autograph
         ] ;
+
+        dhpluso:P_szd_bookplate [
+            rdfs:label "Exlibris"@de, "Bookplate"@en ;
+            rdf:value "NN"@de, "NN"@en ;    #SZDBIB:    #//fileDesc/sourceDesc/msDesc/physDesc/additions/list@type="provenance"/item/desc   #szd:provenanceCharacteristic/szd:bookplate
+        ] ;
+
+        dhpluso:P_szd_insertion [
+            rdfs:label "Einlage"@de, "Insertion"@en ;
+            rdf:value "NN"@de, "NN"@en ;    #SZDBIB:    #//fileDesc/sourceDesc/msDesc/physDesc/additions/list@type="provenance"/item/desc   #szd:provenanceCharacteristic/szd:insertion
+        ] ;
+
         dhpluso:P_szd_marginalia [
             rdfs:label "Marginalie"@de, "Marginalia"@en ;
-            rdf:value "NN" ;
+            rdf:value "NN"@de, "NN"@en ;    #SZDBIB:    #//fileDesc/sourceDesc/msDesc/physDesc/additions/list/item/desc   #szd:provenanceCharacteristic/szd:marginalia
         ] ;
+
         dhpluso:P_szd_marker [
             rdfs:label "Merkzeichen"@de, "Underlining / Marker"@en ;
-            rdf:value "NN" ;
+            rdf:value "NN"@de, "NN"@en ;    #SZDBIB:    #//fileDesc/sourceDesc/msDesc/physDesc/additions/list/item/desc   #szd:provenanceCharacteristic/szd:marker
         ] ;
+
+        dhpluso:P_szd_note [
+            rdfs:label "Notiz"@de, "Note"@en ;
+            rdf:value "NN"@de, "NN"@en ;    #SZDBIB:    #//fileDesc/sourceDesc/msDesc/physDesc/additions/list@type="provenance"/item/desc   #szd:provenanceCharacteristic/szd:note
+        ] ;
+
         dhpluso:P_szd_originalShelfmark [
             a dhpluso:E_szd_OriginalShelfmark ;
             rdfs:label "Originalsignatur"@de, "OriginalShelfmark"@en ;
-            dhpluso:P_szd_inventorynumbernew "NN" ;
-            dhpluso:P_szd_inventorynumberold "NN" ;
-            dhpluso:P_szd_singleletter  "NN" ;
+            dhpluso:P_szd_inventorynumbernew "NN" ; #SZDBIB:    #//fileDesc/sourceDesc/msDesc/msIdentifier/altIdentifier@corresp="szdg:InventoryNumberNew"/idno   #szd:provenanceCharacteristic/szd:originalShelfmark/szd:inventorynumbernew
+            dhpluso:P_szd_inventorynumberold "NN" ; #SZDBIB:    #//fileDesc/sourceDesc/msDesc/msIdentifier/altIdentifier@corresp="szdg:InventoryNumberOld"/idno   #szd:provenanceCharacteristic/szd:originalShelfmark/szd:inventorynumberold
+            dhpluso:P_szd_singleletter  "NN" ;  #SZDBIB:    #//fileDesc/sourceDesc/msDesc/msIdentifier/altIdentifier@corresp="szdg:SingleLetter"/idno   #szd:provenanceCharacteristic/szd:originalShelfmark/szd:singleletter
             dhpluso:P_szd_hausexemplar [
-                rdf:value "NN" ;
-                dhpluso:P_szd_note "NN"@de, "NN"@en ;
+                dhpluso:P_szd_note "NN"@de, "NN"@en ;   #SZDBIB:    #//fileDesc/sourceDesc/msDesc/msIdentifier/altIdentifier@corresp="szdg:Hausexemplar"/note/span   #szd:provenanceCharacteristic/szd:originalShelfmark/szd:hausexemplar
+                rdf:value "NN" ;    #SZDBIB:    #//fileDesc/sourceDesc/msDesc/msIdentifier/altIdentifier@corresp="szdg:Hausexemplar"/idno   #szd:provenanceCharacteristic/szd:originalShelfmark/szd:hausexemplar
             ] ;
-            dhpluso:P_szd_furniturelocation "NN" ;
-            dhpluso:P_szd_roomlocation "NN" ;
-            dhpluso:P_szd_numbercollection "NN" ;
+            dhpluso:P_szd_furniturelocation "NN" ;  #SZDBIB:    #//fileDesc/sourceDesc/msDesc/msIdentifier/altIdentifier@corresp="szdg:FurnitureLocation"/idno   #szd:provenanceCharacteristic/szd:originalShelfmark/szd:furniturelocation
+            dhpluso:P_szd_roomlocation "NN" ;   #SZDBIB:    #//fileDesc/sourceDesc/msDesc/msIdentifier/altIdentifier@corresp="szdg:RoomLocation"/idno   #szd:provenanceCharacteristic/szd:originalShelfmark/szd:roomlocation
+            dhpluso:P_szd_numbercollection "NN" ;   #SZDBIB:    #//fileDesc/sourceDesc/msDesc/msIdentifier/altIdentifier@corresp="szdg:NumberCollection"/idno   #szd:provenanceCharacteristic/szd:originalShelfmark/szd:numbercollection
         ] ;
-        dhpluso:P_szd_stamp [
-            rdfs:label "Stempel"@de, "Stamp"@en ;   #list@type="provenance"/item/stamp
-            rdf:value "NN" ;  #list@type="provenance"/item/desc
+
+        dhpluso:P_szd_presentationInscription [
+            rdfs:label "Widmung"@de, "Presentation Inscription"@en ;
+            rdf:value "NN"@de, "NN"@en ;    #SZDBIB:    #//fileDesc/sourceDesc/msDesc/physDesc/additions/list/item/desc   #szd:provenanceCharacteristic/szd:presentationinscription
         ] ;
+
         dhpluso:P_szd_removedpage [
             rdfs:label "Tektur"@de, "Removed Page"@en ;
-            rdf:value "NN"@de, "NN"@en ;
+            rdf:value "NN"@de, "NN"@en ;    #SZDBIB:    #//fileDesc/sourceDesc/msDesc/physDesc/additions/list@type="provenance"/item/desc   #szd:provenanceCharacteristic/szd:removedpage
         ] ;
-        dhpluso:P_szd_note [
-            rdfs:label "Notiz"@de, "Note"@en ;
-            rdf:value "NN"@de, "NN"@en ;
+        #ATTENTION: szd:overpasting only in SZDBIB.492
+        dhpluso:P_szd_overpasting [
+            rdfs:label "Tektur"@de, "Overpasting"@en ;
+            rdf:value "NN"@de, "NN"@en ;    #SZDBIB:    #//fileDesc/sourceDesc/msDesc/physDesc/additions/list@type="provenance"/item/desc   #szd:provenanceCharacteristic/szd:overpasting
         ] ;
-        dhpluso:P_szd_bookplate [
-            rdfs:label "Exlibris"@de, "Bookplate"@en ;
-            rdf:value "NN"@de, "NN"@en ;
+
+        dhpluso:P_szd_stamp [
+            rdfs:label "Stempel"@de, "Stamp"@en ;
+            rdf:value "NN"@de, "NN"@en ;    #SZDBIB:    #//fileDesc/sourceDesc/msDesc/physDesc/additions/list@type="provenance"/item/desc   #szd:provenanceCharacteristic/szd:stamp
         ] ;
-        dhpluso:P_szd_autograph [
-            rdfs:label "Autogramm"@de, "Autograph"@en ;
-            rdf:value "NN"@de, "NN"@en ;
-        ] ;
-        dhpluso:P_szd_insertion [
-            rdfs:label "Einlage"@de, "Insertion"@en ;
-            rdf:value "NN"@de, "NN"@en ;
-        ] ;
-        dhpluso:P_szd_binding [
-            rdfs:label "Umfang/Einband"@de, "Physical Description"@en ;
-            rdf:value "NN"@de, "NN"@en ;
-        ]
+
     ] ;
 
     dhpluso:P_szd_publicationStmt [
         a dhpluso:E_szd_PublicationStmt ;
         rdfs:label "Veröffentlichung"@de, "Publication Details"@en ;    # = publicationStmt + provisionActivityStatement
         rdf:value "NN" ;    #//editionStmt/edition/span
+    ] ;
+
+    dhpluso:P_szd_secretarialHand [
+        rdfs:label  "Schreiberhand"@de, "Secretarial Hand"@en ;
+        rdf:value "NN"@de, "NN"@en ;    #SZDMSK: #//fileDesc/sourceDesc/msDesc/physDesc/handDesc/ab  #szd:secretarialHand
+    ] ;
+
+    dhpluso:P_szd_signature "NN" ;  #SZDBIB:  #//msDesc/msIdentifier/idno   #szd:signature
+                                    #SZDMSK:  #//msDesc/msIdentifier/idno@type="signature"  #szd:signature
+
+    dhpluso:P_szd_writingInstrument [
+        rdfs:label  "Schreibstoff"@de, "Writing Instrument"@en ;
+        rdf:value "NN"@de, "NN"@en ;    #SZDMSK: #//fileDesc/sourceDesc/msDesc/physDesc/objectDesc/supportDesc/support/material@ana="szdg:WritingInstrument"  #szd:writingInstrument
+    ] ;
+
+    dhpluso:P_szd_writingMaterial [
+        rdfs:label  "Beschreibstoff"@de, "Writing Material"@en ;
+        rdf:value "NN"@de, "NN"@en ;    #SZDMSK: #//fileDesc/sourceDesc/msDesc/physDesc/objectDesc/supportDesc/support/material@ana="szdg:WritingMaterial"  #szd:writingMaterial
     ] ;
 
     <https://dhplus.sbg.ac.at/ontology#itemOf> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Instance> ;
@@ -656,12 +707,18 @@
             ] ;
             #author
             bf:role <http://id.loc.gov/vocabulary/relators/aut> ;
-            #OR
             #contributor
             bf:role <http://id.loc.gov/vocabulary/relators/ctb> ;
-            #OR
             #editor
             bf:role <http://id.loc.gov/vocabulary/relators/edt> ;
+            #composer
+            bf:role   <http://id.loc.gov/vocabulary/relators/cmp> ;
+            #illustrator
+            bf:role   <http://id.loc.gov/vocabulary/relators/ill> ;
+            #translator
+            bf:role   <http://id.loc.gov/vocabulary/relators/trl> ;
+            #other
+            bf:role   <http://id.loc.gov/vocabulary/relators/oth> ;
         ] ;
 
         ##title
@@ -728,7 +785,6 @@
         <http://id.loc.gov/ontologies/bibframe/hasInstance> <http://example.org/000000#Instance> ;
 
     ]
-
 .
 
 #instance
@@ -879,6 +935,7 @@
         rdfs:label  "NN"
     ] ;
     #binding information
+    #ATTENTION 2 types of binding description one as instance one as item
     #MARC 563
     #binding note
     #$a
@@ -1008,7 +1065,7 @@
 <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/projSpec>
     a       <https://dhplus.sbg.ac.at/ontology#ProjectSpecific> ;
     dhpluso:hasPart [
-        a szd:Book ;
+        a szd:Work ;
         dhpluso:source <https://gams.uni-graz.at/o:szd.werke#SZDMSK.nnnn> ;
 
         gams:isMemberOfCollection     <https://gams.uni-graz.at/o:szd.werke> ;
@@ -1016,9 +1073,9 @@
         szd:acquired                  "NN"@de, "NN"@en ;
         szd:additionalMaterial        "NN"@de, "NN"@en ;
         szd:author                    <https://gams.uni-graz.at/o:szd.personen#SZDPER.nnnn> ;
-        szd:binding                   "NN"@en , "NN"@de ;
+        szd:binding                   "NN"@de , "NN"@en ;
         szd:category                  <https://gams.uni-graz.at/o:szd.nachlass#nnnn> ;
-        szd:dateOfPublication         "NN" ;
+        szd:dateOfPublication         "0001-01-01" ;
         szd:enclosures                "NN"@de, "NN"@en ;
         szd:extent                    <https://gams.uni-graz.at/o:szd.werke#SZDMSK.nnnnEX> ;
         szd:identifyingInscription    "NN"@de, "NN"@en ;
@@ -1026,15 +1083,15 @@
         szd:language                  <http://id.loc.gov/vocabulary/iso639-2/nnn> ;
         szd:location                  <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.nnnn> ;
         szd:note                      "NN"@de , "NN"@en ;
-        szd:objecttyp                 "NN"@en , "NN"@de ;
+        szd:objecttyp                 "NN"@de , "NN"@en ;
         szd:provenance                "NN"@de, "NN"@en ;
         szd:relationToPerson          <https://gams.uni-graz.at/o:szd.personen#SZDPER.nnnn> ;
         szd:secretarialHand           "NN"@de, "NN"@en ;
         szd:signature                 "NN" ;
         szd:term                      szdg:nnnn ;
-        szd:title                     "NN"@en , "NN"@de ;
+        szd:title                     "NN"@de , "NN"@en ;
         szd:writingInstrument         "NN"@de , "NN"@en ;
-        szd:writingMaterial           "NN"@en , "NN"@de ;
+        szd:writingMaterial           "NN"@de , "NN"@en ;
     ]
 .
 <https://gams.uni-graz.at/o:szd.personen#SZDPER.nnnn>
@@ -1052,17 +1109,19 @@
 <https://gams.uni-graz.at/o:szd.werke#SZDMSK.nnnnEX>
     a            szd:Extent ;
     szd:binding  "NN"@en ;
-    szd:format   "n°" ;
+    szd:format   "NN" ;
     szd:page     "nnnn" ;
-    szd:text     "NN"@de , "NN°"@en
+    szd:text     "NN"@de , "NN°"@en ;
 .
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.nnnn>
     a                          szd:Location ;
+    rdfs:seeAlso               <URI> ;
+    gnd:gndIdentifier          <http://d-nb.info/gnd/nnnn> ;
     wgs84_pos:lat              "NN" ;
     wgs84_pos:long             "NN" ;
     gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
     gams:textualContent        "NN" ;
-    szd:name                   "NN"@en ;
-    szd:settlement             "NN"
+    szd:name                   "NN" ;
+    szd:settlement             "NN" ;
 .
 

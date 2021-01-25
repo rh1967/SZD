@@ -1,0 +1,273 @@
+@prefix bf:    <http://id.loc.gov/ontologies/bibframe/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix bflc:  <http://id.loc.gov/ontologies/bflc/> .
+@prefix madsrdf: <http://www.loc.gov/mads/rdf/v1#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://id.loc.gov/vocabulary/languages/ger>
+        a       bf:Language .
+
+<http://id.loc.gov/vocabulary/descriptionConventions/rakwb>
+        a       bf:DescriptionConventions .
+
+<http://id.loc.gov/vocabulary/languages>
+        a       bf:Source .
+
+<http://id.loc.gov/vocabulary/relators/aut>
+        a       bf:Role .
+
+<http://id.loc.gov/vocabulary/relators/oth>
+        a       bf:Role .
+
+<http://example.org/410770167#Agent700-29>
+        a                    bf:Person , bf:Agent ;
+        rdfs:label           "Zweig, Stefan 1881-1942" ;
+        bflc:name00MarcKey   "70012$aZweig, Stefan$d1881-1942$tJeremias <franz.>" ;
+        bflc:name00MatchKey  "Zweig, Stefan 1881-1942" .
+
+<http://example.org/410770167#Work700-29>
+        a                bf:Work ;
+        rdfs:label       "Jeremias <franz.>" ;
+        bf:contribution  [ a         bf:Contribution ;
+                           bf:agent  <http://example.org/410770167#Agent700-29> ;
+                           bf:role   <http://id.loc.gov/vocabulary/relators/ctb>
+                         ] ;
+        bf:title         [ a                     bf:Title ;
+                           rdfs:label            "Jeremias <franz.>" ;
+                           bflc:title00MarcKey   "70012$aZweig, Stefan$d1881-1942$tJeremias <franz.>" ;
+                           bflc:title00MatchKey  "Jeremias <franz.>" ;
+                           bflc:titleSortKey     "Jeremias <franz.>" ;
+                           bf:mainTitle          "Jeremias <franz.>"
+                         ] .
+
+<http://id.loc.gov/vocabulary/countries/fr>
+        a       bf:Place .
+
+<http://id.loc.gov/vocabulary/languages/fre>
+        a       bf:Language .
+
+<http://example.org/410770167#Agent700-28>
+        a                    bf:Person , bf:Agent ;
+        rdfs:label           "Baudouin, Louis Charles" ;
+        bflc:name00MarcKey   "7001 $aBaudouin, Louis Charles$4oth" ;
+        bflc:name00MatchKey  "Baudouin, Louis Charles" .
+
+<http://id.loc.gov/vocabulary/carriers/nc>
+        a           bf:Carrier ;
+        rdfs:label  "Band" ;
+        bf:source   [ a           bf:Source ;
+                      rdfs:label  "rdacarrier"
+                    ] .
+
+<http://id.loc.gov/vocabulary/mediaTypes/n>
+        a           bf:Media ;
+        rdfs:label  "ohne Hilfsmittel zu benutzen" ;
+        bf:source   [ a           bf:Source ;
+                      rdfs:label  "rdamedia"
+                    ] .
+
+<http://id.loc.gov/vocabulary/contentTypes/txt>
+        a           bf:Content ;
+        rdfs:label  "Text" ;
+        bf:source   [ a           bf:Source ;
+                      rdfs:label  "rdacontent"
+                    ] .
+
+<http://example.org/410770167#Work830-30>
+        a                bf:Work ;
+        rdfs:label       "Judaisme / Oeuvres" ;
+        bf:identifiedBy  [ a          bf:Identifier ;
+                           rdf:value  "918740-6" ;
+                           bf:source  [ a           bf:Source ;
+                                        rdfs:label  "DE-600"
+                                      ]
+                         ] ;
+        bf:identifiedBy  [ a          bf:Identifier ;
+                           rdf:value  "515211583" ;
+                           bf:source  [ a           bf:Source ;
+                                        rdfs:label  "DE-576"
+                                      ]
+                         ] ;
+        bf:identifiedBy  [ a          bf:Identifier ;
+                           rdf:value  "182529894" ;
+                           bf:source  [ a           bf:Source ;
+                                        rdfs:label  "DE-627"
+                                      ]
+                         ] ;
+        bf:title         [ a                     bf:Title ;
+                           rdfs:label            "Judaisme / Oeuvres" ;
+                           bflc:title30MarcKey   "830 0$aJudaisme / Oeuvres$v10$91000$w(DE-627)182529894$w(DE-576)515211583$w(DE-600)918740-6" ;
+                           bflc:title30MatchKey  "Judaisme / Oeuvres" ;
+                           bflc:titleSortKey     "Judaisme / Oeuvres" ;
+                           bf:mainTitle          "Judaisme / Oeuvres"
+                         ] .
+
+<http://example.org/410770167#Work>
+        a                  bf:Text , bf:Work ;
+        rdfs:label         "Jeremias <franz.>" ;
+        bf:adminMetadata   [ a                          bf:AdminMetadata ;
+                             bflc:encodingLevel         [ a        bflc:EncodingLevel ;
+                                                          bf:code  "7"
+                                                        ] ;
+                             bf:changeDate              "2019-01-12T07:48:11"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
+                             bf:creationDate            "1999-01-01"^^<http://www.w3.org/2001/XMLSchema#date> ;
+                             bf:descriptionConventions  <http://id.loc.gov/vocabulary/descriptionConventions/rakwb> ;
+                             bf:descriptionConventions  [ a        bf:DescriptionConventions ;
+                                                          bf:code  "unknown"
+                                                        ] ;
+                             bf:descriptionLanguage     <http://id.loc.gov/vocabulary/languages/ger> ;
+                             bf:generationProcess       [ a           bf:GenerationProcess ;
+                                                          rdfs:label  "DLC marc2bibframe2 v1.4.0-SNAPSHOT: 2021-01-23T16:10:58.333+01:00"
+                                                        ] ;
+                             bf:identifiedBy            [ a          bf:Local ;
+                                                          rdf:value  "410770167"
+                                                        ] ;
+                             bf:source                  [ a        bf:Source ;
+                                                          bf:code  "DE-627"
+                                                        ] ;
+                             bf:source                  [ a           bf:Agent , bf:Source ;
+                                                          rdfs:label  "DE-627"
+                                                        ] ;
+                             bf:source                  [ a           bf:Agent , bf:Source ;
+                                                          rdfs:label  "DE-627"
+                                                        ] ;
+                             bf:status                  [ a        bf:Status ;
+                                                          bf:code  "c"
+                                                        ]
+                           ] ;
+        bf:classification  [ a                         bf:Classification ;
+                             bf:classificationPortion  "18.10" ;
+                             bf:source                 [ a           bf:Source ;
+                                                         rdfs:label  "bkl"
+                                                       ]
+                           ] ;
+        bf:classification  [ a                         bf:Classification ;
+                             bf:classificationPortion  "17.97" ;
+                             bf:source                 [ a           bf:Source ;
+                                                         rdfs:label  "bkl"
+                                                       ]
+                           ] ;
+        bf:content         <http://id.loc.gov/vocabulary/contentTypes/txt> ;
+        bf:contribution    [ a         bf:Contribution ;
+                             bf:agent  <http://example.org/410770167#Agent700-28> ;
+                             bf:role   <http://id.loc.gov/vocabulary/relators/oth>
+                           ] ;
+        bf:contribution    [ a         bflc:PrimaryContribution , bf:Contribution ;
+                             bf:agent  <http://example.org/410770167#Agent100-15> ;
+                             bf:role   <http://id.loc.gov/vocabulary/relators/aut>
+                           ] ;
+        bf:hasInstance     <http://example.org/410770167#Instance> ;
+        bf:hasPart         <http://example.org/410770167#Work700-29> ;
+        bf:language        <http://id.loc.gov/vocabulary/languages/fre> ;
+        bf:language        [ a                bf:Language ;
+                             bf:identifiedBy  [ a          bf:Identifier ;
+                                                rdf:value  <http://id.loc.gov/vocabulary/languages/fre> ;
+                                                bf:source  <http://id.loc.gov/vocabulary/languages>
+                                              ]
+                           ] ;
+        bf:title           [ a                     bf:Title ;
+                             rdfs:label            "Jeremias <franz.>" ;
+                             bflc:title40MarcKey   "24010$aJeremias <franz.>" ;
+                             bflc:title40MatchKey  "Jeremias <franz.>" ;
+                             bflc:titleSortKey     "Jeremias <franz.>" ;
+                             bf:mainTitle          "Jeremias <franz.>"
+                           ] .
+
+<http://id.loc.gov/vocabulary/relators/ctb>
+        a       bf:Role .
+
+<http://example.org/410770167#Instance>
+        a                              bf:Instance ;
+        rdfs:label                     "Jérémie" ;
+        bf:carrier                     <http://id.loc.gov/vocabulary/carriers/nc> ;
+        bf:dimensions                  "8\"" ;
+        bf:extent                      [ a           bf:Extent ;
+                                         rdfs:label  "361 S."
+                                       ] ;
+        bf:hasSeries                   [ a                     bf:Instance ;
+                                         rdfs:label            "Judaïsme" ;
+                                         bf:instanceOf         <http://example.org/410770167#Work830-30> ;
+                                         bf:seriesEnumeration  "10" ;
+                                         bf:seriesStatement    "Judaïsme 10"
+                                       ] ;
+        bf:hasSeries                   [ a                     bf:Instance ;
+                                         rdfs:label            "Oeuvres" ;
+                                         bf:seriesEnumeration  "10" ;
+                                         bf:seriesStatement    "Oeuvres 10"
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "410770167" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "DE-627"
+                                                    ]
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "603439359" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "OCoLC"
+                                                    ]
+                                       ] ;
+        bf:identifiedBy                [ a          bf:Local ;
+                                         rdf:value  "GBV410770167" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "DE-599"
+                                                    ]
+                                       ] ;
+        bf:instanceOf                  <http://example.org/410770167#Work> ;
+        bf:issuance                    <http://id.loc.gov/vocabulary/issuance/mono> ;
+        bf:media                       <http://id.loc.gov/vocabulary/mediaTypes/n> ;
+        bf:place                       [ a          bf:Place ;
+                                         bf:code    "XA-FR" ;
+                                         bf:source  [ a           bf:Source ;
+                                                      rdfs:label  "ISO 3166"
+                                                    ]
+                                       ] ;
+        bf:provisionActivity           [ a         bf:Publication , bf:ProvisionActivity ;
+                                         bf:agent  [ a           bf:Agent ;
+                                                     rdfs:label  "Rieder"
+                                                   ] ;
+                                         bf:date   "1929" ;
+                                         bf:place  [ a           bf:Place ;
+                                                     rdfs:label  "Paris"
+                                                   ]
+                                       ] ;
+        bf:provisionActivity           [ a         bf:Publication , bf:ProvisionActivity ;
+                                         bf:date   "1929"^^<http://id.loc.gov/datatypes/edtf> ;
+                                         bf:place  <http://id.loc.gov/vocabulary/countries/fr>
+                                       ] ;
+        bf:provisionActivityStatement  "Paris; Rieder; 1929" ;
+        bf:responsibilityStatement     "Stefan Zweig. Trad. de l'allemand par Louis Charles Baudouin" ;
+        bf:title                       [ a                  bf:Title ;
+                                         rdfs:label         "Jérémie" ;
+                                         bflc:titleSortKey  "Jérémie" ;
+                                         bf:mainTitle       "Jérémie"
+                                       ] .
+
+<http://id.loc.gov/vocabulary/issuance/mono>
+        a       bf:Issuance .
+
+<http://example.org/410770167#Agent100-15>
+        a                    bf:Person , bf:Agent ;
+        rdfs:label           "Zweig, Stefan 1881-1942" ;
+        bflc:name00MarcKey   "1001 $aZweig, Stefan$d1881-1942$0(DE-588)118637479$0(DE-627)133453227$0(DE-576)163687803$4aut" ;
+        bflc:name00MatchKey  "Zweig, Stefan 1881-1942" ;
+        bflc:primaryContributorName00MatchKey
+                "Zweig, Stefan 1881-1942" ;
+        bf:identifiedBy      [ a          bf:Identifier ;
+                               rdf:value  "163687803" ;
+                               bf:source  [ a           bf:Source ;
+                                            rdfs:label  "DE-576"
+                                          ]
+                             ] ;
+        bf:identifiedBy      [ a          bf:Identifier ;
+                               rdf:value  "133453227" ;
+                               bf:source  [ a           bf:Source ;
+                                            rdfs:label  "DE-627"
+                                          ]
+                             ] ;
+        bf:identifiedBy      [ a          bf:Identifier ;
+                               rdf:value  "118637479" ;
+                               bf:source  [ a           bf:Source ;
+                                            rdfs:label  "DE-588"
+                                          ]
+                             ] .
