@@ -1066,7 +1066,7 @@
     a       <https://dhplus.sbg.ac.at/ontology#ProjectSpecific> ;
     dhpluso:hasPart [
         a szd:Book ;
-        dhpluso:source <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.nnnn> ;
+        dc:source <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.nnnn> ;
 
         gams:isMemberOfCollection     <https://gams.uni-graz.at/o:szd.bibliothek> ;
         gams:textualContent           "NN" ;

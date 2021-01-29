@@ -1066,7 +1066,7 @@
     a       <https://dhplus.sbg.ac.at/ontology#ProjectSpecific> ;
     dhpluso:hasPart [
         a szd:Work ;
-        dhpluso:source <https://gams.uni-graz.at/o:szd.werke#SZDMSK.nnnn> ;
+        dc:source <https://gams.uni-graz.at/o:szd.werke#SZDMSK.nnnn> ;
 
         gams:isMemberOfCollection     <https://gams.uni-graz.at/o:szd.werke> ;
         gams:textualContent           "NN" ;
