@@ -31,8 +31,11 @@
 @prefix dhplusi: <http://dhplus.sbg.ac.at/szd/instance/> .
 
 #dhplus
-<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004>
-    a   <https://dhplus.sbg.ac.at/ontology#E71_Human-Made_Thing> ;
+#################################################################
+
+#work
+<http://dhplus.sbg.ac.at/instance/17728dbc-bc9c-11ea-b3de-0242ac130004>
+    a <https://dhplus.sbg.ac.at/ontology#Work> ;
 
     <https://dhplus.sbg.ac.at/ontology#creator> "NN"^^xsd:string ;
     <https://dhplus.sbg.ac.at/ontology#dateCreated> "0001-01-01T00:00:00"^^xsd:dateTime ;
@@ -40,14 +43,8 @@
     <https://dhplus.sbg.ac.at/ontology#datePublished> "0001-01-01T00:00:00"^^xsd:dateTime ;
 
     <https://dhplus.sbg.ac.at/ontology#source>
-        <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Bf-LoC> ,
-        <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/projSpec> ;
-
-    <https://dhplus.sbg.ac.at/ontology#P1_is_identified_by> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work> ;
-.
-#work
-<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work>
-    a <https://dhplus.sbg.ac.at/ontology#Work> ;
+        <http://dhplus.sbg.ac.at/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Bf-LoC> ,
+        <http://dhplus.sbg.ac.at/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/projSpec> ;
 
     ##author, title - short
     rdfs:label "NN"^^xsd:string ;
@@ -107,7 +104,7 @@
         #MARC 700
 
         #relation to dhplus:Person dataset
-        <https://dhplus.sbg.ac.at/ontology#agent> <URI> ;
+        <https://dhplus.sbg.ac.at/ontology#agent> <Person-URI> ;
 
         #Relator term
         #MARC $e
@@ -353,6 +350,7 @@
     #physical description
     #extent
     #MARC 300 $a
+    #Number of physical pages, volumes, cassettes, total playing time, etc., of of each type of unit
     <https://dhplus.sbg.ac.at/ontology#extent> [
         a dhpluso:Extent ;
         #page
@@ -460,7 +458,7 @@
     a dhpluso:Isbn ;
     rdf:value "NN"^^xsd:string ;
   ] ;
-  dhpluso:instanceOf <http://dhplus.sbg.ac.at/kngoe/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work>
+  dhpluso:instanceOf <http://dhplus.sbg.ac.at/kngoe/instance/17728dbc-bc9c-11ea-b3de-0242ac130004>
 .
 
 #item
@@ -617,7 +615,8 @@
 
 #################################################################
 #MarcToBf-LoC
-<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Bf-LoC>
+#################################################################
+<http://dhplus.sbg.ac.at/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Bf-LoC>
     a   <https://dhplus.sbg.ac.at/ontology#MarcToBf-LoC> ;
     <https://dhplus.sbg.ac.at/ontology#hasPart> [
  #work

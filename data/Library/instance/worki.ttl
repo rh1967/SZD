@@ -31,8 +31,11 @@
 @prefix dhplusi: <http://dhplus.sbg.ac.at/szd/instance/> .
 
 #dhplus
-<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004>
-    a   <https://dhplus.sbg.ac.at/ontology#E71_Human-Made_Thing> ;
+#################################################################
+
+#work
+<http://dhplus.sbg.ac.at/instance/17728dbc-bc9c-11ea-b3de-0242ac130004>
+    a <https://dhplus.sbg.ac.at/ontology#Work> ;
 
     <https://dhplus.sbg.ac.at/ontology#creator> "NN"^^xsd:string ;
     <https://dhplus.sbg.ac.at/ontology#dateCreated> "0001-01-01T00:00:00"^^xsd:dateTime ;
@@ -40,14 +43,8 @@
     <https://dhplus.sbg.ac.at/ontology#datePublished> "0001-01-01T00:00:00"^^xsd:dateTime ;
 
     <https://dhplus.sbg.ac.at/ontology#source>
-        <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Bf-LoC> ,
-        <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/projSpec> ;
-
-    <https://dhplus.sbg.ac.at/ontology#P1_is_identified_by> <http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work> ;
-.
-#work
-<http://dhplus.sbg.ac.at/szd/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work>
-    a <https://dhplus.sbg.ac.at/ontology#Work> ;
+        <http://dhplus.sbg.ac.at/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Bf-LoC> ,
+        <http://dhplus.sbg.ac.at/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/projSpec> ;
 
     ##author, title - short
     rdfs:label "NN"^^xsd:string ;
@@ -107,7 +104,7 @@
         #MARC 700
 
         #relation to dhplus:Person dataset
-        <https://dhplus.sbg.ac.at/ontology#agent> <URI> ;
+        <https://dhplus.sbg.ac.at/ontology#agent> <Person-URI> ;
 
         #Relator term
         #MARC $e
@@ -353,6 +350,7 @@
     #physical description
     #extent
     #MARC 300 $a
+    #Number of physical pages, volumes, cassettes, total playing time, etc., of of each type of unit
     <https://dhplus.sbg.ac.at/ontology#extent> [
         a dhpluso:Extent ;
         #page
@@ -460,7 +458,7 @@
     a dhpluso:Isbn ;
     rdf:value "NN"^^xsd:string ;
   ] ;
-  dhpluso:instanceOf <http://dhplus.sbg.ac.at/kngoe/instance/17728dbc-bc9c-11ea-b3de-0242ac130004/Work>
+  dhpluso:instanceOf <http://dhplus.sbg.ac.at/kngoe/instance/17728dbc-bc9c-11ea-b3de-0242ac130004>
 .
 
 #item
@@ -1077,14 +1075,14 @@
         szd:illustrator               <https://gams.uni-graz.at/o:szd.personen#SZDPER.nnnn> ;
         szd:language                  <http://id.loc.gov/vocabulary/iso639-2/nnn> ;
         szd:location                  <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.nnnn> ;
-        szd:originaltitle             "NN"@de ;
-        szd:provenance                "NN"@de ;
+        szd:originaltitle             "NN"@de, "NN"@en ;
+        szd:provenance                "NN"@de, "NN"@en ;
         szd:provenanceCharacteristic  <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.nnnnPS> ;
         szd:publicationStmt           <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.nnnnPUS> ;
         szd:relationToPerson          <https://gams.uni-graz.at/o:szd.personen#SZDPER.nnnn> ;
         szd:series                    "NN" ;
         szd:signature                 "NN" ;
-        szd:title                     "NN"@en , "NN"@de;
+        szd:title                     "NN"@de, "NN"@en ;
         szd:translator                <https://gams.uni-graz.at/o:szd.personen#SZDPER.nnnn> ;
         szd:writerAfterword           <https://gams.uni-graz.at/o:szd.personen#SZDPER.nnnn> ;
         szd:writerForeword            <https://gams.uni-graz.at/o:szd.personen#SZDPER.nnnn> ;
@@ -1104,7 +1102,7 @@
 .
 <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.nnnnEX>
     a            szd:Extent ;
-    szd:binding  "NN"@en ;
+    szd:binding  "NN"@de , "NN°"@en ;
     szd:format   "NN" ;
     szd:page     "nnnn" ;
     szd:text     "NN"@de , "NN°"@en ;
@@ -1117,8 +1115,8 @@
     wgs84_pos:long             "NN" ;
     gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
     gams:textualContent        "NN" ;
-    szd:name                   "NN"@en ;
-    szd:settlement             "NN"
+    szd:name                   "NN"@de , "NN°"@en ;
+    szd:settlement             "NN" ;
 .
 <https://gams.uni-graz.at/o:szd.bibliothek#SZDBIB.nnnnPS>
     a                            szd:ProvenanceCharacteristic ;
