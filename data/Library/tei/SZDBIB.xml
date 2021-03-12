@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -6942,7 +6941,7 @@
                   <surname>Zweig</surname>
                 </persName>
               </author>
-              <editor ref="#">
+              <editor ref="#SZDPER.1628">
                 <persName>
                   <name>The Jew’s Temporary Shelter</name>
                 </persName>
@@ -7971,7 +7970,7 @@
                   <surname>Mary</surname>
                 </persName>
               </author>
-              <author ref="#" role="preface">
+              <author ref="#SZDPER.1625" role="preface">
                 <persName ref="http://d-nb.info/gnd/117676764">
                   <forename>Agnes</forename>
                   <surname>Strickland</surname>
@@ -8058,7 +8057,7 @@
                   <surname>Mary</surname>
                 </persName>
               </author>
-              <author ref="#" role="preface">
+              <author ref="#SZDPER.1625" role="preface">
                 <persName>
                   <forename>Agnes</forename>
                   <surname>Strickland</surname>
@@ -14324,7 +14323,7 @@
               </edition>
             </editionStmt>
             <publicationStmt>
-              <publisher>Edition de la Revue littéraire des Primaires</publisher>
+              <publisher>Edition de la Revue littéraire des Primaires</publisher>
               <date precision="low">1936</date>
               <pubPlace>Paris</pubPlace>
             </publicationStmt>
@@ -15873,7 +15872,7 @@
               <keywords>
                 <term ref="SZDPER.1094" type="person">
                   <persName ref="http://d-nb.info/gnd/118593862">
-                    <name>Philipp II.</name>
+                    <name>Philipp II.</name>
                   </persName>
                 </term>
               </keywords>
@@ -25847,7 +25846,7 @@
         <biblFull xml:id="SZDBIB.339">
           <fileDesc>
             <titleStmt>
-              <title>Les Simulachres et historiees faces de la mort, autant elegammēt pourtraictes,
+              <title>Les Simulachres et historiees faces de la mort, autant elegammēt pourtraictes,
                 que artificiellement imaginées</title>
               <editor ref="#SZDPER.633" role="illustrator">
                 <persName ref="http://d-nb.info/gnd/118552953">
@@ -29070,7 +29069,7 @@
         <biblFull xml:id="SZDBIB.383">
           <fileDesc>
             <titleStmt>
-              <title>Une saison en enfer</title>
+              <title>Une saison en enfer</title>
               <author ref="#SZDPER.1172">
                 <persName ref="http://d-nb.info/gnd/118601032">
                   <forename>Arthur</forename>
@@ -39067,9 +39066,9 @@
                         <ref target="szdg:PresentationInscription"></ref>
                         <term xml:lang="de">Widmung</term>
                         <term xml:lang="en">Presentation Inscription</term>
-                        <desc xml:lang="de">[Teilweise handschriftlich:] Dieses Exemplar Nr. 4 | ist für Stefan
+                        <desc xml:lang="de">[Teilweise handschriftlich:] Dieses Exemplar Nr. 4 | ist für Stefan
                           Zweig | bestimmt. | Mutt Schnapp-Eichschmidt</desc>
-                        <desc xml:lang="en">[Partly handwritten:] Dieses Exemplar Nr. 4 | ist für Stefan Zweig | bestimmt. | Mutt Schnapp-Eichschmidt</desc>
+                        <desc xml:lang="en">[Partly handwritten:] Dieses Exemplar Nr. 4 | ist für Stefan Zweig | bestimmt. | Mutt Schnapp-Eichschmidt</desc>
                       </item>
                     </list>
                   </additions>
@@ -43656,8 +43655,8 @@
                         <term xml:lang="de">Widmung</term>
                         <term xml:lang="en">Presentation Inscription</term>
                         <desc xml:lang="de">Stefan Zweig mit einem | Gruss dankbar verehrender | Freundschaft. |
-                          Baden bei Wien, Nov 1913 | Wilhelm Schmidtbonn.</desc>
-                        <desc xml:lang="en">Stefan Zweig mit einem | Gruss dankbar verehrender | Freundschaft. | Baden bei Wien, Nov 1913 | Wilhelm Schmidtbonn.</desc>
+                          Baden bei Wien, Nov 1913 | Wilhelm Schmidtbonn.</desc>
+                        <desc xml:lang="en">Stefan Zweig mit einem | Gruss dankbar verehrender | Freundschaft. | Baden bei Wien, Nov 1913 | Wilhelm Schmidtbonn.</desc>
                       </item>
                     </list>
                   </additions>
@@ -46675,9 +46674,9 @@
                         <ref target="szdg:PresentationInscription"></ref>
                         <term xml:lang="de">Widmung</term>
                         <term xml:lang="en">Presentation Inscription</term>
-                        <desc xml:lang="de">Dem geliebten und bewun- | derten Freunde Stefan Zweig. | Wilhelm
+                        <desc xml:lang="de">Dem geliebten und bewun- | derten Freunde Stefan Zweig. | Wilhelm
                           Schmidtbonn.</desc>
-                        <desc xml:lang="en">Dem geliebten und bewun- | derten Freunde Stefan Zweig. | Wilhelm Schmidtbonn.</desc>
+                        <desc xml:lang="en">Dem geliebten und bewun- | derten Freunde Stefan Zweig. | Wilhelm Schmidtbonn.</desc>
                       </item>
                     </list>
                   </additions>
@@ -48152,7 +48151,7 @@
                   <surname>Sillib</surname>
                 </persName>
               </editor>
-              <editor ref="#">
+              <editor ref="#SZDPER.1627">
                 <persName ref="http://d-nb.info/gnd/116511567">
                   <forename>Arthur</forename>
                   <surname>Haseloff</surname>
@@ -50395,7 +50394,7 @@
             <titleStmt>
               <title>Die Wiener Oper : Konkurrenzprojekte. Kartons und Aquarelle und photographische
                 Aufnahmen</title>
-              <editor ref="#">
+              <editor ref="#SZDPER.1626">
                 <persName ref="http://d-nb.info/gnd/2020891-1">
                   <name>Österreichische Galerie Wien</name>
                 </persName>
@@ -74288,7 +74287,7 @@
               <keywords>
                 <term ref="SZDPER.749" type="person">
                   <persName ref="http://d-nb.info/gnd/118574892">
-                    <name>Ludwig II, König von Bayern</name>rname&gt;</persName>
+                    <name>Ludwig II, König von Bayern</name>rname&gt;</persName>
                 </term>
               </keywords>
             </textClass>
@@ -74360,9 +74359,9 @@
                         <ref target="szdg:Insertion"></ref>
                         <term xml:lang="de">Einlage</term>
                         <term xml:lang="en">Insertion</term>
-                        <desc xml:lang="de">Ein Zettel mit eigenhändigen Korrekturen von Stefan Zweig. – Eine
+                        <desc xml:lang="de">Ein Zettel mit eigenhändigen Korrekturen von Stefan Zweig. – Eine
                           Visitenkarte von Carl Skoda</desc>
-                        <desc xml:lang="en">A slip of paper with autograph corrections by Stefan Zweig. – A visiting card from Carl Skoda</desc>
+                        <desc xml:lang="en">A slip of paper with autograph corrections by Stefan Zweig. – A visiting card from Carl Skoda</desc>
                       </item>
                       <item>
                         <ref target="szdg:Marginalia"></ref>
@@ -75665,7 +75664,7 @@
         <biblFull xml:id="SZDBIB.987">
           <fileDesc>
             <titleStmt>
-              <title>Wilhelm Meisters Wanderjahre. Kleine Erzählungen. Reineke Fuchs - Hermann und
+              <title>Wilhelm Meisters Wanderjahre. Kleine Erzählungen. Reineke Fuchs - Hermann und
                 Dorothea - Achilleïs</title>
               <title type="series">Goethes Werke. Auswahl in zwanzig Teilen 13-15</title>
               <author ref="#SZDPER.489">
@@ -77006,7 +77005,7 @@
             <publicationStmt>
               <publisher>Insel-Verlag</publisher>
               <date>       
-         <span xml:lang="de">1925-1927</span>
+                <span xml:lang="de">1925-1927</span>
                 <span xml:lang="en">1925-1927</span>
               </date>
               <pubPlace>Leipzig</pubPlace>
@@ -79857,7 +79856,7 @@
                 <term ref="SZDPER.749" type="person">
                   <persName ref="http://d-nb.info/gnd/118574892">
                     <forename></forename>
-                    <surname>Ludwig II.</surname>
+                    <surname>Ludwig II.</surname>
                   </persName>
                 </term>
               </keywords>
@@ -83981,7 +83980,7 @@
                     <lang xml:lang="fre"></lang>
                   </textLang>
                   <msItem>     
-                    <note xml:lang="de">Enthält das Faksimile eines Autographs aus der Sammlung Stefan
+               <note xml:lang="de">Enthält das Faksimile eines Autographs aus der Sammlung Stefan
                       Zweig</note>
                     <note xml:lang="en">Contains the facsimile of an autograph from Stefan Zweig&apos;s collection</note>
                   </msItem>
@@ -86463,7 +86462,7 @@
               <keywords>
                 <term ref="SZDPER.1086" type="person">
                   <persName ref="http://d-nb.info/gnd/119446383">
-                    <name>Peter II., Kaiser von Brasilien</name>
+                    <name>Peter II., Kaiser von Brasilien</name>
                   </persName>
                 </term>
               </keywords>
@@ -88028,7 +88027,7 @@
               <keywords>
                 <term ref="SZDPER.1086" type="person">
                   <persName ref="http://d-nb.info/gnd/119446383">
-                    <name>Peter II., Kaiser von Brasilien</name>
+                    <name>Peter II., Kaiser von Brasilien</name>
                   </persName>
                 </term>
               </keywords>
@@ -89845,7 +89844,7 @@
                 </msIdentifier>
                 <msContents>
                   <textLang>
-                    <lang xml:lang="rum "></lang>
+                    <lang xml:lang="rum"></lang>
                   </textLang>
                 </msContents>
                 <physDesc>
@@ -93359,7 +93358,7 @@
               <author ref="SZDPER.960">
                 <persName ref="http://d-nb.info/gnd/11851993X">
                   <forename>Miguel de</forename>
-                  <surname>Cervantes Saavedra</surname>
+                  <surname>Cervantes Saavedra</surname>
                 </persName>
               </author>
             </titleStmt>
