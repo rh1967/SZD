@@ -12,412 +12,413 @@
 @prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix szd:   <https://gams.uni-graz.at/o:szd.ontology#> .
 @prefix gnd:   <http://d-nb.info/standards/elementset/gnd#> .
+@prefix szdg:  <https://gams.uni-graz.at/o:szd.glossar#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix dc:    <http://purl.org/dc/elements/1.1/> .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.38>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://lionheartautographs.com/about-us/about/> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/38379-X> ;
-    wgs84_pos:lat              "40.71427" ;
-    wgs84_pos:long             "-74.00597" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "David H. Lowenherz USA New York  40.71427, -74.00597  SZDSTA.38" ;
-    szd:name                   "David H. Lowenherz" ;
-    szd:settlement             "New York" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://lionheartautographs.com/about-us/about/> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/38379-X> ;
+        wgs84_pos:lat              "40.71427" ;
+        wgs84_pos:long             "-74.00597" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "David H. Lowenherz USA New York  40.71427, -74.00597  SZDSTA.38" ;
+        szd:name                   "David H. Lowenherz" ;
+        szd:settlement             "New York" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.17>
-    a                          szd:Location ;
-    rdfs:seeAlso               <http://ahl.sbg.ac.at/> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/1047604132> ;
-    wgs84_pos:lat              "47.59941" ;
-    wgs84_pos:long             "13.14399" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Adolf Haslinger Literaturstiftung im Literaturarchiv Salzburg Österreich Salzburg  47.59941, 13.14399  SZDSTA.17" ;
-    szd:name                   "Adolf Haslinger Literaturstiftung im Literaturarchiv Salzburg" ;
-    szd:settlement             "Salzburg" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <http://ahl.sbg.ac.at/> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/1047604132> ;
+        wgs84_pos:lat              "47.59941" ;
+        wgs84_pos:long             "13.14399" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Adolf Haslinger Literaturstiftung im Literaturarchiv Salzburg Österreich Salzburg  47.59941, 13.14399  SZDSTA.17" ;
+        szd:name                   "Adolf Haslinger Literaturstiftung im Literaturarchiv Salzburg" ;
+        szd:settlement             "Salzburg" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.4>
-    a                          szd:Location ;
-    rdfs:seeAlso               <http://fondationbodmer.ch/en/> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/1019332-7> ;
-    wgs84_pos:lat              "46.21672" ;
-    wgs84_pos:long             "6.18041" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Fondation Martin Bodmer Schweiz Cologny-Genève  46.21672, 6.18041  SZDSTA.4" ;
-    szd:name                   "Fondation Martin Bodmer" ;
-    szd:settlement             "Cologny-Genève" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <http://fondationbodmer.ch/en/> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/1019332-7> ;
+        wgs84_pos:lat              "46.21672" ;
+        wgs84_pos:long             "6.18041" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Fondation Martin Bodmer Schweiz Cologny-Genève  46.21672, 6.18041  SZDSTA.4" ;
+        szd:name                   "Fondation Martin Bodmer" ;
+        szd:settlement             "Cologny-Genève" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.11>
-    a                          szd:Location ;
-    rdfs:seeAlso               <http://www.stefan-zweig-centre-salzburg.at/> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/10368864-X> ;
-    wgs84_pos:lat              "47.7982" ;
-    wgs84_pos:long             "13.0429" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Stefan Zweig Zentrum Österreich Salzburg  47.7982, 13.0429  SZDSTA.11" ;
-    szd:name                   "Stefan Zweig Zentrum" ;
-    szd:settlement             "Salzburg" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <http://www.stefan-zweig-centre-salzburg.at/> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/10368864-X> ;
+        wgs84_pos:lat              "47.7982" ;
+        wgs84_pos:long             "13.0429" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Stefan Zweig Zentrum Österreich Salzburg  47.7982, 13.0429  SZDSTA.11" ;
+        szd:name                   "Stefan Zweig Zentrum" ;
+        szd:settlement             "Salzburg" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.24>
-    a                          szd:Location ;
-    wgs84_pos:lat              "39.76" ;
-    wgs84_pos:long             "-98.5" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Privatbesitz, USA Private collection, USA USA  39.76, -98.5  SZDSTA.24" ;
-    szd:name                   "Private collection, USA"@en .
+        a                          szd:Location ;
+        wgs84_pos:lat              "39.76" ;
+        wgs84_pos:long             "-98.5" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Privatbesitz, USA Private collection, USA USA  39.76, -98.5  SZDSTA.24" ;
+        szd:name                   "Private collection, USA"@en .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.37>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://www.britishmuseum.org/> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/38379-X> ;
-    wgs84_pos:lat              "51.5195" ;
-    wgs84_pos:long             "-0.1269" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "The British Museum England London  51.5195, -0.1269  SZDSTA.37" ;
-    szd:name                   "The British Museum" ;
-    szd:settlement             "London" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://www.britishmuseum.org/> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/38379-X> ;
+        wgs84_pos:lat              "51.5195" ;
+        wgs84_pos:long             "-0.1269" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "The British Museum England London  51.5195, -0.1269  SZDSTA.37" ;
+        szd:name                   "The British Museum" ;
+        szd:settlement             "London" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.9>
-    a                          szd:Location ;
-    rdfs:seeAlso               <http://www.ub.unibas.ch/ub-hauptbibliothek/> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/2023655-4> ;
-    wgs84_pos:lat              "47.5594" ;
-    wgs84_pos:long             "7.5808" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Universitätsbibliothek Basel Schweiz Basel  47.5594, 7.5808  SZDSTA.9" ;
-    szd:name                   "Universitätsbibliothek Basel" ;
-    szd:settlement             "Basel" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <http://www.ub.unibas.ch/ub-hauptbibliothek/> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/2023655-4> ;
+        wgs84_pos:lat              "47.5594" ;
+        wgs84_pos:long             "7.5808" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Universitätsbibliothek Basel Schweiz Basel  47.5594, 7.5808  SZDSTA.9" ;
+        szd:name                   "Universitätsbibliothek Basel" ;
+        szd:settlement             "Basel" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.16>
-    a                          szd:Location ;
-    wgs84_pos:lat              "47.00016" ;
-    wgs84_pos:long             "8.01427" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Privatbesitz, Schweiz Private collection, Switzerland Schweiz  47.00016, 8.01427  SZDSTA.16" ;
-    szd:name                   "Private collection, Switzerland"@en .
+        a                          szd:Location ;
+        wgs84_pos:lat              "47.00016" ;
+        wgs84_pos:long             "8.01427" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Privatbesitz, Schweiz Private collection, Switzerland Schweiz  47.00016, 8.01427  SZDSTA.16" ;
+        szd:name                   "Private collection, Switzerland"@en .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.3>
-    a                          szd:Location ;
-    rdfs:seeAlso               <http://web.nli.org.il/sites/nlis/en> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/1004728-1> ;
-    wgs84_pos:lat              "31.76904" ;
-    wgs84_pos:long             "35.21633" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "The National Library of Israel Israel Jerusalem  31.76904, 35.21633  SZDSTA.3" ;
-    szd:name                   "The National Library of Israel" ;
-    szd:settlement             "Jerusalem" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <http://web.nli.org.il/sites/nlis/en> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/1004728-1> ;
+        wgs84_pos:lat              "31.76904" ;
+        wgs84_pos:long             "35.21633" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "The National Library of Israel Israel Jerusalem  31.76904, 35.21633  SZDSTA.3" ;
+        szd:name                   "The National Library of Israel" ;
+        szd:settlement             "Jerusalem" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.29>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://www.saengermuseum.de/> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/4646846-8> ;
-    wgs84_pos:lat              "49.16287" ;
-    wgs84_pos:long             "10.3385" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Dokumentations- und Forschungszentrum des Deutschen Chorwesens Deutschland Feuchtwangen  49.16287, 10.3385  SZDSTA.29" ;
-    szd:name                   "Dokumentations- und Forschungszentrum des Deutschen Chorwesens" ;
-    szd:settlement             "Feuchtwangen" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://www.saengermuseum.de/> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/4646846-8> ;
+        wgs84_pos:lat              "49.16287" ;
+        wgs84_pos:long             "10.3385" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Dokumentations- und Forschungszentrum des Deutschen Chorwesens Deutschland Feuchtwangen  49.16287, 10.3385  SZDSTA.29" ;
+        szd:name                   "Dokumentations- und Forschungszentrum des Deutschen Chorwesens" ;
+        szd:settlement             "Feuchtwangen" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.10>
-    a                          szd:Location ;
-    rdfs:seeAlso               <http://www.literaturhaus.at/index.php?id=6542> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/2057272-4> ;
-    wgs84_pos:lat              "48.21303" ;
-    wgs84_pos:long             "16.35993" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Dokumentationsstelle für neuere österreichische Literatur im Literaturhaus Österreich Wien  48.21303, 16.35993  SZDSTA.10" ;
-    szd:name                   "Dokumentationsstelle für neuere österreichische Literatur im Literaturhaus" ;
-    szd:settlement             "Wien" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <http://www.literaturhaus.at/index.php?id=6542> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/2057272-4> ;
+        wgs84_pos:lat              "48.21303" ;
+        wgs84_pos:long             "16.35993" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Dokumentationsstelle für neuere österreichische Literatur im Literaturhaus Österreich Wien  48.21303, 16.35993  SZDSTA.10" ;
+        szd:name                   "Dokumentationsstelle für neuere österreichische Literatur im Literaturhaus" ;
+        szd:settlement             "Wien" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.23>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://www.theatermuseum.at/> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/1033329-0> ;
-    wgs84_pos:lat              "48.215" ;
-    wgs84_pos:long             "16.3844" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Theatermuseum Österreich Wien  48.215, 16.3844  SZDSTA.23" ;
-    szd:name                   "Theatermuseum" ;
-    szd:settlement             "Wien" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://www.theatermuseum.at/> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/1033329-0> ;
+        wgs84_pos:lat              "48.215" ;
+        wgs84_pos:long             "16.3844" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Theatermuseum Österreich Wien  48.215, 16.3844  SZDSTA.23" ;
+        szd:name                   "Theatermuseum" ;
+        szd:settlement             "Wien" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.36>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://mozarteum.at/e> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/37019-8> ;
-    wgs84_pos:lat              "47.8039" ;
-    wgs84_pos:long             "13.0434" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Internationale Stiftung Mozarteum Österreich Salzburg  47.8039, 13.0434  SZDSTA.36" ;
-    szd:name                   "Internationale Stiftung Mozarteum" ;
-    szd:settlement             "Salzburg" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://mozarteum.at/e> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/37019-8> ;
+        wgs84_pos:lat              "47.8039" ;
+        wgs84_pos:long             "13.0434" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Internationale Stiftung Mozarteum Österreich Salzburg  47.8039, 13.0434  SZDSTA.36" ;
+        szd:name                   "Internationale Stiftung Mozarteum" ;
+        szd:settlement             "Salzburg" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.8>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://www.wienbibliothek.at/> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/10144442-4> ;
-    wgs84_pos:lat              "48.21071" ;
-    wgs84_pos:long             "16.3576" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Wienbibliothek im Rathaus Österreich Wien  48.21071, 16.3576  SZDSTA.8" ;
-    szd:name                   "Wienbibliothek im Rathaus" ;
-    szd:settlement             "Wien" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://www.wienbibliothek.at/> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/10144442-4> ;
+        wgs84_pos:lat              "48.21071" ;
+        wgs84_pos:long             "16.3576" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Wienbibliothek im Rathaus Österreich Wien  48.21071, 16.3576  SZDSTA.8" ;
+        szd:name                   "Wienbibliothek im Rathaus" ;
+        szd:settlement             "Wien" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.30>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://www.goethe-museum.de/de> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/2012581-1> ;
-    wgs84_pos:lat              "51.2343" ;
-    wgs84_pos:long             "6.7733" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Goethe-Museum Düsseldorf, Anton-und-Katharina-Kippenberg-Stiftung Deutschland Düsseldorf  51.2343, 6.7733  SZDSTA.30" ;
-    szd:name                   "Goethe-Museum Düsseldorf, Anton-und-Katharina-Kippenberg-Stiftung" ;
-    szd:settlement             "Düsseldorf" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://www.goethe-museum.de/de> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/2012581-1> ;
+        wgs84_pos:lat              "51.2343" ;
+        wgs84_pos:long             "6.7733" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Goethe-Museum Düsseldorf, Anton-und-Katharina-Kippenberg-Stiftung Deutschland Düsseldorf  51.2343, 6.7733  SZDSTA.30" ;
+        szd:name                   "Goethe-Museum Düsseldorf, Anton-und-Katharina-Kippenberg-Stiftung" ;
+        szd:settlement             "Düsseldorf" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.15>
-    a                          szd:Location ;
-    wgs84_pos:lat              "54.75844" ;
-    wgs84_pos:long             "-2.69531" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Privatbesitz, Großbritannien Private collection, United Kingdom Großbritannien  54.75844, -2.69531  SZDSTA.15" ;
-    szd:name                   "Private collection, United Kingdom"@en .
+        a                          szd:Location ;
+        wgs84_pos:lat              "54.75844" ;
+        wgs84_pos:long             "-2.69531" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Privatbesitz, Großbritannien Private collection, United Kingdom Großbritannien  54.75844, -2.69531  SZDSTA.15" ;
+        szd:name                   "Private collection, United Kingdom"@en .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.2>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://fredonia.libguides.com/archives/zweig> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/2156743-8> ;
-    wgs84_pos:lat              "42.44006" ;
-    wgs84_pos:long             "-79.33171" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Reed Library – Stefan Zweig Collection USA Fredonia  42.44006, -79.33171  SZDSTA.2" ;
-    szd:name                   "Reed Library – Stefan Zweig Collection" ;
-    szd:settlement             "Fredonia" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://fredonia.libguides.com/archives/zweig> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/2156743-8> ;
+        wgs84_pos:lat              "42.44006" ;
+        wgs84_pos:long             "-79.33171" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Reed Library – Stefan Zweig Collection USA Fredonia  42.44006, -79.33171  SZDSTA.2" ;
+        szd:name                   "Reed Library – Stefan Zweig Collection" ;
+        szd:settlement             "Fredonia" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.28>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://www.loc.gov/> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/35626-8> ;
-    wgs84_pos:lat              "38.88845" ;
-    wgs84_pos:long             "-77.00442" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Library of Congress USA Washington, DC  38.88845, -77.00442  SZDSTA.28" ;
-    szd:name                   "Library of Congress" ;
-    szd:settlement             "Washington, DC" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://www.loc.gov/> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/35626-8> ;
+        wgs84_pos:lat              "38.88845" ;
+        wgs84_pos:long             "-77.00442" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Library of Congress USA Washington, DC  38.88845, -77.00442  SZDSTA.28" ;
+        szd:name                   "Library of Congress" ;
+        szd:settlement             "Washington, DC" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.22>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://www.zb.uzh.ch/> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/1012546-2> ;
-    wgs84_pos:lat              "47.3742" ;
-    wgs84_pos:long             "8.5453" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Zentralbibliothek Zürich Schweiz Zürich  47.3742, 8.5453  SZDSTA.22" ;
-    szd:name                   "Zentralbibliothek Zürich" ;
-    szd:settlement             "Zürich" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://www.zb.uzh.ch/> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/1012546-2> ;
+        wgs84_pos:lat              "47.3742" ;
+        wgs84_pos:long             "8.5453" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Zentralbibliothek Zürich Schweiz Zürich  47.3742, 8.5453  SZDSTA.22" ;
+        szd:name                   "Zentralbibliothek Zürich" ;
+        szd:settlement             "Zürich" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.35>
-    a                          szd:Location ;
-    rdfs:seeAlso               <http://www.beethoven-haus-bonn.de> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/2085343-9> ;
-    wgs84_pos:lat              "50.74" ;
-    wgs84_pos:long             "7.1" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Beethoven-Haus Bonn Deutschland Bonn  50.74, 7.1  SZDSTA.35" ;
-    szd:name                   "Beethoven-Haus Bonn" ;
-    szd:settlement             "Bonn" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <http://www.beethoven-haus-bonn.de> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/2085343-9> ;
+        wgs84_pos:lat              "50.74" ;
+        wgs84_pos:long             "7.1" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Beethoven-Haus Bonn Deutschland Bonn  50.74, 7.1  SZDSTA.35" ;
+        szd:name                   "Beethoven-Haus Bonn" ;
+        szd:settlement             "Bonn" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.7>
-    a                          szd:Location ;
-    rdfs:seeAlso               <http://www.tma.ethz.ch/> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/2024553-1> ;
-    wgs84_pos:lat              "47.3763" ;
-    wgs84_pos:long             "8.54805" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Thomas-Mann-Archiv an der ETH-Bibliothek Schweiz Zürich  47.3763, 8.54805  SZDSTA.7" ;
-    szd:name                   "Thomas-Mann-Archiv an der ETH-Bibliothek" ;
-    szd:settlement             "Zürich" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <http://www.tma.ethz.ch/> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/2024553-1> ;
+        wgs84_pos:lat              "47.3763" ;
+        wgs84_pos:long             "8.54805" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Thomas-Mann-Archiv an der ETH-Bibliothek Schweiz Zürich  47.3763, 8.54805  SZDSTA.7" ;
+        szd:name                   "Thomas-Mann-Archiv an der ETH-Bibliothek" ;
+        szd:settlement             "Zürich" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.42>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://www.dla-marbach.de/> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/10155895-8> ;
-    wgs84_pos:lat              "46.85441" ;
-    wgs84_pos:long             "7.89966" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Deutsches Literaturarchiv Marbach Deutschland Marbach  46.85441, 7.89966  SZDSTA.42" ;
-    szd:name                   "Deutsches Literaturarchiv Marbach" ;
-    szd:settlement             "Marbach" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://www.dla-marbach.de/> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/10155895-8> ;
+        wgs84_pos:lat              "46.85441" ;
+        wgs84_pos:long             "7.89966" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Deutsches Literaturarchiv Marbach Deutschland Marbach  46.85441, 7.89966  SZDSTA.42" ;
+        szd:name                   "Deutsches Literaturarchiv Marbach" ;
+        szd:settlement             "Marbach" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.14>
-    a                          szd:Location ;
-    wgs84_pos:lat              "48.85341" ;
-    wgs84_pos:long             "2.3488" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Privatbesitz, Frankreich Private collection, France Frankreich  48.85341, 2.3488  SZDSTA.14" ;
-    szd:name                   "Private collection, France"@en .
+        a                          szd:Location ;
+        wgs84_pos:lat              "48.85341" ;
+        wgs84_pos:long             "2.3488" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Privatbesitz, Frankreich Private collection, France Frankreich  48.85341, 2.3488  SZDSTA.14" ;
+        szd:name                   "Private collection, France"@en .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.1>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://www.uni-salzburg.at/index.php?id=72> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/1047605287> ;
-    wgs84_pos:lat              "47.798" ;
-    wgs84_pos:long             "13.048" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Literaturarchiv Salzburg Österreich Salzburg  47.798, 13.048  SZDSTA.1" ;
-    szd:name                   "Literaturarchiv Salzburg" ;
-    szd:settlement             "Salzburg" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://www.uni-salzburg.at/index.php?id=72> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/1047605287> ;
+        wgs84_pos:lat              "47.798" ;
+        wgs84_pos:long             "13.048" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Literaturarchiv Salzburg Österreich Salzburg  47.798, 13.048  SZDSTA.1" ;
+        szd:name                   "Literaturarchiv Salzburg" ;
+        szd:settlement             "Salzburg" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.27>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://staatsbibliothek-berlin.de/> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/5036103-X> ;
-    wgs84_pos:lat              "52.5064" ;
-    wgs84_pos:long             "13.3703" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Staatsbibliothek zu Berlin - Preußischer Kulturbesitz Deutschland Berlin  52.5064, 13.3703  SZDSTA.27" ;
-    szd:name                   "Staatsbibliothek zu Berlin - Preußischer Kulturbesitz" ;
-    szd:settlement             "Berlin" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://staatsbibliothek-berlin.de/> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/5036103-X> ;
+        wgs84_pos:lat              "52.5064" ;
+        wgs84_pos:long             "13.3703" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Staatsbibliothek zu Berlin - Preußischer Kulturbesitz Deutschland Berlin  52.5064, 13.3703  SZDSTA.27" ;
+        szd:name                   "Staatsbibliothek zu Berlin - Preußischer Kulturbesitz" ;
+        szd:settlement             "Berlin" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.21>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://www.moz.ac.at/de/bibliothek/index.php> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/5299663-3> ;
-    wgs84_pos:lat              "47.78824" ;
-    wgs84_pos:long             "13.06035" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Universitätsbibliothek Mozarteum Österreich Salzburg  47.78824, 13.06035  SZDSTA.21" ;
-    szd:name                   "Universitätsbibliothek Mozarteum" ;
-    szd:settlement             "Salzburg" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://www.moz.ac.at/de/bibliothek/index.php> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/5299663-3> ;
+        wgs84_pos:lat              "47.78824" ;
+        wgs84_pos:long             "13.06035" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Universitätsbibliothek Mozarteum Österreich Salzburg  47.78824, 13.06035  SZDSTA.21" ;
+        szd:name                   "Universitätsbibliothek Mozarteum" ;
+        szd:settlement             "Salzburg" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.34>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://library.stanford.edu/collections/memorial-library-music> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/5069027-9> ;
-    wgs84_pos:lat              "37.42716" ;
-    wgs84_pos:long             "-122.17024" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Stanford University, Memorial Library of Music USA Stanford, CA  37.42716, -122.17024  SZDSTA.34" ;
-    szd:name                   "Stanford University, Memorial Library of Music" ;
-    szd:settlement             "Stanford, CA" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://library.stanford.edu/collections/memorial-library-music> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/5069027-9> ;
+        wgs84_pos:lat              "37.42716" ;
+        wgs84_pos:long             "-122.17024" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Stanford University, Memorial Library of Music USA Stanford, CA  37.42716, -122.17024  SZDSTA.34" ;
+        szd:name                   "Stanford University, Memorial Library of Music" ;
+        szd:settlement             "Stanford, CA" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.19>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://www.londonlibrary.co.uk/> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/35655-4> ;
-    wgs84_pos:lat              "51.5074" ;
-    wgs84_pos:long             "-0.13645" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "London Library England London  51.5074, -0.13645  SZDSTA.19" ;
-    szd:name                   "London Library" ;
-    szd:settlement             "London" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://www.londonlibrary.co.uk/> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/35655-4> ;
+        wgs84_pos:lat              "51.5074" ;
+        wgs84_pos:long             "-0.13645" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "London Library England London  51.5074, -0.13645  SZDSTA.19" ;
+        szd:name                   "London Library" ;
+        szd:settlement             "London" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.6>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://www.themorgan.org/> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/10156282-2> ;
-    wgs84_pos:lat              "40.74923" ;
-    wgs84_pos:long             "-73.9814" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "The Morgan Library & Museum USA New York City  40.74923, -73.9814  SZDSTA.6" ;
-    szd:name                   "The Morgan Library & Museum" ;
-    szd:settlement             "New York City" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://www.themorgan.org/> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/10156282-2> ;
+        wgs84_pos:lat              "40.74923" ;
+        wgs84_pos:long             "-73.9814" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "The Morgan Library & Museum USA New York City  40.74923, -73.9814  SZDSTA.6" ;
+        szd:name                   "The Morgan Library & Museum" ;
+        szd:settlement             "New York City" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.41>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://haendelhaus.de> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/16008856-2> ;
-    wgs84_pos:lat              "51.48158" ;
-    wgs84_pos:long             "11.97947" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Stiftung Händel-Haus Halle Deutschland Halle/Saale  51.48158, 11.97947  SZDSTA.41" ;
-    szd:name                   "Stiftung Händel-Haus Halle" ;
-    szd:settlement             "Halle/Saale" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://haendelhaus.de> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/16008856-2> ;
+        wgs84_pos:lat              "51.48158" ;
+        wgs84_pos:long             "11.97947" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Stiftung Händel-Haus Halle Deutschland Halle/Saale  51.48158, 11.97947  SZDSTA.41" ;
+        szd:name                   "Stiftung Händel-Haus Halle" ;
+        szd:settlement             "Halle/Saale" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.13>
-    a                          szd:Location ;
-    wgs84_pos:lat              "47.33333" ;
-    wgs84_pos:long             "13.33333" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Privatbesitz, Österreich Private collection, Austria Österreich  47.33333, 13.33333  SZDSTA.13" ;
-    szd:name                   "Private collection, Austria"@en .
+        a                          szd:Location ;
+        wgs84_pos:lat              "47.33333" ;
+        wgs84_pos:long             "13.33333" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Privatbesitz, Österreich Private collection, Austria Österreich  47.33333, 13.33333  SZDSTA.13" ;
+        szd:name                   "Private collection, Austria"@en .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.26>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://www.bn.gov.br/en> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/1003296-4> ;
-    wgs84_pos:lat              "-22.9047" ;
-    wgs84_pos:long             "-43.2208" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Biblioteca Nacional Brasilien Rio de Janeiro  -22.9047,-43.2208  SZDSTA.26" ;
-    szd:name                   "Biblioteca Nacional" ;
-    szd:settlement             "Rio de Janeiro" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://www.bn.gov.br/en> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/1003296-4> ;
+        wgs84_pos:lat              "-22.9047" ;
+        wgs84_pos:long             "-43.2208" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Biblioteca Nacional Brasilien Rio de Janeiro  -22.9047,-43.2208  SZDSTA.26" ;
+        szd:name                   "Biblioteca Nacional" ;
+        szd:settlement             "Rio de Janeiro" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.39>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://www.ub.uni-rostock.de/> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/25968-8> ;
-    wgs84_pos:lat              "54.0871" ;
-    wgs84_pos:long             "12.1362" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Universitätsbibliothek Rostock Deutschland Rostock  54.0871, 12.1362  SZDSTA.39" ;
-    szd:name                   "Universitätsbibliothek Rostock" ;
-    szd:settlement             "Rostock" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://www.ub.uni-rostock.de/> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/25968-8> ;
+        wgs84_pos:lat              "54.0871" ;
+        wgs84_pos:long             "12.1362" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Universitätsbibliothek Rostock Deutschland Rostock  54.0871, 12.1362  SZDSTA.39" ;
+        szd:name                   "Universitätsbibliothek Rostock" ;
+        szd:settlement             "Rostock" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.20>
-    a                          szd:Location ;
-    wgs84_pos:lat              "-22.505" ;
-    wgs84_pos:long             "-43.17861" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Biblioteca Central Municipal Gabriela Mistral Brasilien Petrópolis  -22.505, -43.17861  SZDSTA.20" ;
-    szd:name                   "Biblioteca Central Municipal Gabriela Mistral" ;
-    szd:settlement             "Petrópolis" .
+        a                          szd:Location ;
+        wgs84_pos:lat              "-22.505" ;
+        wgs84_pos:long             "-43.17861" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Biblioteca Central Municipal Gabriela Mistral Brasilien Petrópolis  -22.505, -43.17861  SZDSTA.20" ;
+        szd:name                   "Biblioteca Central Municipal Gabriela Mistral" ;
+        szd:settlement             "Petrópolis" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.33>
-    a                          szd:Location ;
-    rdfs:seeAlso               <http://institutions.ville-geneve.ch/fr/bge/connaitre-la-bibliotheque/sites/musee-voltaire/presentation/> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/40303-9> ;
-    wgs84_pos:lat              "46.20222" ;
-    wgs84_pos:long             "6.14569" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Institut et Musée Voltaire Schweiz Genf  46.20222, 6.14569  SZDSTA.33" ;
-    szd:name                   "Institut et Musée Voltaire" ;
-    szd:settlement             "Genf" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <http://institutions.ville-geneve.ch/fr/bge/connaitre-la-bibliotheque/sites/musee-voltaire/presentation/> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/40303-9> ;
+        wgs84_pos:lat              "46.20222" ;
+        wgs84_pos:long             "6.14569" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Institut et Musée Voltaire Schweiz Genf  46.20222, 6.14569  SZDSTA.33" ;
+        szd:name                   "Institut et Musée Voltaire" ;
+        szd:settlement             "Genf" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.18>
-    a                          szd:Location ;
-    wgs84_pos:lat              "51.50853" ;
-    wgs84_pos:long             "-0.12574" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Erben Stefan Zweigs Heirs of Stefan Zweig England London  51.50853, -0.12574  SZDSTA.18" ;
-    szd:name                   "Heirs of Stefan Zweig"@en ;
-    szd:settlement             "London" .
+        a                          szd:Location ;
+        wgs84_pos:lat              "51.50853" ;
+        wgs84_pos:long             "-0.12574" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Erben Stefan Zweigs Heirs of Stefan Zweig England London  51.50853, -0.12574  SZDSTA.18" ;
+        szd:name                   "Heirs of Stefan Zweig"@en ;
+        szd:settlement             "London" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.5>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://www.bl.uk/> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/4472698-3> ;
-    wgs84_pos:lat              "51.5288" ;
-    wgs84_pos:long             "-0.1267" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "The British Library England London  51.5288, -0.1267  SZDSTA.5" ;
-    szd:name                   "The British Library" ;
-    szd:settlement             "London" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://www.bl.uk/> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/4472698-3> ;
+        wgs84_pos:lat              "51.5288" ;
+        wgs84_pos:long             "-0.1267" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "The British Library England London  51.5288, -0.1267  SZDSTA.5" ;
+        szd:name                   "The British Library" ;
+        szd:settlement             "London" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.40>
-    a                          szd:Location ;
-    rdfs:seeAlso               <https://stargardt.de> ;
-    gnd:gndIdentifier          <http://d-nb.info/gnd/2140517-7> ;
-    wgs84_pos:lat              "52.52437" ;
-    wgs84_pos:long             "13.41053" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Autographenhandlung J. A. Stargardt Deutschland Berlin  52.52437, 13.41053  SZDSTA.40" ;
-    szd:name                   "Autographenhandlung J. A. Stargardt" ;
-    szd:settlement             "Berlin" .
+        a                          szd:Location ;
+        rdfs:seeAlso               <https://stargardt.de> ;
+        gnd:gndIdentifier          <http://d-nb.info/gnd/2140517-7> ;
+        wgs84_pos:lat              "52.52437" ;
+        wgs84_pos:long             "13.41053" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Autographenhandlung J. A. Stargardt Deutschland Berlin  52.52437, 13.41053  SZDSTA.40" ;
+        szd:name                   "Autographenhandlung J. A. Stargardt" ;
+        szd:settlement             "Berlin" .
 
 <https://gams.uni-graz.at/o:szd.standorte#SZDSTA.12>
-    a                          szd:Location ;
-    wgs84_pos:lat              "51.5" ;
-    wgs84_pos:long             "10.5" ;
-    gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
-    gams:textualContent        "Privatbesitz, Deutschland Private collection, Germany Deutschland  51.5, 10.5  SZDSTA.12" ;
-    szd:name                   "Private collection, Germany"@en .
+        a                          szd:Location ;
+        wgs84_pos:lat              "51.5" ;
+        wgs84_pos:long             "10.5" ;
+        gams:isMemberOfCollection  <https://gams.uni-graz.at/o:szd.standorte> ;
+        gams:textualContent        "Privatbesitz, Deutschland Private collection, Germany Deutschland  51.5, 10.5  SZDSTA.12" ;
+        szd:name                   "Private collection, Germany"@en .
