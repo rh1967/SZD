@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
   <teiHeader>
     <fileDesc>
@@ -14887,7 +14888,7 @@
         <person corresp="https://de.wikipedia.org/wiki/Gaetano_Donizetti" xml:id="SZDPER.1615">
           <persName ref="http://d-nb.info/gnd/118526731">
             <forename>Gaetano</forename>
-            <surname>Donizett</surname>
+            <surname>Donizetti</surname>
           </persName>
           <note type="variants">Donizetti, Gaetano D. ; Donizetti, Gaëtano ; Donizetti, L. ; Donizetti, Domenico Gaetano Maria ; Donizetti ; Donizetti, C. ; Donizetti, G. ; Donicetti, G. ; Donizzetti, Gaetano ; Donizetti, Gaetanto ; Donizeti, Gaetano ; Donizetti, Cajetan ; Donizetti, Geatano ; Donizetti, Caetano ; Donizetti, Sactano ; Donizetti, Gaetano Domenico Maria ; Donicetti, Gėtano ; Donicetti, Domenico Gaetano Maria ; Donicetti, Caetano</note>
           <birth when="1797-11-29"></birth>
@@ -15100,7 +15101,7 @@
         <person xml:id="SZDPER.1645">
           <persName ref="http://d-nb.info/gnd/116402873">
             <forename>Herbert</forename>
-            <surname>Reichner</surname>
+            <surname>Faerber</surname>
           </persName>
         </person>
         <person xml:id="SZDPER.1646">
@@ -15119,6 +15120,30 @@
           <persName ref="http://d-nb.info/gnd/118612670">
             <forename>Carl</forename>
             <surname>Seelig</surname>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1649">
+          <persName ref="http://d-nb.info/gnd/118763938">
+            <forename>Johannes</forename>
+            <surname>Urzidil</surname>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1650">
+          <persName ref="http://d-nb.info/gnd/116129611">
+            <forename>Jimmy</forename>
+            <surname>Berg</surname>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1651">
+          <persName ref="http://d-nb.info/gnd/119187698">
+            <forename>George N.</forename>
+            <surname>Shuster</surname>
+          </persName>
+        </person>
+        <person xml:id="SZDPER.1652">
+          <persName ref="http://d-nb.info/gnd/119137186">
+            <forename>Erich</forename>
+            <surname>Fitzbauer</surname>
           </persName>
         </person>
       </listPerson>
