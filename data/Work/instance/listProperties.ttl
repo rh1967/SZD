@@ -33,6 +33,8 @@
                 "result" ;
         <https://gams.uni-graz.at/o:szd.ontology#location>
                 "result" ;
+        <https://gams.uni-graz.at/o:szd.ontology#originaltitle>
+                "result" ;
         <https://gams.uni-graz.at/o:szd.ontology#note>
                 "result" ;
         <https://gams.uni-graz.at/o:szd.ontology#objecttyp>
